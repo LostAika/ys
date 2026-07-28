@@ -11,10 +11,29 @@
     <!-- ШАПКА САЙТА -->
     <header class="bg-white shadow-md py-4 sticky top-0 z-40">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-            <div class="text-2xl font-black text-yellow-500 tracking-tight">Yellow<span class="text-gray-800">Сервис</span></div>
-            <div class="text-right">
-                <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">г. Тула</p>
-                <a href="tel:+79952938949" class="font-bold text-lg hover:text-yellow-500 transition">+7 (995) 293-89-49</a>
+            
+            <!-- Логотип -->
+            <div class="text-2xl font-black text-yellow-500 tracking-tight">
+                Yellow<span class="text-gray-800">Сервис</span>
+            </div>
+            
+            <!-- Контакты справа -->
+            <div class="text-right flex flex-col md:flex-row items-end md:items-center gap-1.5 md:gap-6">
+                
+                <!-- Кнопка адреса -->
+                <a href="#map-section" class="flex items-center gap-1 text-[10px] md:text-sm text-gray-600 hover:text-gray-900 transition bg-gray-100 px-2 py-1 md:px-3 md:py-1.5 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3 h-3 md:w-4 md:h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    <span class="block md:hidden">Хомяковская, 6</span>
+                    <span class="hidden md:block">Хомяковская ул., 6</span>
+                </a>
+                
+                <div>
+                    <p class="text-[9px] md:text-xs text-gray-500 uppercase tracking-wider font-semibold text-right">Ежедневно 11:00-19:00</p>
+                    <a href="tel:+79952938949" class="font-bold text-sm md:text-lg hover:text-yellow-500 transition block text-right">+7 (995) 293-89-49</a>
+                </div>
             </div>
         </div>
     </header>
@@ -23,7 +42,7 @@
     <section class="bg-yellow-400 text-gray-900 py-24 text-center relative overflow-hidden">
         <div class="max-w-3xl mx-auto px-4 relative z-10">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Срочный ремонт техники <br>с гарантией</h1>
-            <p class="text-xl mb-10 font-medium">Восстанавливаем Apple, Samsung, Xiaomi и ноутбуки после любых поломок. Бесплатная диагностика за 15 минут.</p>
+            <p class="text-xl mb-10 font-medium">Восстанавливаем Apple, Samsung, Xiaomi, Tecno, Infinix и ноутбуки. Бесплатная диагностика за 15 минут.</p>
             <a href="#prices" class="bg-gray-900 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-gray-800 hover:shadow-lg transition transform hover:-translate-y-1 inline-block">Смотреть прайс-лист</a>
         </div>
     </section>
@@ -51,53 +70,38 @@
         </div>
     </section>
 
-    <!-- ФОТОГАЛЕРЕЯ (Унифицированные карточки) -->
+    <!-- ФОТОГАЛЕРЕЯ -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">Наш сервис</h2>
             
             <div class="relative group">
-                <!-- Кнопка "Влево" -->
                 <button id="scrollLeftBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg border border-gray-100 hover:bg-yellow-400 text-gray-800 rounded-full w-12 h-12 flex items-center justify-center transition -ml-4 opacity-90 hover:opacity-100 hidden md:flex">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
                 </button>
 
-                <!-- Контейнер со скроллом -->
                 <div id="galleryWrapper" class="flex overflow-x-auto gap-5 pb-6 px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
-                    
-                    <!-- ФОТО 1 -->
                     <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-md overflow-hidden snap-center bg-gray-200">
                         <img src="https://avatars.mds.yandex.net/get-altay/20781708/2a0000019f6f90f8fa9a9223542539864df4/XXXL" alt="Ремонт смартфона" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    
-                    <!-- ФОТО 2 -->
                     <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-md overflow-hidden snap-center bg-gray-200">
                         <img src="https://avatars.mds.yandex.net/get-altay/20420873/2a0000019f6f90df40be0b4709eb4a7a5334/XXXL" alt="Профессиональное оборудование" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    
-                    <!-- ФОТО 3 -->
                     <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-md overflow-hidden snap-center bg-gray-200">
                         <img src="https://avatars.mds.yandex.net/get-altay/19785895/2a0000019f6f90f40e5e6588142cbb428363/XXXL" alt="Ремонт ноутбука" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
-
-                    <!-- ФОТО 4 -->
                     <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-md overflow-hidden snap-center bg-gray-200">
                         <img src="https://avatars.mds.yandex.net/get-altay/20336841/2a0000019f6f90e26d4003773119bc57af95/XXXL" alt="Ремонт ноутбука" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
-
-                    <!-- ФОТО 5 -->
                     <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-md overflow-hidden snap-center bg-gray-200">
                         <img src="https://avatars.mds.yandex.net/get-altay/19840634/2a0000019f6f90ef52017b703412568383a5/XXXL" alt="Ремонт ноутбука" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
-
                 </div>
 
-                <!-- Кнопка "Вправо" -->
                 <button id="scrollRightBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg border border-gray-100 hover:bg-yellow-400 text-gray-800 rounded-full w-12 h-12 flex items-center justify-center transition -mr-4 opacity-90 hover:opacity-100 hidden md:flex">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
                 </button>
             </div>
-            
             <p class="text-center text-gray-500 mt-4 text-sm">Используем профессиональное оборудование для компонентного ремонта.</p>
         </div>
     </section>
@@ -106,7 +110,7 @@
     <section id="prices" class="py-20 max-w-4xl mx-auto px-4">
         <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">Популярные услуги</h2>
         
-        <!-- Таблица для iPhone -->
+        <!-- Apple -->
         <div class="bg-white shadow-xl rounded-2xl overflow-hidden mb-10 border border-gray-100">
             <div class="bg-gray-900 text-white py-4 px-6 text-xl font-bold flex justify-between items-center">
                 <span>🍏 Apple (iPhone)</span>
@@ -129,7 +133,7 @@
             </table>
         </div>
 
-        <!-- Таблица для Samsung -->
+        <!-- Samsung -->
         <div class="bg-white shadow-xl rounded-2xl overflow-hidden mb-10 border border-gray-100">
             <div class="bg-blue-800 text-white py-4 px-6 text-xl font-bold flex justify-between items-center">
                 <span>📱 Samsung</span>
@@ -156,10 +160,10 @@
             </table>
         </div>
 
-        <!-- Таблица для Xiaomi/Android -->
+        <!-- Xiaomi / Redmi / Poco -->
         <div class="bg-white shadow-xl rounded-2xl overflow-hidden mb-10 border border-gray-100">
             <div class="bg-orange-500 text-white py-4 px-6 text-xl font-bold flex justify-between items-center">
-                <span>🤖 Xiaomi / Разные Android</span>
+                <span>🤖 Xiaomi / Redmi / Poco</span>
             </div>
             <table class="w-full text-left border-collapse">
                 <tbody>
@@ -168,10 +172,14 @@
                         <td class="py-4 px-6 text-right font-bold whitespace-nowrap">от 2 500 ₽</td>
                     </tr>
                     <tr class="border-b bg-gray-50 hover:bg-yellow-50 transition">
-                        <td class="py-4 px-6 text-gray-700">Замена разъема зарядки (Type-C / MicroUSB)</td>
+                        <td class="py-4 px-6 text-gray-700">Замена разъема зарядки (Type-C)</td>
                         <td class="py-4 px-6 text-right font-bold whitespace-nowrap">от 1 200 ₽</td>
                     </tr>
                     <tr class="border-b hover:bg-yellow-50 transition">
+                        <td class="py-4 px-6 text-gray-700">Замена аккумулятора</td>
+                        <td class="py-4 px-6 text-right font-bold whitespace-nowrap">от 1 500 ₽</td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 hover:bg-yellow-50 transition">
                         <td class="py-4 px-6 text-gray-700">Программный ремонт (Сброс FRP, прошивка)</td>
                         <td class="py-4 px-6 text-right font-bold whitespace-nowrap">от 1 500 ₽</td>
                     </tr>
@@ -179,7 +187,34 @@
             </table>
         </div>
 
-        <!-- Таблица для Ноутбуков -->
+        <!-- Tecno / Infinix / Honor / Huawei -->
+        <div class="bg-white shadow-xl rounded-2xl overflow-hidden mb-10 border border-gray-100">
+            <div class="bg-emerald-600 text-white py-4 px-6 text-xl font-bold flex justify-between items-center">
+                <span>📱 Tecno / Infinix / Honor / Huawei</span>
+            </div>
+            <table class="w-full text-left border-collapse">
+                <tbody>
+                    <tr class="border-b hover:bg-yellow-50 transition">
+                        <td class="py-4 px-6 text-gray-700">Замена дисплейного модуля / экрана</td>
+                        <td class="py-4 px-6 text-right font-bold whitespace-nowrap">от 2 500 ₽</td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 hover:bg-yellow-50 transition">
+                        <td class="py-4 px-6 text-gray-700">Замена разъема зарядки (Type-C)</td>
+                        <td class="py-4 px-6 text-right font-bold whitespace-nowrap">от 1 200 ₽</td>
+                    </tr>
+                    <tr class="border-b hover:bg-yellow-50 transition">
+                        <td class="py-4 px-6 text-gray-700">Замена аккумулятора</td>
+                        <td class="py-4 px-6 text-right font-bold whitespace-nowrap">от 1 600 ₽</td>
+                    </tr>
+                    <tr class="border-b bg-gray-50 hover:bg-yellow-50 transition">
+                        <td class="py-4 px-6 text-gray-700">Восстановление после попадания влаги</td>
+                        <td class="py-4 px-6 text-right font-bold whitespace-nowrap">от 1 500 ₽</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Ноутбуки -->
         <div class="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100">
             <div class="bg-indigo-600 text-white py-4 px-6 text-xl font-bold flex justify-between items-center">
                 <span>💻 Ремонт Ноутбуков</span>
@@ -203,12 +238,78 @@
         </div>
     </section>
 
+    <!-- БЛОК ОТЗЫВОВ -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">Отзывы клиентов</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Отзыв 1 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-500 mb-3 text-lg">★★★★★</div>
+                        <p class="text-gray-700 italic mb-4">«Менял дисплей на айфоне. Сделали всё при мне минут за 30, качество экрана супер, от оригинала не отличить. Цены адекватные, спасибо мастеру!»</p>
+                    </div>
+                    <p class="font-bold text-gray-900 text-sm">— Алексей М.</p>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-500 mb-3 text-lg">★★★★★</div>
+                        <p class="text-gray-700 italic mb-4">«Ноутбук стал сильно греться и выключаться. Почистили от пыли и поменяли термопасту, теперь летает и вообще не шумит. Быстро и профессионально.»</p>
+                    </div>
+                    <p class="font-bold text-gray-900 text-sm">— Светлана К.</p>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-500 mb-3 text-lg">★★★★★</div>
+                        <p class="text-gray-700 italic mb-4">«Отличный сервис! Утопил Xiaomi, думал всё, конец телефону. Восстановили плату, спасли все данные. Очень благодарен за честный подход!»</p>
+                    </div>
+                    <p class="font-bold text-gray-900 text-sm">— Дмитрий В.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- БЛОК ПРИЗЫВА К ДЕЙСТВИЮ -->
     <section class="bg-yellow-400 py-16 text-center">
         <div class="max-w-2xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Не нашли свою поломку в прайсе?</h2>
             <p class="text-lg text-gray-800 mb-8">Опишите проблему, и мастер сориентирует вас по точной стоимости и срокам ремонта.</p>
             <button id="leadButton" class="bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">Получить консультацию</button>
+        </div>
+    </section>
+
+    <!-- БЛОК С КАРТОЙ И КОНТАКТАМИ -->
+    <section id="map-section" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">Как нас найти</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <!-- Текстовые контакты -->
+                <div class="w-full md:w-1/3 space-y-6 text-lg">
+                    <div>
+                        <p class="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-1">Адрес</p>
+                        <p class="font-bold text-gray-900">г. Тула, посёлок Хомяково, Хомяковская ул., 6</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-1">Режим работы</p>
+                        <p class="font-bold text-gray-900">Ежедневно: 11:00 — 19:00</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-1">Телефон</p>
+                        <a href="tel:+79952938949" class="font-bold text-gray-900 hover:text-yellow-500 transition">+7 (995) 293-89-49</a>
+                    </div>
+                </div>
+                
+                <!-- Интерактивная карта -->
+                <div class="w-full md:w-2/3 h-80 rounded-xl overflow-hidden shadow-md bg-gray-200">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5504fda7d600ba48b085d13c8cb946da85f7b5b923cbf8bea0b7be0ac0275c7b&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -225,7 +326,7 @@
         </div>
     </footer>
 
-    <!-- ПЛАВАЮЩАЯ КНОПКА ЗАЯВКИ (Плюс анимация пульсации) -->
+    <!-- ПЛАВАЮЩАЯ КНОПКА ЗАЯВКИ -->
     <button id="floatingLeadButton" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-4 md:px-6 rounded-full shadow-[0_10px_25px_-5px_rgba(0,0,0,0.3)] z-40 flex items-center gap-2 transition transform hover:scale-105 border-2 border-white animate-bounce">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.496-3.909-7.474-6.945l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -246,7 +347,7 @@
                     <input type="text" id="clientName" required placeholder="Ваше имя" class="w-full bg-gray-50 border border-gray-200 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition">
                 </div>
                 <div>
-                    <input type="tel" id="clientPhone" required placeholder="Ваш номер телефона" class="w-full bg-gray-50 border border-gray-200 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition">
+                    <input type="tel" id="clientPhone" required placeholder="Телефон: +7 (___) ___-__-__" class="w-full bg-gray-50 border border-gray-200 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition">
                 </div>
                 <div>
                     <input type="text" id="clientProblem" placeholder="Что сломалось? (необязательно)" class="w-full bg-gray-50 border border-gray-200 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition">
@@ -274,37 +375,50 @@
             });
         }
 
-        // --- 2. НАСТРОЙКИ TELEGRAM ---
-        const BOT_TOKEN = '8842490593:AAFTgLXVlby0sv_JF2-sDVrmuHLOZHqKuTI'; 
-        const CHAT_ID = 'ТВОЙ_CHAT_ID'; // <--- ВПИШИ СЮДА СВОИ ЦИФРЫ ИЗ @userinfobot
+        // --- 2. МАСКА ДЛЯ ТЕЛЕФОНА ---
+        const phoneInput = document.getElementById('clientPhone');
+        
+        phoneInput.addEventListener('input', function (e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            
+            if (!x[2] && x[1] !== '') {
+                e.target.value = x[1] === '7' || x[1] === '8' ? '+7 ' : '+7 (' + x[1];
+            } else {
+                e.target.value = !x[2] ? '' : '+7 (' + x[2] + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+            }
+        });
 
-        // --- 3. УПРАВЛЕНИЕ МОДАЛЬНЫМ ОКНОМ ---
+        // --- 3. НАСТРОЙКИ TELEGRAM ---
+        const BOT_TOKEN = '8842490593:AAFTgLXVlby0sv_JF2-sDVrmuHLOZHqKuTI'; 
+        const CHAT_IDS = ['5114609971', '8822193866']; 
+
+        // --- 4. УПРАВЛЕНИЕ МОДАЛЬНЫМ ОКНОМ ---
         const modal = document.getElementById('modal');
-        const btnOpen = document.getElementById('leadButton'); // Кнопка внизу сайта
-        const floatingBtn = document.getElementById('floatingLeadButton'); // Плавающая кнопка
+        const btnOpen = document.getElementById('leadButton');
+        const floatingBtn = document.getElementById('floatingLeadButton');
         const btnClose = document.getElementById('closeModal');
         const leadForm = document.getElementById('leadForm');
         const formStatus = document.getElementById('formStatus');
 
-        // Функция открытия модалки
         const openModal = () => {
             modal.classList.remove('hidden');
-            formStatus.classList.add('hidden'); // Прячем статус прошлой отправки
+            formStatus.classList.add('hidden');
+            
+            setTimeout(() => {
+                document.getElementById('clientName').focus();
+            }, 100);
         };
         
-        // Вешаем открытие на ОБЕ кнопки
         if(btnOpen) btnOpen.addEventListener('click', openModal);
         if(floatingBtn) floatingBtn.addEventListener('click', openModal);
         
-        // Закрытие на крестик
         if(btnClose) btnClose.addEventListener('click', () => modal.classList.add('hidden'));
         
-        // Закрытие по клику на темный фон вокруг окна
         window.addEventListener('click', (e) => {
             if (e.target === modal) modal.classList.add('hidden');
         });
 
-        // --- 4. ОТПРАВКА ЗАЯВКИ ---
+        // --- 5. ОТПРАВКА ЗАЯВКИ НА ДВА ID ---
         if(leadForm) {
             leadForm.addEventListener('submit', function(e) {
                 e.preventDefault(); 
@@ -313,30 +427,40 @@
                 const phone = document.getElementById('clientPhone').value;
                 const problem = document.getElementById('clientProblem').value || 'Не указано';
 
+                if (phone.replace(/\D/g, '').length < 11) {
+                    formStatus.textContent = 'Пожалуйста, введите корректный номер телефона.';
+                    formStatus.classList.remove('hidden', 'text-green-600');
+                    formStatus.classList.add('text-red-500');
+                    return;
+                }
+
                 const text = `🔥 Новая заявка с сайта Yellow Сервис!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🛠 Поломка: ${problem}`;
 
-                const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
-                const params = {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ chat_id: CHAT_ID, text: text })
-                };
-
-                // Визуальная блокировка кнопки, чтобы клиент не нажал 2 раза
                 const submitBtn = leadForm.querySelector('button[type="submit"]');
                 const originalBtnText = submitBtn.textContent;
                 submitBtn.textContent = 'Отправка...';
                 submitBtn.disabled = true;
+                
+                formStatus.classList.add('hidden');
 
-                fetch(url, params)
-                    .then(response => {
-                        if (response.ok) {
+                const requests = CHAT_IDS.map(chatId => {
+                    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+                    return fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ chat_id: chatId, text: text })
+                    });
+                });
+
+                Promise.all(requests)
+                    .then(responses => {
+                        const success = responses.some(res => res.ok);
+                        if (success) {
                             formStatus.textContent = 'Заявка отправлена! Мы скоро перезвоним.';
                             formStatus.classList.remove('hidden', 'text-red-500');
                             formStatus.classList.add('text-green-600');
                             leadForm.reset(); 
                             
-                            // Закрываем окно через 3 секунды
                             setTimeout(() => {
                                 modal.classList.add('hidden');
                             }, 3000);
@@ -350,7 +474,6 @@
                         formStatus.classList.add('text-red-500');
                     })
                     .finally(() => {
-                        // Возвращаем кнопку в исходное состояние
                         submitBtn.textContent = originalBtnText;
                         submitBtn.disabled = false;
                     });
