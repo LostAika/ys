@@ -11,6 +11,9 @@
     <meta property="og:description" content="Восстанавливаем смартфоны Apple, Samsung, Xiaomi и ноутбуки. Профессиональное оборудование и честные цены.">
     <meta property="og:type" content="website">
 
+    <!-- ПОДТВЕРЖДЕНИЕ ПРАВ В ЯНДЕКС ВЕБМАСТЕРЕ -->
+    <meta name="yandex-verification" content="f2f8ee7b109cb9a4" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- УЛЬТРА-ЯРКИЙ НЕОНОВЫЙ ЖЕЛТЫЙ -->
@@ -29,10 +32,25 @@
             }
         }
     </script>
+
+    <!-- КОД ЯНДЕКС МЕТРИКИ -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111251316', 'ym');
+
+        ym(111251316, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111251316" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body class="bg-[#0f0f0f] font-sans text-gray-300">
 
-    <!-- ШАПКА САЙТА (ТЕМНАЯ) -->
+    <!-- ШАПКА САЙТА -->
     <header class="bg-[#141414] py-4 sticky top-0 z-40 border-b border-gray-800 shadow-md">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
             
@@ -629,7 +647,7 @@
         if (btnClose) btnClose.addEventListener('click', () => modal.classList.add('hidden'));
         window.addEventListener('click', (e) => { if (e.target === modal) modal.classList.add('hidden'); });
 
-        // --- ФУНКЦИЯ ОТПРАВКИ ---
+        // --- ФУНКЦИЯ ОТПРАВКИ С ИНТЕГРАЦИЕЙ МЕТРИКИ ---
         function sendToGoogle(payload, formElement, statusElement, buttonElement, originalBtnText) {
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
@@ -637,6 +655,11 @@
                 headers: { 'Content-Type': 'text/plain;charset=utf-8' },
                 body: JSON.stringify(payload)
             }).catch(error => console.error("Ошибка сети:", error));
+
+            // Сообщаем Яндекс Метрике о выполнении цели "lead"
+            if (typeof ym !== 'undefined') {
+                ym(111251316, 'reachGoal', 'lead');
+            }
 
             setTimeout(() => {
                 statusElement.textContent = 'Заявка отправлена! Ожидайте звонка.';
