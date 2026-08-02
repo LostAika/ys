@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru" class="scroll-smooth">
 <head>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23facc15%22/><text x=%2250%%22 y=%2257%%22 font-size=%2260%22 font-weight=%22900%22 font-family=%22Arial, sans-serif%22 fill=%22%23111827%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>Y</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23facc15%22/><text x=%2250%%22 y=%2257%%22 font-size=%2260%22 font-weight=%22900%22 font-family=%22Arial, sans-serif%22 fill=%22%23111827%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>Y</text></svg>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт телефонов и ноутбуков в Туле | Yellow Сервис</title>
+    
+    <!-- SEO и Open Graph теги -->
+    <meta name="description" content="Срочный ремонт телефонов и ноутбуков в Туле. Бесплатная диагностика, замена дисплеев, аккумуляторов и гидрогелевая защита.">
+    <meta property="og:title" content="Ремонт телефонов и ноутбуков в Туле | Yellow Сервис">
+    <meta property="og:description" content="Восстанавливаем смартфоны Apple, Samsung, Xiaomi и ноутбуки. Профессиональное оборудование и честные цены.">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
@@ -20,7 +27,6 @@
             
             <!-- Контакты справа -->
             <div class="text-right flex flex-col md:flex-row items-end md:items-center gap-1.5 md:gap-6">
-                
                 <!-- Кнопка адреса -->
                 <a href="#map-section" class="flex items-center gap-1 text-[10px] md:text-sm text-gray-600 hover:text-gray-900 transition bg-gray-100 px-2 py-1 md:px-3 md:py-1.5 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3 h-3 md:w-4 md:h-4">
@@ -31,9 +37,19 @@
                     <span class="hidden md:block">Хомяковская ул., 6</span>
                 </a>
                 
-                <div>
-                    <p class="text-[9px] md:text-xs text-gray-500 uppercase tracking-wider font-semibold text-right">Ежедневно 11:00-19:00</p>
+                <div class="flex flex-col items-end">
+                    <p class="text-[9px] md:text-xs text-gray-500 uppercase tracking-wider font-semibold text-right mb-0.5">Ежедневно 11:00-19:00</p>
                     <a href="tel:+79952938949" class="font-bold text-sm md:text-lg hover:text-yellow-500 transition block text-right">+7 (995) 293-89-49</a>
+                    
+                    <!-- Ссылки на мессенджеры в шапке -->
+                    <div class="flex items-center gap-2.5 mt-1">
+                        <a href="https://t.me/+79952938949" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform flex items-center justify-center" title="Написать в Telegram">
+                            <img src="telega.png" alt="Telegram" class="w-5 h-5 md:w-6 md:h-6 object-contain">
+                        </a>
+                        <a href="https://max.ru/+79952938949" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform flex items-center justify-center" title="Написать в MAX">
+                            <img src="max.webp" alt="MAX" class="w-5 h-5 md:w-6 md:h-6 object-contain rounded-md">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,29 +93,29 @@
             <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">Наш сервис</h2>
             
             <div class="relative group">
-                <button id="scrollLeftBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg border border-gray-100 hover:bg-yellow-400 text-gray-800 rounded-full w-12 h-12 flex items-center justify-center transition -ml-4 opacity-90 hover:opacity-100 hidden md:flex">
+                <button type="button" aria-label="Прокрутить влево" id="scrollLeftBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg border border-gray-100 hover:bg-yellow-400 text-gray-800 rounded-full w-12 h-12 flex items-center justify-center transition -ml-4 opacity-90 hover:opacity-100 hidden md:flex">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
                 </button>
 
                 <div id="galleryWrapper" class="flex overflow-x-auto gap-5 pb-6 px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
                     <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-md overflow-hidden snap-center bg-gray-200">
-                        <img src="https://avatars.mds.yandex.net/get-altay/20781708/2a0000019f6f90f8fa9a9223542539864df4/XXXL" alt="Ремонт смартфона" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <img src="https://avatars.mds.yandex.net/get-altay/20781708/2a0000019f6f90f8fa9a9223542539864df4/XXXL" alt="Ремонт смартфона" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
                     <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-md overflow-hidden snap-center bg-gray-200">
-                        <img src="https://avatars.mds.yandex.net/get-altay/20420873/2a0000019f6f90df40be0b4709eb4a7a5334/XXXL" alt="Профессиональное оборудование" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <img src="https://avatars.mds.yandex.net/get-altay/20420873/2a0000019f6f90df40be0b4709eb4a7a5334/XXXL" alt="Профессиональное оборудование" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
                     <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-md overflow-hidden snap-center bg-gray-200">
-                        <img src="https://avatars.mds.yandex.net/get-altay/19785895/2a0000019f6f90f40e5e6588142cbb428363/XXXL" alt="Ремонт ноутбука" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <img src="https://avatars.mds.yandex.net/get-altay/19785895/2a0000019f6f90f40e5e6588142cbb428363/XXXL" alt="Ремонт ноутбука" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
                     <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-md overflow-hidden snap-center bg-gray-200">
-                        <img src="https://avatars.mds.yandex.net/get-altay/20336841/2a0000019f6f90e26d4003773119bc57af95/XXXL" alt="Ремонт ноутбука" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <img src="https://avatars.mds.yandex.net/get-altay/20336841/2a0000019f6f90e26d4003773119bc57af95/XXXL" alt="Ремонт ноутбука" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
                     <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-md overflow-hidden snap-center bg-gray-200">
-                        <img src="https://avatars.mds.yandex.net/get-altay/19840634/2a0000019f6f90ef52017b703412568383a5/XXXL" alt="Ремонт ноутбука" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        <img src="https://avatars.mds.yandex.net/get-altay/19840634/2a0000019f6f90ef52017b703412568383a5/XXXL" alt="Ремонт ноутбука" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
                 </div>
 
-                <button id="scrollRightBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg border border-gray-100 hover:bg-yellow-400 text-gray-800 rounded-full w-12 h-12 flex items-center justify-center transition -mr-4 opacity-90 hover:opacity-100 hidden md:flex">
+                <button type="button" aria-label="Прокрутить вправо" id="scrollRightBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg border border-gray-100 hover:bg-yellow-400 text-gray-800 rounded-full w-12 h-12 flex items-center justify-center transition -mr-4 opacity-90 hover:opacity-100 hidden md:flex">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
                 </button>
             </div>
@@ -307,7 +323,7 @@
         <div class="max-w-2xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Не нашли свою поломку в прайсе?</h2>
             <p class="text-lg text-gray-800 mb-8">Опишите проблему, и мастер сориентирует вас по точной стоимости и срокам ремонта.</p>
-            <button id="leadButton" class="bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">Получить консультацию</button>
+            <button type="button" id="leadButton" class="bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">Получить консультацию</button>
         </div>
     </section>
 
@@ -328,14 +344,24 @@
                         <p class="font-bold text-gray-900">Ежедневно: 11:00 — 19:00</p>
                     </div>
                     <div>
-                        <p class="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-1">Телефон</p>
-                        <a href="tel:+79952938949" class="font-bold text-gray-900 hover:text-yellow-500 transition">+7 (995) 293-89-49</a>
+                        <p class="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-1">Телефон и Мессенджеры</p>
+                        <a href="tel:+79952938949" class="font-bold text-gray-900 hover:text-yellow-500 transition block mb-3">+7 (995) 293-89-49</a>
+                        
+                        <!-- Ссылки на мессенджеры в блоке контактов -->
+                        <div class="flex gap-4">
+                            <a href="https://t.me/+79952938949" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform flex items-center justify-center" title="Написать в Telegram">
+                                <img src="5968804.png" alt="Telegram" class="w-10 h-10 md:w-12 md:h-12 object-contain shadow-sm rounded-full bg-white">
+                            </a>
+                            <a href="https://max.ru/+79952938949" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform flex items-center justify-center" title="Написать в MAX">
+                                <img src="Логотип_MAX.svg.webp" alt="MAX" class="w-10 h-10 md:w-12 md:h-12 object-contain shadow-sm rounded-[10px] bg-white">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Интерактивная карта -->
                 <div class="w-full md:w-2/3 h-80 rounded-xl overflow-hidden shadow-md bg-gray-200">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5504fda7d600ba48b085d13c8cb946da85f7b5b923cbf8bea0b7be0ac0275c7b&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5504fda7d600ba48b085d13c8cb946da85f7b5b923cbf8bea0b7be0ac0275c7b&amp;source=constructor" width="100%" height="100%" frameborder="0" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -355,7 +381,7 @@
     </footer>
 
     <!-- ПЛАВАЮЩАЯ КНОПКА ЗАЯВКИ -->
-    <button id="floatingLeadButton" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-4 md:px-6 rounded-full shadow-[0_10px_25px_-5px_rgba(0,0,0,0.3)] z-40 flex items-center gap-2 transition transform hover:scale-105 border-2 border-white animate-bounce">
+    <button type="button" aria-label="Оставить заявку" id="floatingLeadButton" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-4 md:px-6 rounded-full shadow-[0_10px_25px_-5px_rgba(0,0,0,0.3)] z-40 flex items-center gap-2 transition transform hover:scale-105 border-2 border-white animate-bounce">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.496-3.909-7.474-6.945l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
         </svg>
@@ -365,7 +391,7 @@
     <!-- ВСПЛЫВАЮЩЕЕ ОКНО (МОДАЛКА) -->
     <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden flex items-center justify-center z-50 transition-opacity backdrop-blur-sm">
         <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md relative mx-4">
-            <button id="closeModal" class="absolute top-4 right-5 text-gray-400 hover:text-gray-800 text-3xl font-bold leading-none">&times;</button>
+            <button type="button" aria-label="Закрыть" id="closeModal" class="absolute top-4 right-5 text-gray-400 hover:text-gray-800 text-3xl font-bold leading-none">&times;</button>
             
             <h3 class="text-2xl font-bold mb-2 text-gray-900">Свяжитесь с мастером</h3>
             <p class="text-gray-500 mb-6 text-sm">Оставьте номер, и мы перезвоним в течение 5 минут.</p>
@@ -394,7 +420,7 @@
         const scrollLeftBtn = document.getElementById('scrollLeftBtn');
         const scrollRightBtn = document.getElementById('scrollRightBtn');
 
-        if(scrollLeftBtn && scrollRightBtn && galleryWrapper) {
+        if (scrollLeftBtn && scrollRightBtn && galleryWrapper) {
             scrollLeftBtn.addEventListener('click', () => {
                 galleryWrapper.scrollBy({ left: -340, behavior: 'smooth' });
             });
@@ -406,15 +432,17 @@
         // --- 2. МАСКА ДЛЯ ТЕЛЕФОНА ---
         const phoneInput = document.getElementById('clientPhone');
         
-        phoneInput.addEventListener('input', function (e) {
-            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
-            
-            if (!x[2] && x[1] !== '') {
-                e.target.value = x[1] === '7' || x[1] === '8' ? '+7 ' : '+7 (' + x[1];
-            } else {
-                e.target.value = !x[2] ? '' : '+7 (' + x[2] + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
-            }
-        });
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function (e) {
+                let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+                
+                if (!x[2] && x[1] !== '') {
+                    e.target.value = x[1] === '7' || x[1] === '8' ? '+7 ' : '+7 (' + x[1];
+                } else {
+                    e.target.value = !x[2] ? '' : '+7 (' + x[2] + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+                }
+            });
+        }
 
         // --- 3. НАСТРОЙКИ TELEGRAM ---
         const BOT_TOKEN = '8842490593:AAFpIpgvbiJ_rpXIAO_Fz-JLsKQdBKgPiMI'; 
@@ -429,25 +457,26 @@
         const formStatus = document.getElementById('formStatus');
 
         const openModal = () => {
+            if (!modal) return;
             modal.classList.remove('hidden');
             formStatus.classList.add('hidden');
             
             setTimeout(() => {
-                document.getElementById('clientName').focus();
+                const nameInput = document.getElementById('clientName');
+                if (nameInput) nameInput.focus();
             }, 100);
         };
         
-        if(btnOpen) btnOpen.addEventListener('click', openModal);
-        if(floatingBtn) floatingBtn.addEventListener('click', openModal);
-        
-        if(btnClose) btnClose.addEventListener('click', () => modal.classList.add('hidden'));
+        if (btnOpen) btnOpen.addEventListener('click', openModal);
+        if (floatingBtn) floatingBtn.addEventListener('click', openModal);
+        if (btnClose) btnClose.addEventListener('click', () => modal.classList.add('hidden'));
         
         window.addEventListener('click', (e) => {
             if (e.target === modal) modal.classList.add('hidden');
         });
 
         // --- 5. ОТПРАВКА ЗАЯВКИ НА ДВА ID ---
-        if(leadForm) {
+        if (leadForm) {
             leadForm.addEventListener('submit', function(e) {
                 e.preventDefault(); 
                 
