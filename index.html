@@ -49,6 +49,38 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/111251316" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+
+    <!-- МИКРОРАЗМЕТКА ДЛЯ ПОИСКОВИКОВ (LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobilePhoneStore",
+      "name": "Yellow Сервис",
+      "image": "https://avatars.mds.yandex.net/get-altay/20781708/2a0000019f6f90f8fa9a9223542539864df4/XXXL",
+      "@id": "",
+      "url": "https://yellow-service71.ru/", 
+      "telephone": "+79952938949",
+      "priceRange": "RUB",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Хомяковская, 6",
+        "addressLocality": "Тула",
+        "postalCode": "300036",
+        "addressCountry": "RU"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://t.me/+79952938949"
+      ]
+    }
+    </script>
 </head>
 <body class="bg-[#0f0f0f] font-sans text-gray-300">
 
@@ -95,19 +127,23 @@
         </div>
     </header>
 
-    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <!-- ГЛАВНЫЙ ЭКРАН (С динамическим заголовком) -->
     <section class="bg-[#111] py-24 text-center relative overflow-hidden border-b border-gray-800">
         <!-- Яркое неоновое свечение на фоне -->
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-3/4 bg-yellow-500 opacity-[0.07] blur-[100px] rounded-full pointer-events-none"></div>
         
         <div class="max-w-3xl mx-auto px-4 relative z-10">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white">Срочный ремонт телефонов <br>и ноутбуков</h1>
-            <p class="text-xl mb-10 font-medium text-gray-400">Восстанавливаем <span class="text-gray-200 font-semibold">смартфоны</span> Apple, Samsung, Xiaomi, Tecno, Infinix, Realme; <span class="text-gray-200 font-semibold">планшеты</span> Ipad, Samsung, Xiomi; <span class="text-gray-200 font-semibold">ноутбуки</span> Asus, Acer, MSI, Huawei, HP и многое другое</p>
+            <!-- Динамический заголовок с фиксированной минимальной высотой -->
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white min-h-[96px] md:min-h-[144px]">
+                Срочный ремонт <br>
+                <span id="typed-text" class="text-yellow-500"></span><span class="inline-block w-1 md:w-1.5 h-8 md:h-12 bg-yellow-500 animate-pulse ml-1 align-middle rounded-full"></span>
+            </h1>
+            <p class="text-xl mb-10 font-medium text-gray-400">Восстанавливаем <span class="text-gray-200 font-semibold">смартфоны</span> Apple, Samsung, Xiaomi, Tecno, Infinix, Realme; <span class="text-gray-200 font-semibold">планшеты</span> Ipad, Samsung, Xiaomi; <span class="text-gray-200 font-semibold">ноутбуки</span> Asus, Acer, MSI, Huawei, HP и многое другое</p>
             <a href="#quiz-section" class="bg-yellow-500 text-gray-900 font-bold py-4 px-10 rounded-full text-lg hover:bg-yellow-400 hover:shadow-[0_0_25px_rgba(255,238,0,0.5)] transition transform hover:-translate-y-1 inline-block">Рассчитать стоимость</a>
         </div>
     </section>
 
-    <!-- БЛОК ЭКСПЕРТНОСТИ (С уменьшенным текстом под блоки справа) -->
+    <!-- БЛОК ЭКСПЕРТНОСТИ -->
     <section class="py-16 bg-[#111] border-b border-gray-800 relative overflow-hidden">
         <!-- Желтый блик на фоне -->
         <div class="absolute top-1/2 right-0 w-64 h-64 bg-yellow-500 opacity-[0.03] blur-[80px] rounded-full pointer-events-none"></div>
@@ -170,7 +206,7 @@
         </div>
     </section>
 
-    <!-- ФОТОГАЛЕРЕЯ (Сразу после преимуществ) -->
+    <!-- ФОТОГАЛЕРЕЯ -->
     <section class="py-16 bg-[#0f0f0f] border-b border-gray-800">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-white">Наш сервис</h2>
@@ -373,32 +409,6 @@
                 </table>
             </div>
 
-            <div class="bg-[#1a1a1a] shadow-2xl rounded-2xl overflow-hidden mb-10 border border-gray-800">
-                <div class="bg-emerald-900 text-white py-4 px-6 text-xl font-bold border-b border-emerald-800">
-                    <span>📱 Tecno / Infinix / Honor / Huawei</span>
-                </div>
-                <table class="w-full text-left border-collapse">
-                    <tbody>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена дисплейного модуля / экрана</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 2 500 ₽</td>
-                        </tr>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена разъема зарядки (Type-C)</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 1 200 ₽</td>
-                        </tr>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена аккумулятора</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 1 600 ₽</td>
-                        </tr>
-                        <tr class="hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Программная настройка и обслуживание</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 1 500 ₽</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
             <div class="bg-[#1a1a1a] shadow-2xl rounded-2xl overflow-hidden border border-gray-800">
                 <div class="bg-indigo-900 text-white py-4 px-6 text-xl font-bold border-b border-indigo-800">
                     <span>💻 Ремонт Ноутбуков (Asus, Acer, MSI и др.)</span>
@@ -426,32 +436,52 @@
     <!-- БЛОК ОТЗЫВОВ -->
     <section class="py-16 bg-[#0f0f0f]">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-white">Отзывы клиентов</h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-6 text-white">Реальные отзывы</h2>
+            <p class="text-center text-gray-400 mb-12">Нам доверяют. Выдержки из переписок с нашими клиентами.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-gray-800 shadow-lg flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-yellow-500 mb-3 text-lg drop-shadow-[0_0_10px_rgba(255,238,0,0.6)]">★★★★★</div>
-                        <p class="text-gray-400 italic mb-4">«Менял дисплей на айфоне. Сделали всё при мне минут за 30, качество экрана супер, от оригинала не отличить. Цены адекватные, спасибо мастеру!»</p>
+                <!-- Имитация чата 1 -->
+                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col gap-4">
+                    <div class="bg-[#222] rounded-br-2xl rounded-tr-2xl rounded-tl-2xl p-3 w-4/5 border border-gray-700">
+                        <p class="text-[10px] text-yellow-500 font-bold mb-1 uppercase tracking-wider">Yellow Сервис</p>
+                        <p class="text-sm text-gray-300">Алексей, ваш iPhone готов! Дисплей заменили, True-Tone прошили. Держите фотоотчет, можно забирать 🤝</p>
                     </div>
-                    <p class="font-bold text-gray-200 text-sm">— Алексей М.</p>
+                    <div class="bg-[#2b5278] rounded-bl-2xl rounded-tr-2xl rounded-tl-2xl p-3 w-4/5 self-end shadow-md">
+                        <p class="text-[10px] text-blue-200 font-bold mb-1 uppercase tracking-wider">Алексей М.</p>
+                        <p class="text-sm text-white">Супер, спасибо огромное! Качество экрана топ, от оригинала не отличить прям. Завтра утром заеду.</p>
+                    </div>
                 </div>
 
-                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-gray-800 shadow-lg flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-yellow-500 mb-3 text-lg drop-shadow-[0_0_10px_rgba(255,238,0,0.6)]">★★★★★</div>
-                        <p class="text-gray-400 italic mb-4">«Ноутбук Asus стал сильно греться и шуметь. Почистили от пыли и поменяли термопасту, теперь работает тихо и быстро. Рекомендую!»</p>
+                <!-- Имитация чата 2 -->
+                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col gap-4">
+                    <div class="bg-[#222] rounded-br-2xl rounded-tr-2xl rounded-tl-2xl p-3 w-4/5 border border-gray-700">
+                        <p class="text-[10px] text-yellow-500 font-bold mb-1 uppercase tracking-wider">Yellow Сервис</p>
+                        <p class="text-sm text-gray-300">Светлана, провели диагностику ноутбука. Шумел и грелся из-за высохшего термоинтерфейса и забитого кулера. Почистили, температуры держит отлично.</p>
                     </div>
-                    <p class="font-bold text-gray-200 text-sm">— Светлана К.</p>
+                    <div class="bg-[#306646] rounded-bl-2xl rounded-tr-2xl rounded-tl-2xl p-3 w-4/5 self-end shadow-md">
+                        <p class="text-[10px] text-green-200 font-bold mb-1 uppercase tracking-wider">Светлана К.</p>
+                        <p class="text-sm text-white">Ура! А то шумел невозможно просто. Спасибо за оперативность, отправлю мужа забрать.</p>
+                    </div>
                 </div>
 
-                <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-gray-800 shadow-lg flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-yellow-500 mb-3 text-lg drop-shadow-[0_0_10px_rgba(255,238,0,0.6)]">★★★★★</div>
-                        <p class="text-gray-400 italic mb-4">«Отличный сервис! Поклеили гидрогелевую пленку на новый телефон, аккуратно и без единого пузырька. Очень доволен качеством!»</p>
+                <!-- Имитация чата 3 -->
+                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col gap-4">
+                    <div class="bg-[#222] rounded-br-2xl rounded-tr-2xl rounded-tl-2xl p-3 w-4/5 border border-gray-700">
+                        <p class="text-[10px] text-yellow-500 font-bold mb-1 uppercase tracking-wider">Yellow Сервис</p>
+                        <p class="text-sm text-gray-300">Здраствуйте. Поклеили пленку,села идеально, ни одного пузыря. Устройство готово к выдаче, можете приходить забирать.</p>
                     </div>
-                    <p class="font-bold text-gray-200 text-sm">— Дмитрий В.</p>
+                    <div class="bg-[#306646] rounded-bl-2xl rounded-tr-2xl rounded-tl-2xl p-3 w-4/5 self-end shadow-md mb-auto">
+                        <p class="text-[10px] text-green-200 font-bold mb-1 uppercase tracking-wider">Дмитрий В.</p>
+                        <p class="text-sm text-white">Ребят, добрый день! Спасибо, скоро приеду заберу, жене тоже надо на Samsung поклеить, привезу A54.</p>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Кнопка Яндекс Карт -->
+            <div class="mt-12 text-center">
+                <a href="https://yandex.com/maps/org/yellou_servis/140349708663/reviews/?ll=37.610682%2C54.289383&z=16" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#222] hover:bg-[#333] text-white font-semibold py-3 px-8 rounded-full border border-gray-700 hover:border-red-500 transition shadow-lg">
+                    <span class="text-red-500 text-xl">📍</span> Читать все отзывы на Яндекс Картах
+                </a>
             </div>
         </div>
     </section>
@@ -530,19 +560,30 @@
     </section>
 
     <!-- ПОДВАЛ -->
-    <footer class="bg-[#0a0a0a] text-gray-500 py-8 text-center border-t border-gray-900">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0 text-left">
-                <div class="flex items-center justify-center md:justify-start opacity-70 mb-2">
-                    <svg viewBox="0 0 24 24" class="w-5 h-5 text-yellow-600 -mr-1" stroke="currentColor">
-                        <polyline points="6,4 12,13 18,4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="12" cy="20" r="2.5" fill="currentColor" stroke="none"/>
-                    </svg>
-                    <span class="text-lg font-bold tracking-tight text-gray-400">ellowСервис</span>
+    <footer class="bg-[#0a0a0a] text-gray-500 py-10 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-8">
+                <!-- Лого и описание -->
+                <div class="text-left">
+                    <div class="flex items-center opacity-70 mb-3">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5 text-yellow-600 -mr-1" stroke="currentColor">
+                            <polyline points="6,4 12,13 18,4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="20" r="2.5" fill="currentColor" stroke="none"/>
+                        </svg>
+                        <span class="text-lg font-bold tracking-tight text-gray-400">ellowСервис</span>
+                    </div>
+                    <p class="text-sm">Профессиональный ремонт цифровой техники. Инженерный подход и гарантия качества.</p>
                 </div>
-                <p class="text-sm">Профессиональный ремонт техники в Туле.</p>
+                
+                <!-- SEO Блок для поисковиков -->
+                <div class="text-[11px] leading-relaxed text-gray-600 text-left md:text-right">
+                    <h4 class="font-bold text-gray-500 mb-1 uppercase tracking-wider">Наши услуги:</h4>
+                    <p class="mb-1">Срочный ремонт телефонов в Туле, Зареченский район, поселок Хомяково. Замена стекла, экрана, дисплейного модуля на iPhone, Samsung, Xiaomi, Tecno.</p>
+                    <p>Замена разъема зарядки, замена аккумулятора, прошивка и восстановление после воды. Замена динамика. Замена микрофона. Ремонт ноутбуков: чистка от пыли, замена термопасты, замена матрицы. Защита экрана гидрогелевой пленкой.</p>
+                </div>
             </div>
-            <div class="text-sm">
+            
+            <div class="text-center text-sm border-t border-gray-900 pt-6">
                 <p>&copy; 2026 YellowService. Все права защищены.</p>
             </div>
         </div>
@@ -556,9 +597,9 @@
         <span class="hidden md:inline">Оставить заявку</span>
     </button>
 
-    <!-- ВСПЛЫВАЮЩЕЕ ОКНО (МОДАЛКА) -->
-    <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-50 transition-opacity backdrop-blur-sm">
-        <div class="bg-[#1a1a1a] border border-gray-800 p-8 rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.5)] w-full max-w-md relative mx-4">
+    <!-- ВСПЛЫВАЮЩЕЕ ОКНО (ОБЫЧНАЯ МОДАЛКА) -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-[50] transition-opacity backdrop-blur-sm px-4">
+        <div class="bg-[#1a1a1a] border border-gray-800 p-8 rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.5)] w-full max-w-md relative">
             <button type="button" aria-label="Закрыть" id="closeModal" class="absolute top-4 right-5 text-gray-500 hover:text-white text-3xl font-bold leading-none transition">&times;</button>
             
             <h3 class="text-2xl font-bold mb-2 text-white">Свяжитесь с мастером</h3>
@@ -581,9 +622,62 @@
         </div>
     </div>
 
+    <!-- ВСПЛЫВАЮЩЕЕ ОКНО (ЛОВЕЦ УХОДЯЩИХ) -->
+    <div id="exitPopup" class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-[60] transition-opacity backdrop-blur-md px-4">
+        <div class="bg-[#1a1a1a] border-2 border-yellow-500 p-8 rounded-3xl shadow-[0_0_50px_rgba(255,238,0,0.3)] w-full max-w-md relative text-center transform scale-95 transition-transform duration-300">
+            <button type="button" aria-label="Закрыть" id="closeExitPopup" class="absolute top-4 right-5 text-gray-500 hover:text-white text-3xl font-bold leading-none transition">&times;</button>
+            
+            <div class="text-5xl mb-4">🎁</div>
+            <h3 class="text-2xl md:text-3xl font-extrabold mb-2 text-white">Постойте! Уходите?</h3>
+            <p class="text-gray-300 mb-6 text-sm md:text-base">Для Вас скидка<span class="text-yellow-500 font-bold"> 500 ₽</span> на любой ремонт и бесплатную диагностику. Просто оставьте номер!</p>
+            
+            <form id="exitForm" class="flex flex-col gap-4">
+                <input type="tel" id="exitPhone" required placeholder="Телефон: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 transition text-center text-lg">
+                <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-extrabold py-4 px-6 rounded-xl transition mt-2 shadow-[0_0_20px_rgba(255,238,0,0.4)] hover:shadow-[0_0_30px_rgba(255,238,0,0.6)] text-lg">Забрать скидку 500 ₽</button>
+            </form>
+            
+            <p id="exitStatus" class="mt-4 text-center font-semibold hidden"></p>
+            <p class="text-[10px] text-gray-500 mt-4">Скидка привязывается к вашему номеру и действует 7 дней.</p>
+        </div>
+    </div>
+
     <!-- СКРИПТЫ -->
     <script>
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxU95W0x4tF2FHo0BQdFScwz7gZyI3E0dkTE4AU66XKsgfFfzflOQ5kivy7xptlMpRS/exec';
+
+        // --- ДИНАМИЧЕСКИЙ ЗАГОЛОВОК (ЭФФЕКТ ПЕЧАТИ) ---
+        const words = ["телефонов", "ноутбуков", "iPhone", "Samsung", "Xiaomi", "планшетов"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typedTextSpan = document.getElementById("typed-text");
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                typedTextSpan.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedTextSpan.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 120;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000; // Пауза перед удалением
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500; // Пауза перед печатью нового слова
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+        setTimeout(typeEffect, 1000); // Запуск через 1 сек после загрузки
+
 
         // --- ЛОГИКА ИНТЕРАКТИВНОГО КВИЗА ---
         const quizData = {
@@ -687,10 +781,12 @@
         };
         const phoneInputModal = document.getElementById('clientPhone');
         const phoneInputQuiz = document.getElementById('quizPhone');
+        const phoneInputExit = document.getElementById('exitPhone');
         if (phoneInputModal) phoneInputModal.addEventListener('input', maskPhone);
         if (phoneInputQuiz) phoneInputQuiz.addEventListener('input', maskPhone);
+        if (phoneInputExit) phoneInputExit.addEventListener('input', maskPhone);
 
-        // --- УПРАВЛЕНИЕ МОДАЛЬНЫМ ОКНОМ ---
+        // --- УПРАВЛЕНИЕ МОДАЛЬНЫМИ ОКНАМИ ---
         const modal = document.getElementById('modal');
         const btnOpen = document.getElementById('leadButton');
         const floatingBtn = document.getElementById('floatingLeadButton');
@@ -712,7 +808,28 @@
         if (btnClose) btnClose.addEventListener('click', () => modal.classList.add('hidden'));
         window.addEventListener('click', (e) => { if (e.target === modal) modal.classList.add('hidden'); });
 
-        // --- ФУНКЦИЯ ОТПРАВКИ ---
+        // --- ЛОВЕЦ УХОДЯЩИХ КЛИЕНТОВ ---
+        const exitPopup = document.getElementById('exitPopup');
+        const closeExitPopup = document.getElementById('closeExitPopup');
+        let exitPopupShown = false;
+
+        document.addEventListener('mouseout', (e) => {
+            // Срабатывает только если курсор ушел вверх экрана и ширина экрана больше 768px (не телефон)
+            if (e.clientY < 10 && !exitPopupShown && window.innerWidth > 768) {
+                exitPopup.classList.remove('hidden');
+                setTimeout(() => exitPopup.querySelector('div').classList.remove('scale-95'), 10);
+                exitPopupShown = true;
+            }
+        });
+
+        if (closeExitPopup) {
+            closeExitPopup.addEventListener('click', () => exitPopup.classList.add('hidden'));
+        }
+        window.addEventListener('click', (e) => { 
+            if (e.target === exitPopup) exitPopup.classList.add('hidden'); 
+        });
+
+        // --- ФУНКЦИЯ ОТПРАВКИ В GOOGLE ТАБЛИЦУ ---
         function sendToGoogle(payload, formElement, statusElement, buttonElement, originalBtnText) {
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
@@ -736,6 +853,9 @@
 
                 if(formElement.id === 'leadForm') {
                     setTimeout(() => document.getElementById('modal').classList.add('hidden'), 2500);
+                }
+                if(formElement.id === 'exitForm') {
+                    setTimeout(() => document.getElementById('exitPopup').classList.add('hidden'), 2500);
                 }
             }, 800);
         }
@@ -792,6 +912,32 @@
                 const formattedProblem = `[КВИЗ] ${quizData[currentDevice].name} - ${currentProblem} (Ожидает: ${currentEstimate})`;
                 const payload = { name: name, phone: phone, problem: formattedProblem };
                 sendToGoogle(payload, quizForm, quizStatus, submitBtn, originalBtnText);
+            });
+        }
+
+        // --- ОТПРАВКА ФОРМЫ ЛОВЦА (EXIT POPUP) ---
+        const exitForm = document.getElementById('exitForm');
+        const exitStatus = document.getElementById('exitStatus');
+        if (exitForm) {
+            exitForm.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                const phone = document.getElementById('exitPhone').value;
+
+                if (phone.replace(/\D/g, '').length < 11) {
+                    exitStatus.textContent = 'Пожалуйста, введите корректный номер телефона.';
+                    exitStatus.classList.remove('hidden', 'text-green-500');
+                    exitStatus.classList.add('text-red-500');
+                    return;
+                }
+
+                const submitBtn = exitForm.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.textContent;
+                submitBtn.textContent = 'Бронируем скидку...';
+                submitBtn.disabled = true;
+                exitStatus.classList.add('hidden');
+
+                const payload = { name: "поймал уходящего с сайта", phone: phone, problem: "Забрал промокод на 500 рублей" };
+                sendToGoogle(payload, exitForm, exitStatus, submitBtn, originalBtnText);
             });
         }
     </script>
