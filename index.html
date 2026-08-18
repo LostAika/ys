@@ -82,7 +82,7 @@
     }
     </script>
 </head>
-<body class="bg-[#0f0f0f] font-sans text-gray-300">
+<body class="bg-[#0f0f0f] font-sans text-gray-300 selection:bg-yellow-500 selection:text-gray-900">
 
     <!-- ШАПКА САЙТА -->
     <header class="bg-[#141414] py-4 sticky top-0 z-40 border-b border-gray-800 shadow-md">
@@ -143,102 +143,29 @@
         </div>
     </section>
 
-    <!-- БЛОК ЭКСПЕРТНОСТИ -->
-    <section class="py-16 bg-[#111] border-b border-gray-800 relative overflow-hidden">
-        <!-- Желтый блик на фоне -->
-        <div class="absolute top-1/2 right-0 w-64 h-64 bg-yellow-500 opacity-[0.03] blur-[80px] rounded-full pointer-events-none"></div>
+    <!-- БЛОК КУРЬЕР -->
+    <section class="py-12 bg-gradient-to-r from-[#111] to-[#1a1a1a] border-y border-gray-800 relative overflow-hidden">
+        <!-- Декор свечение -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-yellow-500 opacity-5 blur-[100px] pointer-events-none"></div>
         
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-start gap-10 relative z-10">
-            <div class="w-full md:w-1/2">
-                <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-white leading-tight">Мы не просто меняем экраны</h2>
-                <div class="space-y-3 text-gray-400 text-base">
-                    <p>В <span class="text-yellow-500 font-bold">Yellow Сервис</span> мы практикуем настоящий инженерный подход. Мы не предлагаем слепо менять материнскую плату целиком при малейшей неисправности.</p>
-                    <p>Мы умеем читать <span class="text-gray-200 font-semibold">panic логи</span>, проводим сложный <span class="text-gray-200 font-semibold">компонентный ремонт</span> и профессионально <span class="text-gray-200 font-semibold">владеем микропайкой</span>. Если телефон не загружается, висит на "яблоке" или не подает признаков жизни — мы найдем истинную причину: от сгоревшего контроллера питания до поврежденной цепи на плате.</p>
-                    <p><span class="text-gray-200 font-semibold">Точная диагностика</span> — залог честной цены и успешного ремонта. Приносите устройство, даже если в других сервисах вам сказали, что оно неремонтопригодно.</p>
+        <div class="max-w-6xl mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="md:w-2/3">
+                <div class="flex items-center gap-3 mb-4">
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-white">Нет времени ехать к нам?</h2>
                 </div>
-            </div>
-            
-            <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
-                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full">
-                    <div class="text-3xl mb-3 text-yellow-500">🔬</div>
-                    <h4 class="font-bold text-gray-200 mb-1">Микропайка</h4>
-                    <p class="text-sm text-gray-500">Восстановление контактных дорожек и реболл BGA-чипов.</p>
-                </div>
-                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full">
-                    <div class="text-3xl mb-3 text-yellow-500">📊</div>
-                    <h4 class="font-bold text-gray-200 mb-1">Чтение логов</h4>
-                    <p class="text-sm text-gray-500">Расшифровка паник-логов и программных сбоев.</p>
-                </div>
-                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full">
-                    <div class="text-3xl mb-3 text-yellow-500">🔌</div>
-                    <h4 class="font-bold text-gray-200 mb-1">Ремонт цепей питания</h4>
-                    <p class="text-sm text-gray-500">Замена контроллеров заряда и аудиокодеков.</p>
-                </div>
-                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full">
-                    <div class="text-3xl mb-3 text-yellow-500">💾</div>
-                    <h4 class="font-bold text-gray-200 mb-1">Прошивка</h4>
-                    <p class="text-sm text-gray-500">Восстановление ПО и системных данных.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ПРЕИМУЩЕСТВА -->
-    <section class="py-16 bg-[#0f0f0f]">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 bg-[#1a1a1a] rounded-2xl border border-gray-800 shadow-lg">
-                    <div class="text-5xl mb-4">🔍</div>
-                    <h3 class="text-xl font-bold mb-2 text-white">Бесплатная диагностика</h3>
-                    <p class="text-gray-400">Не берем деньги за осмотр, даже если вы откажетесь от ремонта.</p>
-                </div>
-                <div class="p-6 bg-[#1a1a1a] rounded-2xl border border-gray-800 shadow-lg">
-                    <div class="text-5xl mb-4">🛡️</div>
-                    <h3 class="text-xl font-bold mb-2 text-white">Гидрогелевая защита</h3>
-                    <p class="text-gray-400">Идеальная броня для экрана вашего смартфона с точным вырезом.</p>
-                </div>
-                <div class="p-6 bg-[#1a1a1a] rounded-2xl border border-gray-800 shadow-lg">
-                    <div class="text-5xl mb-4">💻</div>
-                    <h3 class="text-xl font-bold mb-2 text-white">Настройка и ПО</h3>
-                    <p class="text-gray-400">Установка программного обеспечения, обновление и оптимизация работы устройств.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ФОТОГАЛЕРЕЯ -->
-    <section class="py-16 bg-[#0f0f0f] border-b border-gray-800">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-white">Наш сервис</h2>
-            
-            <div class="relative group">
-                <button type="button" aria-label="Прокрутить влево" id="scrollLeftBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#222] border border-gray-700 hover:bg-yellow-500 hover:border-yellow-500 hover:text-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center transition -ml-4 opacity-90 hover:opacity-100 hidden md:flex shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
-                </button>
-
-                <div id="galleryWrapper" class="flex overflow-x-auto gap-5 pb-6 px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
-                    <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-lg overflow-hidden snap-center border border-gray-800 bg-[#1a1a1a]">
-                        <img src="https://avatars.mds.yandex.net/get-altay/20781708/2a0000019f6f90f8fa9a9223542539864df4/XXXL" alt="Ремонт смартфона" loading="lazy" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-lg overflow-hidden snap-center border border-gray-800 bg-[#1a1a1a]">
-                        <img src="https://avatars.mds.yandex.net/get-altay/20420873/2a0000019f6f90df40be0b4709eb4a7a5334/XXXL" alt="Профессиональное оборудование" loading="lazy" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-lg overflow-hidden snap-center border border-gray-800 bg-[#1a1a1a]">
-                        <img src="https://avatars.mds.yandex.net/get-altay/19785895/2a0000019f6f90f40e5e6588142cbb428363/XXXL" alt="Ремонт ноутбука" loading="lazy" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-lg overflow-hidden snap-center border border-gray-800 bg-[#1a1a1a]">
-                        <img src="https://avatars.mds.yandex.net/get-altay/20336841/2a0000019f6f90e26d4003773119bc57af95/XXXL" alt="Ремонт ноутбука" loading="lazy" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-lg overflow-hidden snap-center border border-gray-800 bg-[#1a1a1a]">
-                        <img src="https://avatars.mds.yandex.net/get-altay/19840634/2a0000019f6f90ef52017b703412568383a5/XXXL" alt="Ремонт ноутбука" loading="lazy" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
-                    </div>
-                </div>
-
-                <button type="button" aria-label="Прокрутить вправо" id="scrollRightBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#222] border border-gray-700 hover:bg-yellow-500 hover:border-yellow-500 hover:text-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center transition -mr-4 opacity-90 hover:opacity-100 hidden md:flex shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                <p class="text-gray-400 text-lg mb-6 leading-relaxed">Оформите <span class="text-yellow-500 font-semibold">бесплатную доставку курьером</span>. Мы бережно заберем ваше устройство из любой точки Тулы, отремонтируем и привезем обратно. Вам даже не придется выходить из дома или офиса!</p>
+                
+                <button type="button" id="courierButton" class="bg-[#222] border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-gray-900 font-bold py-3.5 px-8 rounded-xl transition shadow-[0_0_15px_rgba(255,238,0,0.15)] hover:shadow-[0_0_25px_rgba(255,238,0,0.4)] flex items-center gap-2 w-full sm:w-auto justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                    </svg>
+                    Вызвать курьера
                 </button>
             </div>
-            <p class="text-center text-gray-500 mt-4 text-sm">Используем профессиональное оборудование для компонентного ремонта.</p>
+            <div class="md:w-1/3 hidden md:flex justify-end pr-8">
+                <!-- Эмодзи с тенью для эффекта -->
+                <div class="text-8xl drop-shadow-[0_0_30px_rgba(255,238,0,0.3)] animate-bounce" style="animation-duration: 3s;">🛵</div>
+            </div>
         </div>
     </section>
 
@@ -297,6 +224,10 @@
                         <input type="text" id="quizName" required placeholder="Ваше имя" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none transition">
                         <input type="tel" id="quizPhone" required placeholder="Телефон: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none transition">
                         <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-4 px-6 rounded-lg transition mt-2 shadow-[0_0_20px_rgba(255,238,0,0.3)] hover:shadow-[0_0_25px_rgba(255,238,0,0.5)]">Жду звонка мастера</button>
+                        
+                        <!-- 152-ФЗ СОГЛАСИЕ (КВИЗ) -->
+                        <p class="text-[10px] text-gray-500 mt-2 text-center leading-tight">Нажимая кнопку, вы соглашаетесь на обработку персональных данных и с <a href="#" class="underline hover:text-yellow-500 transition policy-link">политикой конфиденциальности</a>.</p>
+                        
                         <p id="quizStatus" class="text-center font-semibold text-sm hidden mt-2"></p>
                     </form>
                 </div>
@@ -486,6 +417,100 @@
         </div>
     </section>
 
+    <!-- ФОТОГАЛЕРЕЯ -->
+    <section class="py-16 bg-[#0f0f0f] border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-white">Наш сервис</h2>
+            
+            <div class="relative group">
+                <button type="button" aria-label="Прокрутить влево" id="scrollLeftBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#222] border border-gray-700 hover:bg-yellow-500 hover:border-yellow-500 hover:text-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center transition -ml-4 opacity-90 hover:opacity-100 hidden md:flex shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                </button>
+
+                <div id="galleryWrapper" class="flex overflow-x-auto gap-5 pb-6 px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
+                    <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-lg overflow-hidden snap-center border border-gray-800 bg-[#1a1a1a]">
+                        <img src="https://avatars.mds.yandex.net/get-altay/20781708/2a0000019f6f90f8fa9a9223542539864df4/XXXL" alt="Ремонт смартфона" loading="lazy" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-lg overflow-hidden snap-center border border-gray-800 bg-[#1a1a1a]">
+                        <img src="https://avatars.mds.yandex.net/get-altay/20420873/2a0000019f6f90df40be0b4709eb4a7a5334/XXXL" alt="Профессиональное оборудование" loading="lazy" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-lg overflow-hidden snap-center border border-gray-800 bg-[#1a1a1a]">
+                        <img src="https://avatars.mds.yandex.net/get-altay/19785895/2a0000019f6f90f40e5e6588142cbb428363/XXXL" alt="Ремонт ноутбука" loading="lazy" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-lg overflow-hidden snap-center border border-gray-800 bg-[#1a1a1a]">
+                        <img src="https://avatars.mds.yandex.net/get-altay/20336841/2a0000019f6f90e26d4003773119bc57af95/XXXL" alt="Ремонт ноутбука" loading="lazy" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="flex-none w-72 h-48 md:w-80 md:h-56 rounded-xl shadow-lg overflow-hidden snap-center border border-gray-800 bg-[#1a1a1a]">
+                        <img src="https://avatars.mds.yandex.net/get-altay/19840634/2a0000019f6f90ef52017b703412568383a5/XXXL" alt="Ремонт ноутбука" loading="lazy" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+
+                <button type="button" aria-label="Прокрутить вправо" id="scrollRightBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#222] border border-gray-700 hover:bg-yellow-500 hover:border-yellow-500 hover:text-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center transition -mr-4 opacity-90 hover:opacity-100 hidden md:flex shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                </button>
+            </div>
+            <p class="text-center text-gray-500 mt-4 text-sm">Используем профессиональное оборудование для компонентного ремонта.</p>
+        </div>
+    </section>
+
+    <!-- ЭКСПЕРТНОСТЬ И ПРЕИМУЩЕСТВА (Для сложных ремонтов) -->
+    <section class="py-16 bg-[#111] border-b border-gray-800 relative overflow-hidden">
+        <!-- Желтый блик на фоне -->
+        <div class="absolute top-1/2 right-0 w-64 h-64 bg-yellow-500 opacity-[0.03] blur-[80px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-start gap-10 relative z-10">
+            <div class="w-full md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-white leading-tight">Почему выбирают нас?</h2>
+                <div class="space-y-3 text-gray-400 text-base mb-8">
+                    <p>Часто к нам приносят технику после других сервисов со словами <span class="text-gray-200 italic">«сказали, проще купить новый»</span>.</p>
+                    <p>В <span class="text-yellow-500 font-bold">Yellow Сервис</span> мы не предлагаем слепо менять плату за бешеные деньги. Мы читаем <span class="text-gray-200 font-semibold">panic логи</span>, владеем микропайкой и ищем саму причину: сгоревший контроллер, поврежденная цепь или короткое замыкание.</p>
+                    <p><span class="text-gray-200 font-semibold">Точная диагностика</span> — залог того, что вы не переплатите.</p>
+                </div>
+                
+                <!-- Базовые плюсы -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-start gap-3">
+                        <div class="text-xl">🔍</div>
+                        <div>
+                            <h4 class="font-bold text-gray-200">Бесплатная диагностика</h4>
+                            <p class="text-sm text-gray-500">Не берем деньги за осмотр, даже если откажетесь от ремонта.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="text-xl">🛡️</div>
+                        <div>
+                            <h4 class="font-bold text-gray-200">Гарантия на работу</h4>
+                            <p class="text-sm text-gray-500">Отвечаем рублем за каждую установленную запчасть.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full">
+                    <div class="text-3xl mb-3 text-yellow-500">🔬</div>
+                    <h4 class="font-bold text-gray-200 mb-1">Микропайка</h4>
+                    <p class="text-sm text-gray-500">Восстановление контактных дорожек и реболл BGA-чипов.</p>
+                </div>
+                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full">
+                    <div class="text-3xl mb-3 text-yellow-500">📊</div>
+                    <h4 class="font-bold text-gray-200 mb-1">Чтение логов</h4>
+                    <p class="text-sm text-gray-500">Расшифровка паник-логов и программных сбоев.</p>
+                </div>
+                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full">
+                    <div class="text-3xl mb-3 text-yellow-500">🔌</div>
+                    <h4 class="font-bold text-gray-200 mb-1">Ремонт цепей питания</h4>
+                    <p class="text-sm text-gray-500">Замена контроллеров заряда и аудиокодеков.</p>
+                </div>
+                <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full">
+                    <div class="text-3xl mb-3 text-yellow-500">💾</div>
+                    <h4 class="font-bold text-gray-200 mb-1">Прошивка</h4>
+                    <p class="text-sm text-gray-500">Восстанавливаем ПО.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- БЛОК FAQ -->
     <section class="py-16 bg-[#0f0f0f]">
         <div class="max-w-4xl mx-auto px-4">
@@ -616,6 +641,9 @@
                     <input type="text" id="clientProblem" placeholder="Что сломалось? (необязательно)" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition">
                 </div>
                 <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-4 px-6 rounded-lg transition mt-2 shadow-[0_0_20px_rgba(255,238,0,0.3)] hover:shadow-[0_0_25px_rgba(255,238,0,0.5)]">Отправить заявку</button>
+                
+                <!-- 152-ФЗ СОГЛАСИЕ (ОСНОВНАЯ ФОРМА) -->
+                <p class="text-[10px] text-gray-500 mt-2 text-center leading-tight">Нажимая кнопку, вы соглашаетесь на обработку персональных данных и с <a href="#" class="underline hover:text-yellow-500 transition policy-link">политикой конфиденциальности</a>.</p>
             </form>
             
             <p id="formStatus" class="mt-4 text-center font-semibold hidden"></p>
@@ -634,10 +662,39 @@
             <form id="exitForm" class="flex flex-col gap-4">
                 <input type="tel" id="exitPhone" required placeholder="Телефон: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 transition text-center text-lg">
                 <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-extrabold py-4 px-6 rounded-xl transition mt-2 shadow-[0_0_20px_rgba(255,238,0,0.4)] hover:shadow-[0_0_30px_rgba(255,238,0,0.6)] text-lg">Забрать скидку 500 ₽</button>
+                
+                <!-- 152-ФЗ СОГЛАСИЕ (ЛОВЕЦ) -->
+                <p class="text-[10px] text-gray-500 mt-1 text-center leading-tight">Нажимая кнопку, вы соглашаетесь с <a href="#" class="underline hover:text-yellow-500 transition policy-link">политикой конфиденциальности</a>.</p>
             </form>
             
             <p id="exitStatus" class="mt-4 text-center font-semibold hidden"></p>
             <p class="text-[10px] text-gray-500 mt-4">Скидка привязывается к вашему номеру и действует 7 дней.</p>
+        </div>
+    </div>
+
+    <!-- ВСПЛЫВАЮЩЕЕ ОКНО (ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ) -->
+    <div id="policyModal" class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-[70] transition-opacity backdrop-blur-sm px-4">
+        <div class="bg-[#1a1a1a] border border-gray-800 p-6 md:p-8 rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.5)] w-full max-w-2xl relative max-h-[80vh] overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-gray-700 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <button type="button" aria-label="Закрыть политику" id="closePolicyModal" class="absolute top-4 right-5 text-gray-500 hover:text-white text-3xl font-bold leading-none transition sticky float-right">&times;</button>
+            
+            <h3 class="text-2xl font-bold mb-6 text-white pr-8">Политика конфиденциальности</h3>
+            
+            <div class="space-y-4 text-gray-400 text-sm leading-relaxed">
+                <p><strong>1. Общие положения</strong><br>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые сервисом «Yellow Сервис» (далее – Оператор).</p>
+                
+                <p><strong>2. Основные понятия</strong><br>Персональные данные — любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта.</p>
+                
+                <p><strong>3. Оператор может обрабатывать следующие персональные данные Пользователя:</strong><br>
+                • Имя;<br>
+                • Номер телефона;<br>
+                • Сведения о поломке устройства.</p>
+                
+                <p><strong>4. Цели обработки персональных данных</strong><br>Цель обработки персональных данных Пользователя — информирование Пользователя посредством телефонных звонков; уточнение деталей ремонта; предоставление консультаций.</p>
+                
+                <p><strong>5. Порядок сбора, хранения, передачи и других видов обработки</strong><br>Безопасность персональных данных обеспечивается путем реализации правовых, организационных и технических мер. Оператор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ неуполномоченных лиц. Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства.</p>
+                
+                <p><strong>6. Заключительные положения</strong><br>Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору по контактному телефону. Данный документ актуален бессрочно до замены его новой версией.</p>
+            </div>
         </div>
     </div>
 
@@ -792,8 +849,20 @@
         const floatingBtn = document.getElementById('floatingLeadButton');
         const btnClose = document.getElementById('closeModal');
         const formStatus = document.getElementById('formStatus');
+        
+        // Кнопка вызова курьера
+        const courierBtn = document.getElementById('courierButton');
+        
+        // Политика конфиденциальности
+        const policyModal = document.getElementById('policyModal');
+        const closePolicyModal = document.getElementById('closePolicyModal');
+        const policyLinks = document.querySelectorAll('.policy-link');
 
-        const openModal = () => {
+        let leadSource = 'Основная форма';
+
+        // Открытие форм
+        const openModal = (source = 'Основная форма') => {
+            leadSource = source;
             if (!modal) return;
             modal.classList.remove('hidden');
             formStatus.classList.add('hidden');
@@ -803,10 +872,28 @@
             }, 100);
         };
         
-        if (btnOpen) btnOpen.addEventListener('click', openModal);
-        if (floatingBtn) floatingBtn.addEventListener('click', openModal);
+        if (btnOpen) btnOpen.addEventListener('click', () => openModal('Кнопка в подвале'));
+        if (floatingBtn) floatingBtn.addEventListener('click', () => openModal('Плавающая кнопка'));
+        
+        if (courierBtn) {
+            courierBtn.addEventListener('click', () => {
+                openModal('КНОПКА КУРЬЕРА');
+            });
+        }
+        
         if (btnClose) btnClose.addEventListener('click', () => modal.classList.add('hidden'));
-        window.addEventListener('click', (e) => { if (e.target === modal) modal.classList.add('hidden'); });
+        
+        // Открытие политики
+        policyLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                policyModal.classList.remove('hidden');
+            });
+        });
+        
+        if (closePolicyModal) {
+            closePolicyModal.addEventListener('click', () => policyModal.classList.add('hidden'));
+        }
 
         // --- ЛОВЕЦ УХОДЯЩИХ КЛИЕНТОВ ---
         const exitPopup = document.getElementById('exitPopup');
@@ -814,7 +901,6 @@
         let exitPopupShown = false;
 
         document.addEventListener('mouseout', (e) => {
-            // Срабатывает только если курсор ушел вверх экрана и ширина экрана больше 768px (не телефон)
             if (e.clientY < 10 && !exitPopupShown && window.innerWidth > 768) {
                 exitPopup.classList.remove('hidden');
                 setTimeout(() => exitPopup.querySelector('div').classList.remove('scale-95'), 10);
@@ -825,8 +911,12 @@
         if (closeExitPopup) {
             closeExitPopup.addEventListener('click', () => exitPopup.classList.add('hidden'));
         }
+        
+        // Закрытие всех модалок по клику на фон
         window.addEventListener('click', (e) => { 
-            if (e.target === exitPopup) exitPopup.classList.add('hidden'); 
+            if (e.target === modal) modal.classList.add('hidden'); 
+            if (e.target === exitPopup) exitPopup.classList.add('hidden');
+            if (e.target === policyModal) policyModal.classList.add('hidden');
         });
 
         // --- ФУНКЦИЯ ОТПРАВКИ В GOOGLE ТАБЛИЦУ ---
@@ -867,13 +957,18 @@
                 e.preventDefault(); 
                 const name = document.getElementById('clientName').value;
                 const phone = document.getElementById('clientPhone').value;
-                const problem = document.getElementById('clientProblem').value || 'Не указано';
+                let problem = document.getElementById('clientProblem').value || 'Не указано';
 
                 if (phone.replace(/\D/g, '').length < 11) {
                     formStatus.textContent = 'Пожалуйста, введите корректный номер телефона.';
                     formStatus.classList.remove('hidden', 'text-green-500');
                     formStatus.classList.add('text-red-500');
                     return;
+                }
+
+                // Гарантированно добавляем тег КУРЬЕР, если форма была открыта этой кнопкой
+                if (leadSource === 'КНОПКА КУРЬЕРА') {
+                    problem = '[КУРЬЕР] ' + problem;
                 }
 
                 const submitBtn = leadForm.querySelector('button[type="submit"]');
@@ -940,6 +1035,95 @@
                 sendToGoogle(payload, exitForm, exitStatus, submitBtn, originalBtnText);
             });
         }
+        
+        // --- ТЕНЕВОЕ СОХРАНЕНИЕ (ЧЕРНОВИКИ) УЛУЧШЕННОЕ + ИСПРАВЛЕНИЕ ДУБЛЕЙ ---
+        function sendDraftLead(phoneInputId, nameInputId, getProblemText) {
+            const phoneInput = document.getElementById(phoneInputId);
+            if (!phoneInput) return;
+
+            const form = phoneInput.closest('form');
+
+            // 1. Ловим момент нажатия на кнопку "Отправить"
+            if (form && !form.dataset.draftListenerAdded) {
+                form.addEventListener('submit', function() {
+                    form.dataset.isRealSubmit = 'true'; // Ставим метку, что пошла реальная отправка
+                });
+                form.dataset.draftListenerAdded = 'true';
+            }
+
+            // 2. Сбрасываем метку, если клиент снова кликнул в поле телефона
+            phoneInput.addEventListener('focus', function() {
+                if (form) form.dataset.isRealSubmit = 'false';
+            });
+
+            // Флаг защиты от спама одинаковыми черновиками
+            phoneInput.dataset.draftSent = 'false';
+
+            phoneInput.addEventListener('blur', function() {
+                const phone = this.value;
+                
+                // Делаем задержку в 500 мс, чтобы дождаться нажатия кнопки "Отправить"
+                setTimeout(() => {
+                    // ЕСЛИ КНОПКУ НАЖАЛИ — ОТМЕНЯЕМ ЧЕРНОВИК!
+                    if (form && form.dataset.isRealSubmit === 'true') {
+                        return; 
+                    }
+
+                    // Проверяем: номер должен быть введен полностью (не менее 11 цифр)
+                    if (phone.replace(/\D/g, '').length >= 11 && phoneInput.dataset.draftSent === 'false') {
+                        
+                        const nameInput = nameInputId ? document.getElementById(nameInputId) : null;
+                        const name = nameInput && nameInput.value ? nameInput.value : 'Не указал имя';
+                        
+                        // Собираем текст комментария
+                        const problemText = getProblemText();
+                        
+                        const payload = { 
+                            name: name, 
+                            phone: phone, 
+                            problem: problemText 
+                        };
+
+                        // Отправляем данные тихо
+                        fetch(GOOGLE_SCRIPT_URL, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                            body: JSON.stringify(payload)
+                        }).catch(e => console.log("Draft send error"));
+
+                        // Помечаем, что черновик отправлен
+                        phoneInput.dataset.draftSent = 'true';
+                    }
+                }, 500); // 500 мс — идеальное время ожидания
+            });
+        }
+
+        // 1. Инициализация для основной формы (собираем текст из поля ввода)
+        sendDraftLead('clientPhone', 'clientName', () => {
+            const problemInput = document.getElementById('clientProblem');
+            const userProblem = problemInput && problemInput.value ? problemInput.value : 'Не указано';
+            
+            // Если черновик уходит с формы, открытой через курьера, приклеиваем метку
+            if (leadSource === 'КНОПКА КУРЬЕРА') {
+                return `[ЧЕРНОВИК] [КУРЬЕР] Форма: ${userProblem} (не нажал кнопку отправки)`;
+            }
+            return `[ЧЕРНОВИК] Основная форма: ${userProblem} (не нажал кнопку отправки)`;
+        });
+
+        // 2. Инициализация для Квиза (собираем выбранные кнопки)
+        sendDraftLead('quizPhone', 'quizName', () => {
+            const deviceName = currentDevice && quizData[currentDevice] ? quizData[currentDevice].name : 'Устройство не выбрано';
+            const problemName = currentProblem || 'Поломка не выбрана';
+            const estimate = currentEstimate || '-';
+            return `[ЧЕРНОВИК] Квиз: ${deviceName} - ${problemName} (Цена: ${estimate}) (не нажал кнопку отправки)`;
+        });
+
+        // 3. Инициализация для попапа на выходе (фиксированный текст)
+        sendDraftLead('exitPhone', null, () => {
+            return `[ЧЕРНОВИК] Ловец уходящих: хотел забрать скидку 500₽ (не нажал кнопку отправки)`;
+        });
+
     </script>
 </body>
 </html>
