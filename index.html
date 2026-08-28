@@ -17,11 +17,10 @@
     <!-- google search console -->
     <meta name="google-site-verification" content="YHmCDhAkdKR0aL0Uv_eB06ygDLo1z_6uhlmukgvxxm8" />
 
-    <!-- tailwind & FONT AWESOME ICONS (Надежный CDN, не блокируется в РФ) -->
+    <!-- tailwind грузим СИНХРОННО, чтобы не было моргания (FOUC) и работал конфиг -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- tailwind theme config -->
+    <!-- Ваша кастомная палитра -->
     <script>
         tailwind.config = {
             theme: {
@@ -37,6 +36,10 @@
             }
         }
     </script>
+
+    <!-- FONT AWESOME грузим асинхронно, чтобы при блокировке серверов в РФ сайт не зависал на белом экране -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
     <!-- yandex metrika counter -->
     <script type="text/javascript">
@@ -166,14 +169,12 @@
                 <span id="typed-text" class="text-yellow-500"></span><span class="inline-block w-1 md:w-1.5 h-8 md:h-12 bg-yellow-500 animate-pulse ml-1 align-middle rounded-full"></span>
             </h1>
             
-            <!-- Триггеры конверсии -->
             <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-gray-300 text-sm md:text-base font-medium mb-10">
                 <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-xl text-yellow-500"></i> Бесплатная диагностика</div>
                 <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-xl text-yellow-500"></i> Ремонт от 20 минут</div>
                 <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-xl text-yellow-500"></i> Гарантия до 1 года</div>
             </div>
 
-            <!-- Блок кнопок -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#quiz-section" class="w-full sm:w-auto bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-xl text-lg hover:bg-yellow-400 hover:shadow-[0_0_25px_rgba(255,238,0,0.5)] transition transform hover:-translate-y-1">Рассчитать стоимость</a>
                 <a href="https://t.me/+79952938949" target="_blank" class="w-full sm:w-auto bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-4 px-8 rounded-xl text-lg transition flex items-center justify-center gap-3">
@@ -307,7 +308,7 @@
                                         <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 600 ₽</span>
                                     </div>
                                 </div>
-                                <button onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Уточнить наличие на мою модель</button>
+                                <button type="button" onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Уточнить наличие на мою модель</button>
                             </div>
                         </div>
                     </div>
@@ -361,7 +362,7 @@
                                         <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 2 000 ₽</span>
                                     </div>
                                 </div>
-                                <button onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-yellow-500 font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать стоимость для моего iPhone</button>
+                                <button type="button" onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-yellow-500 font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать стоимость для моего iPhone</button>
                             </div>
                         </div>
                     </div>
@@ -411,7 +412,7 @@
                                         <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 500 ₽</span>
                                     </div>
                                 </div>
-                                <button onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать стоимость для моего Android</button>
+                                <button type="button" onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать стоимость для моего Android</button>
                             </div>
                         </div>
                     </div>
@@ -453,7 +454,7 @@
                                         <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 2 000 ₽</span>
                                     </div>
                                 </div>
-                                <button onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать ремонт моего планшета</button>
+                                <button type="button" onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать ремонт моего планшета</button>
                             </div>
                         </div>
                     </div>
@@ -491,7 +492,7 @@
                                         <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 800 ₽</span>
                                     </div>
                                 </div>
-                                <button onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать ремонт моего ноутбука</button>
+                                <button type="button" onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать ремонт моего ноутбука</button>
                             </div>
                         </div>
                     </div>
@@ -653,7 +654,7 @@
             
             <div class="space-y-4">
                 <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-gray-700 transition overflow-hidden">
-                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
+                    <button type="button" class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
                         <h3 class="text-xl font-bold text-gray-200 pr-4">Сохранятся ли мои данные при ремонте?</h3>
                         <i class="fa-solid fa-chevron-down text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0"></i>
                     </button>
@@ -665,7 +666,7 @@
                 </div>
                 
                 <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-gray-700 transition overflow-hidden">
-                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
+                    <button type="button" class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
                         <h3 class="text-xl font-bold text-gray-200 pr-4">Сколько времени занимает ремонт?</h3>
                         <i class="fa-solid fa-chevron-down text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0"></i>
                     </button>
@@ -677,7 +678,7 @@
                 </div>
                 
                 <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-gray-700 transition overflow-hidden">
-                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
+                    <button type="button" class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
                         <h3 class="text-xl font-bold text-gray-200 pr-4">Какую гарантию вы даете?</h3>
                         <i class="fa-solid fa-chevron-down text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0"></i>
                     </button>
@@ -855,7 +856,7 @@
         </div>
     </div>
 
-    <!-- scripts -->
+    <!-- ВЕСЬ JS ВЫПОЛНЯЕТСЯ СРАЗУ (без DOMContentLoaded, чтобы ничего не зависало) -->
     <script>
         // scroll logic
         const backToTop = document.getElementById('backToTop');
@@ -1004,7 +1005,7 @@
             "МегаФон": ["мегафон", "megafon"],
             "Highscreen": ["highscreen", "хайскрин"],
             
-            // ОБЩИЕ ЗАПРОСЫ (Строго в конце словаря)
+            // ОБЩИЕ ЗАПРОСЫ
             "телефонов": ["телефон", "смартфон", "сотовый"],
             "ноутбуков": ["laptop", "ноутбук", "нетбук"],
             "планшетов": ["tablet", "планшет"],
@@ -1303,20 +1304,24 @@
             if (e.target === policyModal) policyModal.classList.add('hidden');
         });
 
-        // form submits
-        function sendToGoogle(payload, formElement, statusElement, buttonElement, originalBtnText) {
-            fetch(GOOGLE_SCRIPT_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-                body: JSON.stringify(payload)
-            }).catch(error => console.error("Ошибка сети:", error));
+        // form submits with AbortController for blocked requests
+        async function sendToGoogle(payload, formElement, statusElement, buttonElement, originalBtnText) {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 6000); // 6 секунд таймаут
 
-            if (typeof ym !== 'undefined') {
-                ym(111251316, 'reachGoal', 'lead');
-            }
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify(payload),
+                    signal: controller.signal
+                });
 
-            setTimeout(() => {
+                if (typeof ym !== 'undefined') {
+                    ym(111251316, 'reachGoal', 'lead');
+                }
+
                 statusElement.textContent = 'Заявка отправлена! Ожидайте звонка.';
                 statusElement.classList.remove('hidden', 'text-red-500');
                 statusElement.classList.add('text-green-500');
@@ -1331,7 +1336,15 @@
                 if(formElement.id === 'exitForm') {
                     setTimeout(() => document.getElementById('exitPopup').classList.add('hidden'), 2500);
                 }
-            }, 800);
+            } catch (error) {
+                statusElement.textContent = 'Сбой отправки. Пожалуйста, просто позвоните нам по номеру на сайте.';
+                statusElement.classList.remove('hidden', 'text-green-500');
+                statusElement.classList.add('text-red-500');
+                buttonElement.textContent = originalBtnText;
+                buttonElement.disabled = false;
+            } finally {
+                clearTimeout(timeoutId);
+            }
         }
 
         const leadForm = document.getElementById('leadForm');
