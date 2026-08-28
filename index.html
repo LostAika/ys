@@ -17,8 +17,9 @@
     <!-- google search console -->
     <meta name="google-site-verification" content="YHmCDhAkdKR0aL0Uv_eB06ygDLo1z_6uhlmukgvxxm8" />
 
-    <!-- tailwind -->
-    <script src="tailwind.js"></script>
+    <!-- tailwind & icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     
     <!-- tailwind theme config -->
     <script>
@@ -57,6 +58,7 @@
       "@type": "MobilePhoneStore",
       "name": "Yellow Сервис",
       "image": "https://avatars.mds.yandex.net/get-altay/20781708/2a0000019f6f90f8fa9a9223542539864df4/XXXL",
+      "@id": "",
       "url": "https://yellow-service71.ru/", 
       "telephone": "+79952938949",
       "priceRange": "RUB",
@@ -88,7 +90,7 @@
     <div id="mobileMenu" class="fixed top-0 left-0 w-[280px] h-full bg-[#111] border-r border-gray-800 z-[90] transform -translate-x-[400px] transition-transform duration-300 flex flex-col shadow-[20px_0_50px_rgba(0,0,0,0.5)]">
         <div class="p-6 border-b border-gray-800 flex justify-between items-center bg-[#0a0a0a]">
             <span class="text-xl font-extrabold text-white flex items-center gap-2 tracking-tight">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-yellow-500"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                <i data-lucide="cpu" class="w-6 h-6 text-yellow-500"></i>
                 Меню
             </span>
             <button type="button" id="closeMenuBtn" class="text-gray-500 hover:text-yellow-500 text-3xl font-light leading-none transition">&times;</button>
@@ -114,6 +116,7 @@
     <!-- header -->
     <header id="mainHeader" class="bg-[#141414] py-4 sticky top-0 z-40 border-b border-gray-800 shadow-md transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            
              <div class="flex items-center gap-1.5 md:gap-0">
                 <button type="button" id="mobileMenuBtn" class="md:hidden text-yellow-500 hover:text-yellow-400 transition flex items-center justify-center pr-2 -ml-1" aria-label="Открыть меню">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-7 h-7">
@@ -133,7 +136,7 @@
             
             <div class="text-right flex flex-col md:flex-row items-end md:items-center gap-1.5 md:gap-6">
                 <a href="#map-section" class="flex items-center gap-1 text-[10px] md:text-sm text-gray-400 hover:text-white transition bg-gray-800 px-2 py-1 md:px-3 md:py-1.5 rounded-full border border-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 md:w-4 md:h-4"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <i data-lucide="map-pin" class="w-3 h-3 md:w-4 md:h-4"></i>
                     <span class="block md:hidden">Хомяковская, 6</span>
                     <span class="hidden md:block">Хомяковская ул., 6</span>
                 </a>
@@ -167,16 +170,16 @@
             
             <!-- Триггеры конверсии -->
             <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-gray-300 text-sm md:text-base font-medium mb-10">
-                <div class="flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-yellow-500"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg> Бесплатная диагностика</div>
-                <div class="flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-yellow-500"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg> Ремонт от 20 минут</div>
-                <div class="flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-yellow-500"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg> Гарантия до 1 года</div>
+                <div class="flex items-center justify-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i> Бесплатная диагностика</div>
+                <div class="flex items-center justify-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i> Ремонт от 20 минут</div>
+                <div class="flex items-center justify-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i> Гарантия до 1 года</div>
             </div>
 
             <!-- Блок кнопок -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#quiz-section" class="w-full sm:w-auto bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-xl text-lg hover:bg-yellow-400 hover:shadow-[0_0_25px_rgba(255,238,0,0.5)] transition transform hover:-translate-y-1">Рассчитать стоимость</a>
                 <a href="https://t.me/+79952938949" target="_blank" class="w-full sm:w-auto bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-4 px-8 rounded-xl text-lg transition flex items-center justify-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-yellow-500"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Оценка по фото
+                    <i data-lucide="send" class="w-5 h-5 text-yellow-500"></i> Оценка по фото
                 </a>
             </div>
         </div>
@@ -194,12 +197,12 @@
                 <p class="text-gray-400 text-lg mb-6 leading-relaxed">Оформите <span class="text-yellow-500 font-semibold">бесплатную доставку курьером</span>. Мы бережно заберем ваше устройство из любой точки Тулы, отремонтируем и привезем обратно. Вам даже не придется выходить из дома или офиса!</p>
                 
                 <button type="button" id="courierButton" class="bg-[#222] border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-gray-900 font-bold py-3.5 px-8 rounded-xl transition shadow-[0_0_15px_rgba(255,238,0,0.15)] hover:shadow-[0_0_25px_rgba(255,238,0,0.4)] flex items-center gap-2 w-full sm:w-auto justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    <i data-lucide="package" class="w-5 h-5"></i>
                     Вызвать курьера
                 </button>
             </div>
             <div class="md:w-1/3 hidden md:flex justify-end pr-8">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-32 h-32 text-yellow-500 opacity-80 drop-shadow-[0_0_30px_rgba(255,238,0,0.2)] animate-bounce" style="animation-duration: 3s;"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                <i data-lucide="truck" class="w-32 h-32 text-yellow-500 opacity-80 drop-shadow-[0_0_30px_rgba(255,238,0,0.2)] animate-bounce" style="animation-duration: 3s;"></i>
             </div>
         </div>
     </section>
@@ -216,19 +219,19 @@
                     <h3 class="text-xl font-bold mb-6 text-center text-white">Какое устройство сломалось?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="apple">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-gray-300"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            <i data-lucide="smartphone" class="w-10 h-10 text-gray-300"></i>
                             <span class="font-bold text-gray-200">Apple (iPhone)</span>
                         </button>
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="android">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-gray-300"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                            <i data-lucide="cpu" class="w-10 h-10 text-gray-300"></i>
                             <span class="font-bold text-gray-200">Android (Samsung, Xiaomi...)</span>
                         </button>
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="laptop">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-gray-300"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>
+                            <i data-lucide="laptop" class="w-10 h-10 text-gray-300"></i>
                             <span class="font-bold text-gray-200">Ноутбуки и ПК</span>
                         </button>
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="other">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-gray-300"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                            <i data-lucide="settings" class="w-10 h-10 text-gray-300"></i>
                             <span class="font-bold text-gray-200">Планшеты и другое</span>
                         </button>
                     </div>
@@ -236,14 +239,14 @@
 
                 <!-- step 2 -->
                 <div id="quiz-step-2" class="quiz-step hidden">
-                    <button id="btn-back-1" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Назад</button>
+                    <button id="btn-back-1" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-1"><i data-lucide="arrow-left" class="w-4 h-4"></i> Назад</button>
                     <h3 class="text-xl font-bold mb-6 text-center text-white">Что случилось?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="problems-container"></div>
                 </div>
 
                 <!-- step 3 -->
                 <div id="quiz-step-3" class="quiz-step hidden text-center">
-                    <button id="btn-back-2" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-1 float-left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Назад</button>
+                    <button id="btn-back-2" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-1 float-left"><i data-lucide="arrow-left" class="w-4 h-4"></i> Назад</button>
                     <div class="clear-both"></div>
                     
                     <div class="bg-yellow-500/10 border border-yellow-500/30 text-yellow-500 p-6 rounded-xl mb-8 shadow-inner">
@@ -256,6 +259,9 @@
                     <p class="text-gray-400 mb-6 text-sm">Оставьте номер. Перезвоним за 10 минут, спамить не будем.</p>
 
                     <form id="quizForm" class="flex flex-col gap-4 max-w-sm mx-auto text-left relative">
+                        <!-- Невидимое поле Honeypot -->
+                        <input type="text" id="honeyEmailQuiz" name="client_email" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px; opacity: 0; z-index: -1;">
+                        
                         <input type="text" id="quizName" required placeholder="Ваше имя" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none transition">
                         <input type="tel" id="quizPhone" required placeholder="Телефон: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none transition">
                         <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-4 px-6 rounded-lg transition mt-2 shadow-[0_0_20px_rgba(255,238,0,0.3)] hover:shadow-[0_0_25px_rgba(255,238,0,0.5)]">Получить расчет</button>
@@ -284,7 +290,7 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-yellow-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                                <i data-lucide="shield-check" class="w-6 h-6 text-yellow-500"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Защита экранов (Гидрогель)</h3>
                         </div>
@@ -314,7 +320,7 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                                <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Apple (iPhone)</h3>
                         </div>
@@ -368,7 +374,7 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-green-500"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                                <i data-lucide="cpu" class="w-6 h-6 text-green-500"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Android (Samsung, Xiaomi, Realme...)</h3>
                         </div>
@@ -418,7 +424,7 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-purple-400"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                                <i data-lucide="tablet" class="w-6 h-6 text-purple-400"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Планшеты (iPad, Samsung, Xiaomi...)</h3>
                         </div>
@@ -460,7 +466,7 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-blue-400"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>
+                                <i data-lucide="laptop" class="w-6 h-6 text-blue-400"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Ноутбуки (Asus, Acer, MSI, HP...)</h3>
                         </div>
@@ -544,7 +550,7 @@
             <!-- yandex map button -->
             <div class="mt-12 text-center">
                 <a href="https://yandex.com/maps/org/yellou_servis/140349708663/reviews/?ll=37.610682%2C54.289383&z=16" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#222] hover:bg-[#333] text-white font-semibold py-3 px-8 rounded-full border border-gray-700 hover:border-red-500 transition shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-red-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Читать все отзывы на Яндекс Картах
+                    <i data-lucide="map-pin" class="w-5 h-5 text-red-500"></i> Читать все отзывы на Яндекс Картах
                 </a>
             </div>
         </div>
@@ -601,14 +607,14 @@
                 
                 <div class="flex flex-col gap-4">
                     <div class="flex items-start gap-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-yellow-500"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <i data-lucide="search" class="w-6 h-6 text-yellow-500"></i>
                         <div>
                             <h4 class="font-bold text-gray-200">Бесплатная диагностика</h4>
                             <p class="text-sm text-gray-500">Не берем деньги за осмотр, даже если откажетесь от ремонта.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-yellow-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <i data-lucide="shield" class="w-6 h-6 text-yellow-500"></i>
                         <div>
                             <h4 class="font-bold text-gray-200">Гарантия на работу</h4>
                             <p class="text-sm text-gray-500">Отвечаем рублем за каждую установленную запчасть.</p>
@@ -619,22 +625,22 @@
             
             <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 mb-3 text-yellow-500"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                    <i data-lucide="cpu" class="w-8 h-8 mb-3 text-yellow-500"></i>
                     <h4 class="font-bold text-gray-200 mb-1">Пайка компонентов</h4>
                     <p class="text-sm text-gray-500">Восстановление контактных дорожек, замена сгоревших элементов и реболл BGA-чипов.</p>
                 </div>
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 mb-3 text-yellow-500"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <i data-lucide="activity" class="w-8 h-8 mb-3 text-yellow-500"></i>
                     <h4 class="font-bold text-gray-200 mb-1">Чтение логов</h4>
                     <p class="text-sm text-gray-500">Расшифровка panic-логов и программных сбоев для точного поиска проблемы.</p>
                 </div>
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 mb-3 text-yellow-500"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <i data-lucide="zap" class="w-8 h-8 mb-3 text-yellow-500"></i>
                     <h4 class="font-bold text-gray-200 mb-1">Ремонт цепей питания</h4>
                     <p class="text-sm text-gray-500">Поиск короткого замыкания, замена контроллеров заряда и аудиокодеков.</p>
                 </div>
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 mb-3 text-yellow-500"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" y1="16" x2="6.01" y2="16"/><line x1="10" y1="16" x2="10.01" y2="16"/></svg>
+                    <i data-lucide="hard-drive" class="w-8 h-8 mb-3 text-yellow-500"></i>
                     <h4 class="font-bold text-gray-200 mb-1">Программаторы</h4>
                     <p class="text-sm text-gray-500">Работаем с JCID V1SE. Восстанавливаем Face ID (TrueDepth), True-Tone и прописываем АКБ.</p>
                 </div>
@@ -769,7 +775,7 @@
 
     <!-- scroll to top progress button -->
     <button id="backToTop" class="fixed bottom-[110px] right-6 md:bottom-[130px] md:right-10 w-12 h-12 bg-[#222] rounded-full border-2 border-yellow-500 flex items-center justify-center opacity-0 invisible translate-y-4 transition-all duration-300 z-40 hover:bg-yellow-500 hover:text-gray-900 text-yellow-500 shadow-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 absolute"><polyline points="18 15 12 9 6 15"/></svg>
+        <i data-lucide="chevron-up" class="w-6 h-6 absolute"></i>
         <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 36 36">
             <circle class="text-gray-700" stroke-width="2" stroke="currentColor" fill="transparent" r="16" cx="18" cy="18"></circle>
             <circle id="scrollProgress" class="text-yellow-500 transition-all duration-150" stroke-width="2" stroke-dasharray="100.53" stroke-dashoffset="100.53" stroke="currentColor" fill="transparent" r="16" cx="18" cy="18"></circle>
@@ -793,6 +799,9 @@
             <p class="text-gray-400 mb-6 text-sm">Оставьте номер, и мы перезвоним в течение 10 минут.</p>
             
             <form id="leadForm" class="flex flex-col gap-5 relative">
+                <!-- Невидимое поле Honeypot -->
+                <input type="text" id="honeyEmailModal" name="client_email" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px; opacity: 0; z-index: -1;">
+                
                 <div>
                     <input type="text" id="clientName" required placeholder="Ваше имя" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition">
                 </div>
@@ -808,6 +817,30 @@
             </form>
             
             <p id="formStatus" class="mt-4 text-center font-semibold hidden"></p>
+        </div>
+    </div>
+
+    <!-- exit intent popup -->
+    <div id="exitPopup" class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-[60] transition-opacity backdrop-blur-md px-4">
+        <div class="bg-[#1a1a1a] border-2 border-yellow-500 p-8 rounded-3xl shadow-[0_0_50px_rgba(255,238,0,0.3)] w-full max-w-md relative text-center transform scale-95 transition-transform duration-300">
+            <button type="button" aria-label="Закрыть" id="closeExitPopup" class="absolute top-4 right-5 text-gray-500 hover:text-white text-3xl font-bold leading-none transition">&times;</button>
+            
+            <i data-lucide="gift" class="w-16 h-16 mx-auto mb-4 text-yellow-500 drop-shadow-[0_0_15px_rgba(255,238,0,0.5)]"></i>
+            <h3 class="text-2xl md:text-3xl font-extrabold mb-2 text-white">Постойте! Уходите?</h3>
+            <p class="text-gray-300 mb-6 text-sm md:text-base">Для Вас скидка<span class="text-yellow-500 font-bold"> 500 ₽</span> на любой ремонт и бесплатную диагностику. Просто оставьте номер!</p>
+            
+            <form id="exitForm" class="flex flex-col gap-4 relative">
+                <!-- Невидимое поле Honeypot -->
+                <input type="text" id="honeyEmailExit" name="client_email" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px; opacity: 0; z-index: -1;">
+                
+                <input type="tel" id="exitPhone" required placeholder="Телефон: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 transition text-center text-lg">
+                <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-extrabold py-4 px-6 rounded-xl transition mt-2 shadow-[0_0_20px_rgba(255,238,0,0.4)] hover:shadow-[0_0_30px_rgba(255,238,0,0.6)] text-lg">Забрать скидку 500 ₽</button>
+                
+                <p class="text-[10px] text-gray-500 mt-1 text-center leading-tight">Нажимая кнопку, вы соглашаетесь с <a href="#" class="underline hover:text-yellow-500 transition policy-link">политикой конфиденциальности</a>.</p>
+            </form>
+            
+            <p id="exitStatus" class="mt-4 text-center font-semibold hidden"></p>
+            <p class="text-[10px] text-gray-500 mt-4">Скидка привязывается к вашему номеру и действует 7 дней.</p>
         </div>
     </div>
 
@@ -834,6 +867,9 @@
 
     <!-- scripts -->
     <script>
+        // initialize icons
+        lucide.createIcons();
+
         // scroll logic
         const backToTop = document.getElementById('backToTop');
         const scrollProgress = document.getElementById('scrollProgress');
@@ -884,6 +920,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const utmTerm = urlParams.get('utm_term');
 
+        // ГИГАНТСКИЙ СЛОВАРЬ БРЕНДОВ
         const brandMap = {
             "iPhone": ["iphone", "айфон"],
             "Apple": ["apple", "эпл", "эппл"],
@@ -902,14 +939,89 @@
             "Oppo": ["oppo", "оппо"],
             "Google Pixel": ["pixel", "пиксель", "google", "гугл"],
             "OnePlus": ["oneplus", "ванплас", "1+"],
+            "Meizu": ["meizu", "мейзу"],
+            "ZTE": ["zte", "зте"],
+            "Nokia": ["nokia", "нокиа", "нокия"],
+            "Motorola": ["motorola", "моторола"],
+            "Sony": ["sony", "сони"],
+            "Sony Ericsson": ["sony ericsson", "сони эриксон"],
+            "LG": ["lg", "лджи", "элджи"],
+            "HTC": ["htc", "хтс", "аштиси"],
             "Asus": ["asus", "асус"],
             "Acer": ["acer", "асер", "эйсер"],
             "Lenovo": ["lenovo", "леново"],
             "HP": ["hp", "хп", "эйчпи"],
+            "Dell": ["dell", "делл"],
             "MSI": ["msi", "мси", "эмесай"],
+            "Toshiba": ["toshiba", "тошиба"],
+            "Dexp": ["dexp", "дексп"],
+            "Alcatel": ["alcatel", "алкатель"],
+            "Fly": ["fly", "флай"],
+            "Explay": ["explay", "эксплей"],
+            "Philips": ["philips", "филипс"],
+            "Panasonic": ["panasonic", "панасоник"],
+            "BlackBerry": ["blackberry", "блэкберри"],
+            "itel": ["itel", "ител", "айтел"],
+            "Blackview": ["blackview", "блеквью", "блэквью"],
+            "Oukitel": ["oukitel", "аукитель", "оукител"],
+            "CMF By Nothing": ["cmf"],
+            "Nothing": ["nothing", "нафинг", "нофинг"],
+            "Nubia": ["nubia", "нубия"],
+            "iQOO": ["iqoo", "айку"],
+            "TCL": ["tcl", "тсл", "тисиэл"],
+            "Unihertz": ["unihertz", "юнигерц"],
+            "IIIF150": ["iiif150", "150"],
+            "KENSHI": ["kenshi", "кенши"],
+            "Rikor": ["rikor", "рикор"],
+            "Bliss": ["bliss", "блисс"],
+            "SENSEIT": ["senseit", "сенсейт"],
+            "Rover PC": ["rover", "ровер"],
+            "BenQ-Siemens": ["benq", "бенкью"],
+            "Gresso": ["gresso", "грессо"],
+            "TeXet": ["texet", "тексет"],
+            "ONEXT": ["onext", "онекст"],
+            "Getac": ["getac", "гетак"],
+            "AnyDATA": ["anydata", "энидата"],
+            "Eten": ["eten", "етен"],
+            "VEON": ["veon", "веон"],
+            "Tag Heuer": ["tag heuer", "таг хойер"],
+            "BB-mobile": ["bb-mobile", "бб-мобайл"],
+            "Mitac": ["mitac", "митак"],
+            "AWAX": ["awax", "авакс"],
+            "AirOn": ["airon", "айрон"],
+            "BURG": ["burg", "бург"],
+            "Ubiquam": ["ubiquam", "убиквам"],
+            "GIGABYTE": ["gigabyte", "гигабайт"],
+            "Garmin": ["garmin", "гармин"],
+            "Handheld": ["handheld"],
+            "Handyuhr": ["handyuhr"],
+            "Hisense": ["hisense", "хайсенс"],
+            "iTravel": ["itravel", "айтревел"],
+            "JOA": ["joa"],
+            "Just5": ["just5", "джаст5"],
+            "Magic": ["magic", "меджик"],
+            "Maxon": ["maxon", "максон"],
+            "Ninefive": ["ninefive"],
+            "Outfone": ["outfone"],
+            "Pantech": ["pantech", "пантек"],
+            "Seals": ["seals", "силс"],
+            "Siemens": ["siemens", "сименс"],
+            "Sitronics": ["sitronics", "ситроникс"],
+            "Sonim": ["sonim", "соним"],
+            "Vertu": ["vertu", "верту"],
+            "Viewsonic": ["viewsonic", "вьюсоник"],
+            "Voxtel": ["voxtel", "вокстел"],
+            "Watchtech": ["watchtech"],
+            "Билайн": ["билайн", "beeline"],
+            "МТС": ["мтс", "mts"],
+            "МегаФон": ["мегафон", "megafon"],
+            "Highscreen": ["highscreen", "хайскрин"],
+            
+            // ОБЩИЕ ЗАПРОСЫ (Строго в конце словаря)
             "телефонов": ["телефон", "смартфон", "сотовый"],
             "ноутбуков": ["laptop", "ноутбук", "нетбук"],
-            "планшетов": ["tablet", "планшет"]
+            "планшетов": ["tablet", "планшет"],
+            "компьютеров": ["pc", "компьютер", "пк", "моноблок"]
         };
 
         if (utmTerm) {
@@ -1064,8 +1176,10 @@
         };
         const phoneInputModal = document.getElementById('clientPhone');
         const phoneInputQuiz = document.getElementById('quizPhone');
+        const phoneInputExit = document.getElementById('exitPhone');
         if (phoneInputModal) phoneInputModal.addEventListener('input', maskPhone);
         if (phoneInputQuiz) phoneInputQuiz.addEventListener('input', maskPhone);
+        if (phoneInputExit) phoneInputExit.addEventListener('input', maskPhone);
 
         // modal management
         const modal = document.getElementById('modal');
@@ -1179,8 +1293,26 @@
             });
         });
 
+        // exit intent
+        const exitPopup = document.getElementById('exitPopup');
+        const closeExitPopup = document.getElementById('closeExitPopup');
+        let exitPopupShown = false;
+
+        document.addEventListener('mouseout', (e) => {
+            if (e.clientY < 10 && !exitPopupShown && window.innerWidth > 768) {
+                exitPopup.classList.remove('hidden');
+                setTimeout(() => exitPopup.querySelector('div').classList.remove('scale-95'), 10);
+                exitPopupShown = true;
+            }
+        });
+
+        if (closeExitPopup) {
+            closeExitPopup.addEventListener('click', () => exitPopup.classList.add('hidden'));
+        }
+        
         window.addEventListener('click', (e) => { 
             if (e.target === modal) modal.classList.add('hidden'); 
+            if (e.target === exitPopup) exitPopup.classList.add('hidden');
             if (e.target === policyModal) policyModal.classList.add('hidden');
         });
 
@@ -1209,6 +1341,9 @@
                 if(formElement.id === 'leadForm') {
                     setTimeout(() => document.getElementById('modal').classList.add('hidden'), 2500);
                 }
+                if(formElement.id === 'exitForm') {
+                    setTimeout(() => document.getElementById('exitPopup').classList.add('hidden'), 2500);
+                }
             }, 800);
         }
 
@@ -1219,6 +1354,8 @@
                 const name = document.getElementById('clientName').value;
                 const phone = document.getElementById('clientPhone').value;
                 let problem = document.getElementById('clientProblem').value || 'Не указано';
+                
+                const honeypot = document.getElementById('honeyEmailModal') ? document.getElementById('honeyEmailModal').value : '';
 
                 if (phone.replace(/\D/g, '').length < 11) {
                     formStatus.textContent = 'Пожалуйста, введите корректный номер телефона.';
@@ -1237,7 +1374,7 @@
                 submitBtn.disabled = true;
                 formStatus.classList.add('hidden');
 
-                const payload = { name: name, phone: phone, problem: problem };
+                const payload = { name: name, phone: phone, problem: problem, honeypot: honeypot };
                 sendToGoogle(payload, leadForm, formStatus, submitBtn, originalBtnText);
             });
         }
@@ -1249,6 +1386,7 @@
                 e.preventDefault(); 
                 const name = document.getElementById('quizName').value;
                 const phone = document.getElementById('quizPhone').value;
+                const honeypot = document.getElementById('honeyEmailQuiz') ? document.getElementById('honeyEmailQuiz').value : '';
 
                 if (phone.replace(/\D/g, '').length < 11) {
                     quizStatus.textContent = 'Пожалуйста, введите корректный номер телефона.';
@@ -1264,8 +1402,34 @@
                 quizStatus.classList.add('hidden');
 
                 const formattedProblem = `[КВИЗ] ${quizData[currentDevice].name} - ${currentProblem} (Ожидает: ${currentEstimate})`;
-                const payload = { name: name, phone: phone, problem: formattedProblem };
+                const payload = { name: name, phone: phone, problem: formattedProblem, honeypot: honeypot };
                 sendToGoogle(payload, quizForm, quizStatus, submitBtn, originalBtnText);
+            });
+        }
+
+        const exitForm = document.getElementById('exitForm');
+        const exitStatus = document.getElementById('exitStatus');
+        if (exitForm) {
+            exitForm.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                const phone = document.getElementById('exitPhone').value;
+                const honeypot = document.getElementById('honeyEmailExit') ? document.getElementById('honeyEmailExit').value : '';
+
+                if (phone.replace(/\D/g, '').length < 11) {
+                    exitStatus.textContent = 'Пожалуйста, введите корректный номер телефона.';
+                    exitStatus.classList.remove('hidden', 'text-green-500');
+                    exitStatus.classList.add('text-red-500');
+                    return;
+                }
+
+                const submitBtn = exitForm.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.textContent;
+                submitBtn.textContent = 'Бронируем скидку...';
+                submitBtn.disabled = true;
+                exitStatus.classList.add('hidden');
+
+                const payload = { name: "поймал уходящего с сайта", phone: phone, problem: "Забрал скидку 500 рублей", honeypot: honeypot };
+                sendToGoogle(payload, exitForm, exitStatus, submitBtn, originalBtnText);
             });
         }
     </script>
