@@ -17,9 +17,9 @@
     <!-- google search console -->
     <meta name="google-site-verification" content="YHmCDhAkdKR0aL0Uv_eB06ygDLo1z_6uhlmukgvxxm8" />
 
-    <!-- tailwind & icons (заменен CDN на более стабильный в РФ) -->
+    <!-- tailwind & FONT AWESOME ICONS (Надежный CDN, не блокируется в РФ) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- tailwind theme config -->
     <script>
@@ -90,7 +90,7 @@
     <div id="mobileMenu" class="fixed top-0 left-0 w-[280px] h-full bg-[#111] border-r border-gray-800 z-[90] transform -translate-x-[400px] transition-transform duration-300 flex flex-col shadow-[20px_0_50px_rgba(0,0,0,0.5)]">
         <div class="p-6 border-b border-gray-800 flex justify-between items-center bg-[#0a0a0a]">
             <span class="text-xl font-extrabold text-white flex items-center gap-2 tracking-tight">
-                <i data-lucide="cpu" class="w-6 h-6 text-yellow-500"></i>
+                <i class="fa-solid fa-microchip text-2xl text-yellow-500"></i>
                 Меню
             </span>
             <button type="button" id="closeMenuBtn" class="text-gray-500 hover:text-yellow-500 text-3xl font-light leading-none transition">&times;</button>
@@ -119,9 +119,7 @@
             
              <div class="flex items-center gap-1.5 md:gap-0">
                 <button type="button" id="mobileMenuBtn" class="md:hidden text-yellow-500 hover:text-yellow-400 transition flex items-center justify-center pr-2 -ml-1" aria-label="Открыть меню">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-7 h-7">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
+                    <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
                 <a href="#" class="flex items-center hover:opacity-80 transition">
                     <svg viewBox="0 0 24 24" class="w-6 h-6 md:w-7 md:h-7 text-yellow-500 -mr-1.5" stroke="currentColor">
@@ -135,8 +133,8 @@
             </div>
             
             <div class="text-right flex flex-col md:flex-row items-end md:items-center gap-1.5 md:gap-6">
-                <a href="#map-section" class="flex items-center gap-1 text-[10px] md:text-sm text-gray-400 hover:text-white transition bg-gray-800 px-2 py-1 md:px-3 md:py-1.5 rounded-full border border-gray-700">
-                    <i data-lucide="map-pin" class="w-3 h-3 md:w-4 md:h-4"></i>
+                <a href="#map-section" class="flex items-center gap-2 text-[10px] md:text-sm text-gray-400 hover:text-white transition bg-gray-800 px-3 py-1.5 rounded-full border border-gray-700">
+                    <i class="fa-solid fa-location-dot text-sm"></i>
                     <span class="block md:hidden">Хомяковская, 6</span>
                     <span class="hidden md:block">Хомяковская ул., 6</span>
                 </a>
@@ -170,16 +168,16 @@
             
             <!-- Триггеры конверсии -->
             <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-gray-300 text-sm md:text-base font-medium mb-10">
-                <div class="flex items-center justify-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i> Бесплатная диагностика</div>
-                <div class="flex items-center justify-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i> Ремонт от 20 минут</div>
-                <div class="flex items-center justify-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i> Гарантия до 1 года</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-xl text-yellow-500"></i> Бесплатная диагностика</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-xl text-yellow-500"></i> Ремонт от 20 минут</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-xl text-yellow-500"></i> Гарантия до 1 года</div>
             </div>
 
             <!-- Блок кнопок -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#quiz-section" class="w-full sm:w-auto bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-xl text-lg hover:bg-yellow-400 hover:shadow-[0_0_25px_rgba(255,238,0,0.5)] transition transform hover:-translate-y-1">Рассчитать стоимость</a>
-                <a href="https://t.me/+79952938949" target="_blank" class="w-full sm:w-auto bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-4 px-8 rounded-xl text-lg transition flex items-center justify-center gap-2">
-                    <i data-lucide="send" class="w-5 h-5 text-yellow-500"></i> Оценка по фото
+                <a href="https://t.me/+79952938949" target="_blank" class="w-full sm:w-auto bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-4 px-8 rounded-xl text-lg transition flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-paper-plane text-xl text-yellow-500"></i> Оценка по фото
                 </a>
             </div>
         </div>
@@ -196,63 +194,63 @@
                 </div>
                 <p class="text-gray-400 text-lg mb-6 leading-relaxed">Оформите <span class="text-yellow-500 font-semibold">бесплатную доставку курьером</span>. Мы бережно заберем ваше устройство из любой точки Тулы, отремонтируем и привезем обратно. Вам даже не придется выходить из дома или офиса!</p>
                 
-                <button type="button" id="courierButton" class="bg-[#222] border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-gray-900 font-bold py-3.5 px-8 rounded-xl transition shadow-[0_0_15px_rgba(255,238,0,0.15)] hover:shadow-[0_0_25px_rgba(255,238,0,0.4)] flex items-center gap-2 w-full sm:w-auto justify-center">
-                    <i data-lucide="package" class="w-5 h-5"></i>
+                <button type="button" id="courierButton" class="bg-[#222] border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-gray-900 font-bold py-3.5 px-8 rounded-xl transition shadow-[0_0_15px_rgba(255,238,0,0.15)] hover:shadow-[0_0_25px_rgba(255,238,0,0.4)] flex items-center gap-3 w-full sm:w-auto justify-center">
+                    <i class="fa-solid fa-box text-xl"></i>
                     Вызвать курьера
                 </button>
             </div>
             <div class="md:w-1/3 hidden md:flex justify-end pr-8">
-                <i data-lucide="truck" class="w-32 h-32 text-yellow-500 opacity-80 drop-shadow-[0_0_30px_rgba(255,238,0,0.2)] animate-bounce" style="animation-duration: 3s;"></i>
+                <i class="fa-solid fa-truck-fast text-[8rem] text-yellow-500 opacity-80 drop-shadow-[0_0_30px_rgba(255,238,0,0.2)] animate-bounce" style="animation-duration: 3s;"></i>
             </div>
         </div>
     </section>
 
-    <!-- interactive quiz -->
+<!-- interactive quiz -->
     <section id="quiz-section" class="py-16 bg-[#111] border-b border-gray-800">
         <div class="max-w-3xl mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Узнайте стоимость ремонта</h2>
-            <p class="text-center text-gray-400 mb-10">Выберите устройство и поломку, чтобы получить предварительный расчет.</p>
+            <p class="text-center text-gray-400 mb-8">Выберите устройство и поломку, чтобы получить предварительный расчет.</p>
 
-            <div class="bg-[#1a1a1a] p-8 rounded-2xl shadow-2xl border border-gray-800">
+            <div class="bg-[#1a1a1a] p-6 md:p-8 rounded-2xl shadow-2xl border border-gray-800">
                 <!-- step 1 -->
                 <div id="quiz-step-1" class="quiz-step block">
                     <h3 class="text-xl font-bold mb-6 text-center text-white">Какое устройство сломалось?</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="apple">
-                            <i data-lucide="smartphone" class="w-10 h-10 text-gray-300"></i>
-                            <span class="font-bold text-gray-200">Apple (iPhone)</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-5 transition flex flex-col items-center gap-2" data-step="1" data-value="apple">
+                            <i class="fa-brands fa-apple text-4xl text-gray-300 mb-1"></i>
+                            <span class="font-bold text-gray-200 text-base">Apple (iPhone)</span>
                         </button>
-                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="android">
-                            <i data-lucide="cpu" class="w-10 h-10 text-gray-300"></i>
-                            <span class="font-bold text-gray-200">Android (Samsung, Xiaomi...)</span>
+                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-5 transition flex flex-col items-center gap-2" data-step="1" data-value="android">
+                            <i class="fa-brands fa-android text-4xl text-gray-300 mb-1"></i>
+                            <span class="font-bold text-gray-200 text-base">Android (Samsung, Xiaomi...)</span>
                         </button>
-                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="laptop">
-                            <i data-lucide="laptop" class="w-10 h-10 text-gray-300"></i>
-                            <span class="font-bold text-gray-200">Ноутбуки и ПК</span>
+                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-5 transition flex flex-col items-center gap-2" data-step="1" data-value="laptop">
+                            <i class="fa-solid fa-laptop text-4xl text-gray-300 mb-1"></i>
+                            <span class="font-bold text-gray-200 text-base">Ноутбуки и ПК</span>
                         </button>
-                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="other">
-                            <i data-lucide="settings" class="w-10 h-10 text-gray-300"></i>
-                            <span class="font-bold text-gray-200">Планшеты и другое</span>
+                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-5 transition flex flex-col items-center gap-2" data-step="1" data-value="other">
+                            <i class="fa-solid fa-screwdriver-wrench text-4xl text-gray-300 mb-1"></i>
+                            <span class="font-bold text-gray-200 text-base">Планшеты и другое</span>
                         </button>
                     </div>
                 </div>
 
                 <!-- step 2 -->
                 <div id="quiz-step-2" class="quiz-step hidden">
-                    <button id="btn-back-1" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-1"><i data-lucide="arrow-left" class="w-4 h-4"></i> Назад</button>
+                    <button id="btn-back-1" class="text-yellow-500 hover:text-yellow-400 text-sm mb-5 font-semibold flex items-center gap-2"><i class="fa-solid fa-arrow-left"></i> Назад</button>
                     <h3 class="text-xl font-bold mb-6 text-center text-white">Что случилось?</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="problems-container"></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="problems-container"></div>
                 </div>
 
                 <!-- step 3 -->
                 <div id="quiz-step-3" class="quiz-step hidden text-center">
-                    <button id="btn-back-2" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-1 float-left"><i data-lucide="arrow-left" class="w-4 h-4"></i> Назад</button>
+                    <button id="btn-back-2" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-2 float-left"><i class="fa-solid fa-arrow-left"></i> Назад</button>
                     <div class="clear-both"></div>
                     
-                    <div class="bg-yellow-500/10 border border-yellow-500/30 text-yellow-500 p-6 rounded-xl mb-8 shadow-inner">
-                        <p class="text-sm font-semibold uppercase tracking-wider mb-2">Ориентировочная стоимость</p>
+                    <div class="bg-yellow-500/10 border border-yellow-500/30 text-yellow-500 p-5 rounded-xl mb-6 shadow-inner max-w-md mx-auto">
+                        <p class="text-xs font-semibold uppercase tracking-wider mb-1">Ориентировочная стоимость</p>
                         <p id="quiz-result-price" class="text-3xl font-black">от 1 500 ₽</p>
-                        <p class="text-sm mt-2 text-yellow-500/80">Точная цена зависит от модели и результатов диагностики.</p>
+                        <p class="text-xs mt-1 text-yellow-500/80">Точная цена зависит от модели и результатов диагностики.</p>
                     </div>
 
                     <h3 class="text-xl font-bold mb-2 text-white">Узнать точную цену</h3>
@@ -262,13 +260,13 @@
                         <!-- Невидимое поле Honeypot -->
                         <input type="text" id="honeyEmailQuiz" name="client_email" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px; opacity: 0; z-index: -1;">
                         
-                        <input type="text" id="quizName" required placeholder="Ваше имя" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none transition">
-                        <input type="tel" id="quizPhone" required placeholder="Телефон: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none transition">
-                        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-4 px-6 rounded-lg transition mt-2 shadow-[0_0_20px_rgba(255,238,0,0.3)] hover:shadow-[0_0_25px_rgba(255,238,0,0.5)]">Получить расчет</button>
+                        <input type="text" id="quizName" required placeholder="Ваше имя" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none transition text-base">
+                        <input type="tel" id="quizPhone" required placeholder="Телефон: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none transition text-base">
+                        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-3.5 px-6 rounded-lg transition mt-1 shadow-[0_0_20px_rgba(255,238,0,0.3)] hover:shadow-[0_0_25px_rgba(255,238,0,0.5)] text-base">Получить расчет</button>
                         
-                        <p class="text-[10px] text-gray-500 mt-2 text-center leading-tight">Нажимая кнопку, вы даете согласие на обработку данных согласно <a href="#" class="underline hover:text-yellow-500 transition policy-link">политике конфиденциальности</a>.</p>
+                        <p class="text-[11px] text-gray-500 mt-1 text-center leading-tight">Нажимая кнопку, вы даете согласие на обработку данных согласно <a href="#" class="underline hover:text-yellow-500 transition policy-link">политике конфиденциальности</a>.</p>
                         
-                        <p id="quizStatus" class="text-center font-semibold text-sm hidden mt-2"></p>
+                        <p id="quizStatus" class="text-center font-semibold text-sm hidden"></p>
                     </form>
                 </div>
             </div>
@@ -290,11 +288,11 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <i data-lucide="shield-check" class="w-6 h-6 text-yellow-500"></i>
+                                <i class="fa-solid fa-shield-halved text-2xl text-yellow-500"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Защита экранов (Гидрогель)</h3>
                         </div>
-                        <svg class="w-6 h-6 text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        <i class="fa-solid fa-chevron-down text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0"></i>
                     </button>
                     <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -320,11 +318,11 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
+                                <i class="fa-brands fa-apple text-3xl text-white"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Apple (iPhone)</h3>
                         </div>
-                        <svg class="w-6 h-6 text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        <i class="fa-solid fa-chevron-down text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0"></i>
                     </button>
                     <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -374,11 +372,11 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <i data-lucide="cpu" class="w-6 h-6 text-green-500"></i>
+                                <i class="fa-brands fa-android text-3xl text-green-500"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Android (Samsung, Xiaomi, Realme...)</h3>
                         </div>
-                        <svg class="w-6 h-6 text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        <i class="fa-solid fa-chevron-down text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0"></i>
                     </button>
                     <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -424,11 +422,11 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <i data-lucide="tablet" class="w-6 h-6 text-purple-400"></i>
+                                <i class="fa-solid fa-tablet-screen-button text-3xl text-purple-400"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Планшеты (iPad, Samsung, Xiaomi...)</h3>
                         </div>
-                        <svg class="w-6 h-6 text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        <i class="fa-solid fa-chevron-down text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0"></i>
                     </button>
                     <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -466,11 +464,11 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <i data-lucide="laptop" class="w-6 h-6 text-blue-400"></i>
+                                <i class="fa-solid fa-laptop text-3xl text-blue-400"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Ноутбуки (Asus, Acer, MSI, HP...)</h3>
                         </div>
-                        <svg class="w-6 h-6 text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        <i class="fa-solid fa-chevron-down text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0"></i>
                     </button>
                     <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -549,8 +547,8 @@
 
             <!-- yandex map button -->
             <div class="mt-12 text-center">
-                <a href="https://yandex.com/maps/org/yellou_servis/140349708663/reviews/?ll=37.610682%2C54.289383&z=16" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#222] hover:bg-[#333] text-white font-semibold py-3 px-8 rounded-full border border-gray-700 hover:border-red-500 transition shadow-lg">
-                    <i data-lucide="map-pin" class="w-5 h-5 text-red-500"></i> Читать все отзывы на Яндекс Картах
+                <a href="https://yandex.com/maps/org/yellou_servis/140349708663/reviews/?ll=37.610682%2C54.289383&z=16" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-[#222] hover:bg-[#333] text-white font-semibold py-3 px-8 rounded-full border border-gray-700 hover:border-red-500 transition shadow-lg">
+                    <i class="fa-solid fa-location-dot text-xl text-red-500"></i> Читать все отзывы на Яндекс Картах
                 </a>
             </div>
         </div>
@@ -563,7 +561,7 @@
             
             <div class="relative group">
                 <button type="button" aria-label="Прокрутить влево" id="scrollLeftBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#222] border border-gray-700 hover:bg-yellow-500 hover:border-yellow-500 hover:text-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center transition -ml-4 opacity-90 hover:opacity-100 hidden md:flex shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                    <i class="fa-solid fa-chevron-left text-xl"></i>
                 </button>
 
                 <div id="galleryWrapper" class="flex overflow-x-auto gap-5 pb-6 px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
@@ -585,7 +583,7 @@
                 </div>
 
                 <button type="button" aria-label="Прокрутить вправо" id="scrollRightBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#222] border border-gray-700 hover:bg-yellow-500 hover:border-yellow-500 hover:text-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center transition -mr-4 opacity-90 hover:opacity-100 hidden md:flex shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                    <i class="fa-solid fa-chevron-right text-xl"></i>
                 </button>
             </div>
             <p class="text-center text-gray-500 mt-4 text-sm">Используем профессиональное оборудование для компонентного ремонта.</p>
@@ -607,14 +605,14 @@
                 
                 <div class="flex flex-col gap-4">
                     <div class="flex items-start gap-3">
-                        <i data-lucide="search" class="w-6 h-6 text-yellow-500"></i>
+                        <i class="fa-solid fa-magnifying-glass text-2xl text-yellow-500 mt-1"></i>
                         <div>
                             <h4 class="font-bold text-gray-200">Бесплатная диагностика</h4>
                             <p class="text-sm text-gray-500">Не берем деньги за осмотр, даже если откажетесь от ремонта.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <i data-lucide="shield" class="w-6 h-6 text-yellow-500"></i>
+                        <i class="fa-solid fa-shield-halved text-2xl text-yellow-500 mt-1"></i>
                         <div>
                             <h4 class="font-bold text-gray-200">Гарантия на работу</h4>
                             <p class="text-sm text-gray-500">Отвечаем рублем за каждую установленную запчасть.</p>
@@ -625,22 +623,22 @@
             
             <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <i data-lucide="cpu" class="w-8 h-8 mb-3 text-yellow-500"></i>
+                    <i class="fa-solid fa-microchip text-4xl mb-4 text-yellow-500"></i>
                     <h4 class="font-bold text-gray-200 mb-1">Пайка компонентов</h4>
                     <p class="text-sm text-gray-500">Восстановление контактных дорожек, замена сгоревших элементов и реболл BGA-чипов.</p>
                 </div>
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <i data-lucide="activity" class="w-8 h-8 mb-3 text-yellow-500"></i>
+                    <i class="fa-solid fa-wave-square text-4xl mb-4 text-yellow-500"></i>
                     <h4 class="font-bold text-gray-200 mb-1">Чтение логов</h4>
                     <p class="text-sm text-gray-500">Расшифровка panic-логов и программных сбоев для точного поиска проблемы.</p>
                 </div>
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <i data-lucide="zap" class="w-8 h-8 mb-3 text-yellow-500"></i>
+                    <i class="fa-solid fa-bolt text-4xl mb-4 text-yellow-500"></i>
                     <h4 class="font-bold text-gray-200 mb-1">Ремонт цепей питания</h4>
                     <p class="text-sm text-gray-500">Поиск короткого замыкания, замена контроллеров заряда и аудиокодеков.</p>
                 </div>
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <i data-lucide="hard-drive" class="w-8 h-8 mb-3 text-yellow-500"></i>
+                    <i class="fa-solid fa-memory text-4xl mb-4 text-yellow-500"></i>
                     <h4 class="font-bold text-gray-200 mb-1">Программаторы</h4>
                     <p class="text-sm text-gray-500">Работаем с JCID V1SE. Восстанавливаем Face ID (TrueDepth), True-Tone и прописываем АКБ.</p>
                 </div>
@@ -657,9 +655,7 @@
                 <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-gray-700 transition overflow-hidden">
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
                         <h3 class="text-xl font-bold text-gray-200 pr-4">Сохранятся ли мои данные при ремонте?</h3>
-                        <svg class="w-6 h-6 text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <i class="fa-solid fa-chevron-down text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0"></i>
                     </button>
                     <div class="faq-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -671,9 +667,7 @@
                 <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-gray-700 transition overflow-hidden">
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
                         <h3 class="text-xl font-bold text-gray-200 pr-4">Сколько времени занимает ремонт?</h3>
-                        <svg class="w-6 h-6 text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <i class="fa-solid fa-chevron-down text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0"></i>
                     </button>
                     <div class="faq-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -685,9 +679,7 @@
                 <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-gray-700 transition overflow-hidden">
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
                         <h3 class="text-xl font-bold text-gray-200 pr-4">Какую гарантию вы даете?</h3>
-                        <svg class="w-6 h-6 text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <i class="fa-solid fa-chevron-down text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0"></i>
                     </button>
                     <div class="faq-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -775,7 +767,7 @@
 
     <!-- scroll to top progress button -->
     <button id="backToTop" class="fixed bottom-[110px] right-6 md:bottom-[130px] md:right-10 w-12 h-12 bg-[#222] rounded-full border-2 border-yellow-500 flex items-center justify-center opacity-0 invisible translate-y-4 transition-all duration-300 z-40 hover:bg-yellow-500 hover:text-gray-900 text-yellow-500 shadow-lg">
-        <i data-lucide="chevron-up" class="w-6 h-6 absolute"></i>
+        <i class="fa-solid fa-chevron-up text-xl absolute"></i>
         <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 36 36">
             <circle class="text-gray-700" stroke-width="2" stroke="currentColor" fill="transparent" r="16" cx="18" cy="18"></circle>
             <circle id="scrollProgress" class="text-yellow-500 transition-all duration-150" stroke-width="2" stroke-dasharray="100.53" stroke-dashoffset="100.53" stroke="currentColor" fill="transparent" r="16" cx="18" cy="18"></circle>
@@ -783,10 +775,8 @@
     </button>
 
     <!-- floating action button -->
-    <button type="button" aria-label="Оставить заявку" id="floatingLeadButton" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-4 px-4 md:px-6 rounded-full shadow-[0_0_25px_rgba(255,238,0,0.5)] z-40 flex items-center gap-2 transition transform hover:scale-105 border-2 border-gray-900 animate-bounce">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.496-3.909-7.474-6.945l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-        </svg>
+    <button type="button" aria-label="Оставить заявку" id="floatingLeadButton" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-4 px-4 md:px-6 rounded-full shadow-[0_0_25px_rgba(255,238,0,0.5)] z-40 flex items-center gap-3 transition transform hover:scale-105 border-2 border-gray-900 animate-bounce">
+        <i class="fa-solid fa-comment-dots text-2xl"></i>
         <span class="hidden md:inline">Оставить заявку</span>
     </button>
 
@@ -825,7 +815,7 @@
         <div class="bg-[#1a1a1a] border-2 border-yellow-500 p-8 rounded-3xl shadow-[0_0_50px_rgba(255,238,0,0.3)] w-full max-w-md relative text-center transform scale-95 transition-transform duration-300">
             <button type="button" aria-label="Закрыть" id="closeExitPopup" class="absolute top-4 right-5 text-gray-500 hover:text-white text-3xl font-bold leading-none transition">&times;</button>
             
-            <i data-lucide="gift" class="w-16 h-16 mx-auto mb-4 text-yellow-500 drop-shadow-[0_0_15px_rgba(255,238,0,0.5)]"></i>
+            <i class="fa-solid fa-gift text-6xl mx-auto mb-4 text-yellow-500 drop-shadow-[0_0_15px_rgba(255,238,0,0.5)]"></i>
             <h3 class="text-2xl md:text-3xl font-extrabold mb-2 text-white">Постойте! Уходите?</h3>
             <p class="text-gray-300 mb-6 text-sm md:text-base">Для Вас скидка<span class="text-yellow-500 font-bold"> 500 ₽</span> на любой ремонт и бесплатную диагностику. Просто оставьте номер!</p>
             
@@ -867,15 +857,6 @@
 
     <!-- scripts -->
     <script>
-        // Безопасная инициализация иконок (защита от блокировок без VPN)
-        try {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        } catch (error) {
-            console.warn("Иконки не загрузились из-за провайдера, но сайт работает.");
-        }
-
         // scroll logic
         const backToTop = document.getElementById('backToTop');
         const scrollProgress = document.getElementById('scrollProgress');
@@ -921,7 +902,7 @@
 
         // --- ДИНАМИЧЕСКИЙ ЗАГОЛОВОК И МУЛЬТИЛЕНДИНГ (UTM) ---
         let words = ["телефонов", "ноутбуков", "iPhone", "Samsung", "Xiaomi", "планшетов"];
-        let loopTyping = true; // Зацикливать ли анимацию по умолчанию
+        let loopTyping = true; 
 
         const urlParams = new URLSearchParams(window.location.search);
         const utmTerm = urlParams.get('utm_term');
