@@ -17,10 +17,10 @@
     <!-- google search console -->
     <meta name="google-site-verification" content="YHmCDhAkdKR0aL0Uv_eB06ygDLo1z_6uhlmukgvxxm8" />
 
-    <!-- Tailwind -->
+    <!-- 1. СНАЧАЛА ГРУЗИМ САМ ФРЕЙМВОРК -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind config -->
+
+    <!-- 2. ТОЛЬКО ПОТОМ ПРИМЕНЯЕМ ТВОИ ЦВЕТА -->
     <script>
         tailwind.config = {
             theme: {
@@ -850,7 +850,7 @@
         </div>
     </div>
 
-    <!-- ВЕСЬ JS ВЫПОЛНЯЕТСЯ СРАЗУ -->
+    <!-- ВЕСЬ JS ВЫПОЛНЯЕТСЯ СРАЗУ (БЕЗ ОЖИДАНИЯ ВНЕШНИХ РЕСУРСОВ) -->
     <script>
         // scroll logic
         const backToTop = document.getElementById('backToTop');
@@ -1259,18 +1259,19 @@
                         el.classList.add('grid-rows-[0fr]');
                     }
                 });
+                
                 section.querySelectorAll('.faq-icon, .accordion-icon').forEach(el => {
-                    if (el !== icon) el.classList.remove('rotate-180', 'text-yellow-500');
+                    if (el !== icon) el.classList.remove('rotate-180');
                 });
 
                 if (answer.classList.contains('grid-rows-[0fr]')) {
                     answer.classList.remove('grid-rows-[0fr]');
                     answer.classList.add('grid-rows-[1fr]');
-                    icon.classList.add('rotate-180', 'text-yellow-500');
+                    icon.classList.add('rotate-180');
                 } else {
                     answer.classList.remove('grid-rows-[1fr]');
                     answer.classList.add('grid-rows-[0fr]');
-                    icon.classList.remove('rotate-180', 'text-yellow-500');
+                    icon.classList.remove('rotate-180');
                 }
             });
         });
@@ -1298,24 +1299,20 @@
             if (e.target === policyModal) policyModal.classList.add('hidden');
         });
 
-        // form submits with AbortController for blocked requests
-        async function sendToGoogle(payload, formElement, statusElement, buttonElement, originalBtnText) {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 6000); // 6 секунд таймаут
+        // form submits
+        function sendToGoogle(payload, formElement, statusElement, buttonElement, originalBtnText) {
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify(payload)
+            }).catch(error => console.error("Ошибка сети:", error));
 
-            try {
-                await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-                    body: JSON.stringify(payload),
-                    signal: controller.signal
-                });
+            if (typeof ym !== 'undefined') {
+                ym(111251316, 'reachGoal', 'lead');
+            }
 
-                if (typeof ym !== 'undefined') {
-                    ym(111251316, 'reachGoal', 'lead');
-                }
-
+            setTimeout(() => {
                 statusElement.textContent = 'Заявка отправлена! Ожидайте звонка.';
                 statusElement.classList.remove('hidden', 'text-red-500');
                 statusElement.classList.add('text-green-500');
@@ -1330,15 +1327,7 @@
                 if(formElement.id === 'exitForm') {
                     setTimeout(() => document.getElementById('exitPopup').classList.add('hidden'), 2500);
                 }
-            } catch (error) {
-                statusElement.textContent = 'Сбой отправки. Пожалуйста, просто позвоните нам по номеру на сайте.';
-                statusElement.classList.remove('hidden', 'text-green-500');
-                statusElement.classList.add('text-red-500');
-                buttonElement.textContent = originalBtnText;
-                buttonElement.disabled = false;
-            } finally {
-                clearTimeout(timeoutId);
-            }
+            }, 800);
         }
 
         const leadForm = document.getElementById('leadForm');
