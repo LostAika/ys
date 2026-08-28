@@ -17,10 +17,10 @@
     <!-- google search console -->
     <meta name="google-site-verification" content="YHmCDhAkdKR0aL0Uv_eB06ygDLo1z_6uhlmukgvxxm8" />
 
-    <!-- tailwind грузим СИНХРОННО, чтобы не было моргания (FOUC) и работал конфиг -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Ваша кастомная палитра -->
+    <!-- Tailwind config -->
     <script>
         tailwind.config = {
             theme: {
@@ -36,10 +36,6 @@
             }
         }
     </script>
-
-    <!-- FONT AWESOME грузим асинхронно, чтобы при блокировке серверов в РФ сайт не зависал на белом экране -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
     <!-- yandex metrika counter -->
     <script type="text/javascript">
@@ -93,8 +89,7 @@
     <div id="mobileMenu" class="fixed top-0 left-0 w-[280px] h-full bg-[#111] border-r border-gray-800 z-[90] transform -translate-x-[400px] transition-transform duration-300 flex flex-col shadow-[20px_0_50px_rgba(0,0,0,0.5)]">
         <div class="p-6 border-b border-gray-800 flex justify-between items-center bg-[#0a0a0a]">
             <span class="text-xl font-extrabold text-white flex items-center gap-2 tracking-tight">
-                <i class="fa-solid fa-microchip text-2xl text-yellow-500"></i>
-                Меню
+                <span class="text-2xl">⚙️</span> Меню
             </span>
             <button type="button" id="closeMenuBtn" class="text-gray-500 hover:text-yellow-500 text-3xl font-light leading-none transition">&times;</button>
         </div>
@@ -122,7 +117,7 @@
             
              <div class="flex items-center gap-1.5 md:gap-0">
                 <button type="button" id="mobileMenuBtn" class="md:hidden text-yellow-500 hover:text-yellow-400 transition flex items-center justify-center pr-2 -ml-1" aria-label="Открыть меню">
-                    <i class="fa-solid fa-bars text-2xl"></i>
+                    <span class="text-2xl">☰</span>
                 </button>
                 <a href="#" class="flex items-center hover:opacity-80 transition">
                     <svg viewBox="0 0 24 24" class="w-6 h-6 md:w-7 md:h-7 text-yellow-500 -mr-1.5" stroke="currentColor">
@@ -137,7 +132,7 @@
             
             <div class="text-right flex flex-col md:flex-row items-end md:items-center gap-1.5 md:gap-6">
                 <a href="#map-section" class="flex items-center gap-2 text-[10px] md:text-sm text-gray-400 hover:text-white transition bg-gray-800 px-3 py-1.5 rounded-full border border-gray-700">
-                    <i class="fa-solid fa-location-dot text-sm"></i>
+                    <span>📍</span>
                     <span class="block md:hidden">Хомяковская, 6</span>
                     <span class="hidden md:block">Хомяковская ул., 6</span>
                 </a>
@@ -170,15 +165,15 @@
             </h1>
             
             <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-gray-300 text-sm md:text-base font-medium mb-10">
-                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-xl text-yellow-500"></i> Бесплатная диагностика</div>
-                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-xl text-yellow-500"></i> Ремонт от 20 минут</div>
-                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-circle-check text-xl text-yellow-500"></i> Гарантия до 1 года</div>
+                <div class="flex items-center justify-center gap-2"><span class="text-yellow-500 text-xl">✅</span> Бесплатная диагностика</div>
+                <div class="flex items-center justify-center gap-2"><span class="text-yellow-500 text-xl">✅</span> Ремонт от 20 минут</div>
+                <div class="flex items-center justify-center gap-2"><span class="text-yellow-500 text-xl">✅</span> Гарантия до 1 года</div>
             </div>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#quiz-section" class="w-full sm:w-auto bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-xl text-lg hover:bg-yellow-400 hover:shadow-[0_0_25px_rgba(255,238,0,0.5)] transition transform hover:-translate-y-1">Рассчитать стоимость</a>
                 <a href="https://t.me/+79952938949" target="_blank" class="w-full sm:w-auto bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-4 px-8 rounded-xl text-lg transition flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-paper-plane text-xl text-yellow-500"></i> Оценка по фото
+                    <span class="text-xl">📩</span> Оценка по фото
                 </a>
             </div>
         </div>
@@ -196,12 +191,11 @@
                 <p class="text-gray-400 text-lg mb-6 leading-relaxed">Оформите <span class="text-yellow-500 font-semibold">бесплатную доставку курьером</span>. Мы бережно заберем ваше устройство из любой точки Тулы, отремонтируем и привезем обратно. Вам даже не придется выходить из дома или офиса!</p>
                 
                 <button type="button" id="courierButton" class="bg-[#222] border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-gray-900 font-bold py-3.5 px-8 rounded-xl transition shadow-[0_0_15px_rgba(255,238,0,0.15)] hover:shadow-[0_0_25px_rgba(255,238,0,0.4)] flex items-center gap-3 w-full sm:w-auto justify-center">
-                    <i class="fa-solid fa-box text-xl"></i>
-                    Вызвать курьера
+                    <span class="text-xl">📦</span> Вызвать курьера
                 </button>
             </div>
             <div class="md:w-1/3 hidden md:flex justify-end pr-8">
-                <i class="fa-solid fa-truck-fast text-[8rem] text-yellow-500 opacity-80 drop-shadow-[0_0_30px_rgba(255,238,0,0.2)] animate-bounce" style="animation-duration: 3s;"></i>
+                <span class="text-[8rem] drop-shadow-[0_0_30px_rgba(255,238,0,0.2)] animate-bounce" style="animation-duration: 3s;">🚚</span>
             </div>
         </div>
     </section>
@@ -218,19 +212,19 @@
                     <h3 class="text-xl font-bold mb-6 text-center text-white">Какое устройство сломалось?</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-5 transition flex flex-col items-center gap-2" data-step="1" data-value="apple">
-                            <i class="fa-brands fa-apple text-4xl text-gray-300 mb-1"></i>
+                            <span class="text-4xl mb-1">🍏</span>
                             <span class="font-bold text-gray-200 text-base">Apple (iPhone)</span>
                         </button>
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-5 transition flex flex-col items-center gap-2" data-step="1" data-value="android">
-                            <i class="fa-brands fa-android text-4xl text-gray-300 mb-1"></i>
+                            <span class="text-4xl mb-1">🤖</span>
                             <span class="font-bold text-gray-200 text-base">Android (Samsung, Xiaomi...)</span>
                         </button>
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-5 transition flex flex-col items-center gap-2" data-step="1" data-value="laptop">
-                            <i class="fa-solid fa-laptop text-4xl text-gray-300 mb-1"></i>
+                            <span class="text-4xl mb-1">💻</span>
                             <span class="font-bold text-gray-200 text-base">Ноутбуки и ПК</span>
                         </button>
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-5 transition flex flex-col items-center gap-2" data-step="1" data-value="other">
-                            <i class="fa-solid fa-screwdriver-wrench text-4xl text-gray-300 mb-1"></i>
+                            <span class="text-4xl mb-1">🛠️</span>
                             <span class="font-bold text-gray-200 text-base">Планшеты и другое</span>
                         </button>
                     </div>
@@ -238,14 +232,14 @@
 
                 <!-- step 2 -->
                 <div id="quiz-step-2" class="quiz-step hidden">
-                    <button id="btn-back-1" class="text-yellow-500 hover:text-yellow-400 text-sm mb-5 font-semibold flex items-center gap-2"><i class="fa-solid fa-arrow-left"></i> Назад</button>
+                    <button id="btn-back-1" class="text-yellow-500 hover:text-yellow-400 text-sm mb-5 font-semibold flex items-center gap-2">⬅️ Назад</button>
                     <h3 class="text-xl font-bold mb-6 text-center text-white">Что случилось?</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="problems-container"></div>
                 </div>
 
                 <!-- step 3 -->
                 <div id="quiz-step-3" class="quiz-step hidden text-center">
-                    <button id="btn-back-2" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-2 float-left"><i class="fa-solid fa-arrow-left"></i> Назад</button>
+                    <button id="btn-back-2" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-2 float-left">⬅️ Назад</button>
                     <div class="clear-both"></div>
                     
                     <div class="bg-yellow-500/10 border border-yellow-500/30 text-yellow-500 p-5 rounded-xl mb-6 shadow-inner max-w-md mx-auto">
@@ -289,11 +283,11 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <i class="fa-solid fa-shield-halved text-2xl text-yellow-500"></i>
+                                <span class="text-2xl">🛡️</span>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Защита экранов (Гидрогель)</h3>
                         </div>
-                        <i class="fa-solid fa-chevron-down text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0"></i>
+                        <span class="text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0">⬇️</span>
                     </button>
                     <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -319,11 +313,11 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <i class="fa-brands fa-apple text-3xl text-white"></i>
+                                <span class="text-3xl">🍏</span>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Apple (iPhone)</h3>
                         </div>
-                        <i class="fa-solid fa-chevron-down text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0"></i>
+                        <span class="text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0">⬇️</span>
                     </button>
                     <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -373,11 +367,11 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <i class="fa-brands fa-android text-3xl text-green-500"></i>
+                                <span class="text-3xl">🤖</span>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Android (Samsung, Xiaomi, Realme...)</h3>
                         </div>
-                        <i class="fa-solid fa-chevron-down text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0"></i>
+                        <span class="text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0">⬇️</span>
                     </button>
                     <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -423,11 +417,11 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <i class="fa-solid fa-tablet-screen-button text-3xl text-purple-400"></i>
+                                <span class="text-3xl">📱</span>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Планшеты (iPad, Samsung, Xiaomi...)</h3>
                         </div>
-                        <i class="fa-solid fa-chevron-down text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0"></i>
+                        <span class="text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0">⬇️</span>
                     </button>
                     <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -465,11 +459,11 @@
                     <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
-                                <i class="fa-solid fa-laptop text-3xl text-blue-400"></i>
+                                <span class="text-3xl">💻</span>
                             </div>
                             <h3 class="text-xl font-bold text-gray-200">Ноутбуки (Asus, Acer, MSI, HP...)</h3>
                         </div>
-                        <i class="fa-solid fa-chevron-down text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0"></i>
+                        <span class="text-xl text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0">⬇️</span>
                     </button>
                     <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -549,7 +543,7 @@
             <!-- yandex map button -->
             <div class="mt-12 text-center">
                 <a href="https://yandex.com/maps/org/yellou_servis/140349708663/reviews/?ll=37.610682%2C54.289383&z=16" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-[#222] hover:bg-[#333] text-white font-semibold py-3 px-8 rounded-full border border-gray-700 hover:border-red-500 transition shadow-lg">
-                    <i class="fa-solid fa-location-dot text-xl text-red-500"></i> Читать все отзывы на Яндекс Картах
+                    <span class="text-xl">📍</span> Читать все отзывы на Яндекс Картах
                 </a>
             </div>
         </div>
@@ -562,7 +556,7 @@
             
             <div class="relative group">
                 <button type="button" aria-label="Прокрутить влево" id="scrollLeftBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#222] border border-gray-700 hover:bg-yellow-500 hover:border-yellow-500 hover:text-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center transition -ml-4 opacity-90 hover:opacity-100 hidden md:flex shadow-lg">
-                    <i class="fa-solid fa-chevron-left text-xl"></i>
+                    <span class="text-xl">⬅️</span>
                 </button>
 
                 <div id="galleryWrapper" class="flex overflow-x-auto gap-5 pb-6 px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth">
@@ -584,7 +578,7 @@
                 </div>
 
                 <button type="button" aria-label="Прокрутить вправо" id="scrollRightBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#222] border border-gray-700 hover:bg-yellow-500 hover:border-yellow-500 hover:text-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center transition -mr-4 opacity-90 hover:opacity-100 hidden md:flex shadow-lg">
-                    <i class="fa-solid fa-chevron-right text-xl"></i>
+                    <span class="text-xl">➡️</span>
                 </button>
             </div>
             <p class="text-center text-gray-500 mt-4 text-sm">Используем профессиональное оборудование для компонентного ремонта.</p>
@@ -606,14 +600,14 @@
                 
                 <div class="flex flex-col gap-4">
                     <div class="flex items-start gap-3">
-                        <i class="fa-solid fa-magnifying-glass text-2xl text-yellow-500 mt-1"></i>
+                        <span class="text-2xl mt-1">🔍</span>
                         <div>
                             <h4 class="font-bold text-gray-200">Бесплатная диагностика</h4>
                             <p class="text-sm text-gray-500">Не берем деньги за осмотр, даже если откажетесь от ремонта.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <i class="fa-solid fa-shield-halved text-2xl text-yellow-500 mt-1"></i>
+                        <span class="text-2xl mt-1">🛡️</span>
                         <div>
                             <h4 class="font-bold text-gray-200">Гарантия на работу</h4>
                             <p class="text-sm text-gray-500">Отвечаем рублем за каждую установленную запчасть.</p>
@@ -624,22 +618,22 @@
             
             <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <i class="fa-solid fa-microchip text-4xl mb-4 text-yellow-500"></i>
+                    <span class="text-4xl mb-4">🔬</span>
                     <h4 class="font-bold text-gray-200 mb-1">Пайка компонентов</h4>
                     <p class="text-sm text-gray-500">Восстановление контактных дорожек, замена сгоревших элементов и реболл BGA-чипов.</p>
                 </div>
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <i class="fa-solid fa-wave-square text-4xl mb-4 text-yellow-500"></i>
+                    <span class="text-4xl mb-4">📊</span>
                     <h4 class="font-bold text-gray-200 mb-1">Чтение логов</h4>
                     <p class="text-sm text-gray-500">Расшифровка panic-логов и программных сбоев для точного поиска проблемы.</p>
                 </div>
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <i class="fa-solid fa-bolt text-4xl mb-4 text-yellow-500"></i>
+                    <span class="text-4xl mb-4">⚡</span>
                     <h4 class="font-bold text-gray-200 mb-1">Ремонт цепей питания</h4>
                     <p class="text-sm text-gray-500">Поиск короткого замыкания, замена контроллеров заряда и аудиокодеков.</p>
                 </div>
                 <div class="bg-[#1a1a1a] p-5 rounded-2xl border border-gray-800 shadow-lg flex flex-col h-full hover:border-gray-700 transition">
-                    <i class="fa-solid fa-memory text-4xl mb-4 text-yellow-500"></i>
+                    <span class="text-4xl mb-4">💾</span>
                     <h4 class="font-bold text-gray-200 mb-1">Программаторы</h4>
                     <p class="text-sm text-gray-500">Работаем с JCID V1SE. Восстанавливаем Face ID (TrueDepth), True-Tone и прописываем АКБ.</p>
                 </div>
@@ -656,7 +650,7 @@
                 <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-gray-700 transition overflow-hidden">
                     <button type="button" class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
                         <h3 class="text-xl font-bold text-gray-200 pr-4">Сохранятся ли мои данные при ремонте?</h3>
-                        <i class="fa-solid fa-chevron-down text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0"></i>
+                        <span class="text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0">⬇️</span>
                     </button>
                     <div class="faq-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -668,7 +662,7 @@
                 <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-gray-700 transition overflow-hidden">
                     <button type="button" class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
                         <h3 class="text-xl font-bold text-gray-200 pr-4">Сколько времени занимает ремонт?</h3>
-                        <i class="fa-solid fa-chevron-down text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0"></i>
+                        <span class="text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0">⬇️</span>
                     </button>
                     <div class="faq-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -680,7 +674,7 @@
                 <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-gray-700 transition overflow-hidden">
                     <button type="button" class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-btn">
                         <h3 class="text-xl font-bold text-gray-200 pr-4">Какую гарантию вы даете?</h3>
-                        <i class="fa-solid fa-chevron-down text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0"></i>
+                        <span class="text-xl text-yellow-500 transform transition-transform duration-300 faq-icon shrink-0">⬇️</span>
                     </button>
                     <div class="faq-answer grid grid-rows-[0fr] transition-all duration-300">
                         <div class="overflow-hidden">
@@ -768,7 +762,7 @@
 
     <!-- scroll to top progress button -->
     <button id="backToTop" class="fixed bottom-[110px] right-6 md:bottom-[130px] md:right-10 w-12 h-12 bg-[#222] rounded-full border-2 border-yellow-500 flex items-center justify-center opacity-0 invisible translate-y-4 transition-all duration-300 z-40 hover:bg-yellow-500 hover:text-gray-900 text-yellow-500 shadow-lg">
-        <i class="fa-solid fa-chevron-up text-xl absolute"></i>
+        <span class="text-xl absolute">⬆️</span>
         <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 36 36">
             <circle class="text-gray-700" stroke-width="2" stroke="currentColor" fill="transparent" r="16" cx="18" cy="18"></circle>
             <circle id="scrollProgress" class="text-yellow-500 transition-all duration-150" stroke-width="2" stroke-dasharray="100.53" stroke-dashoffset="100.53" stroke="currentColor" fill="transparent" r="16" cx="18" cy="18"></circle>
@@ -777,7 +771,7 @@
 
     <!-- floating action button -->
     <button type="button" aria-label="Оставить заявку" id="floatingLeadButton" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-4 px-4 md:px-6 rounded-full shadow-[0_0_25px_rgba(255,238,0,0.5)] z-40 flex items-center gap-3 transition transform hover:scale-105 border-2 border-gray-900 animate-bounce">
-        <i class="fa-solid fa-comment-dots text-2xl"></i>
+        <span class="text-2xl">💬</span>
         <span class="hidden md:inline">Оставить заявку</span>
     </button>
 
@@ -816,7 +810,7 @@
         <div class="bg-[#1a1a1a] border-2 border-yellow-500 p-8 rounded-3xl shadow-[0_0_50px_rgba(255,238,0,0.3)] w-full max-w-md relative text-center transform scale-95 transition-transform duration-300">
             <button type="button" aria-label="Закрыть" id="closeExitPopup" class="absolute top-4 right-5 text-gray-500 hover:text-white text-3xl font-bold leading-none transition">&times;</button>
             
-            <i class="fa-solid fa-gift text-6xl mx-auto mb-4 text-yellow-500 drop-shadow-[0_0_15px_rgba(255,238,0,0.5)]"></i>
+            <span class="text-6xl block mx-auto mb-4 drop-shadow-[0_0_15px_rgba(255,238,0,0.5)]">🎁</span>
             <h3 class="text-2xl md:text-3xl font-extrabold mb-2 text-white">Постойте! Уходите?</h3>
             <p class="text-gray-300 mb-6 text-sm md:text-base">Для Вас скидка<span class="text-yellow-500 font-bold"> 500 ₽</span> на любой ремонт и бесплатную диагностику. Просто оставьте номер!</p>
             
@@ -856,7 +850,7 @@
         </div>
     </div>
 
-    <!-- ВЕСЬ JS ВЫПОЛНЯЕТСЯ СРАЗУ (без DOMContentLoaded, чтобы ничего не зависало) -->
+    <!-- ВЕСЬ JS ВЫПОЛНЯЕТСЯ СРАЗУ -->
     <script>
         // scroll logic
         const backToTop = document.getElementById('backToTop');
