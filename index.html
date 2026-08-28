@@ -224,15 +224,15 @@
                         </button>
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="android">
                             <i data-lucide="cpu" class="w-10 h-10 text-gray-300"></i>
-                            <span class="font-bold text-gray-200">Android (Samsung, Xiaomi, Tecno...)</span>
+                            <span class="font-bold text-gray-200">Android (Samsung, Xiaomi...)</span>
                         </button>
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="laptop">
                             <i data-lucide="laptop" class="w-10 h-10 text-gray-300"></i>
-                            <span class="font-bold text-gray-200">Ноутбук (MSI, Asus, Acer, HP...)</span>
+                            <span class="font-bold text-gray-200">Ноутбуки и ПК</span>
                         </button>
                         <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="other">
                             <i data-lucide="settings" class="w-10 h-10 text-gray-300"></i>
-                            <span class="font-bold text-gray-200">Другое (пленки, планшеты)</span>
+                            <span class="font-bold text-gray-200">Планшеты и другое</span>
                         </button>
                     </div>
                 </div>
@@ -275,131 +275,230 @@
         </div>
     </section>
 
-    <!-- pricing table -->
+    <!-- БЛОК С ЦЕНАМИ (СПОЙЛЕРЫ) -->
     <section id="prices" class="py-20 bg-[#111] border-b border-gray-800">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-white">Популярные услуги</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Популярные услуги</h2>
+                <p class="text-gray-400">Выберите вашу технику. Точную стоимость скажем после бесплатной диагностики.</p>
+            </div>
             
-            <div class="bg-[#1a1a1a] shadow-2xl rounded-2xl overflow-hidden mb-10 border border-gray-800">
-                <div class="bg-yellow-500 text-gray-900 py-4 px-6 text-xl font-bold border-b border-yellow-600 flex items-center">
-                    <i data-lucide="shield-check" class="w-6 h-6 mr-2"></i> Поклейка гидрогелевой пленки
+            <div class="space-y-4">
+                
+                <!-- Спойлер: Защита экранов -->
+                <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-yellow-500/50 transition duration-300 overflow-hidden group">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-yellow-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-200">Защита экранов (Гидрогель)</h3>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
+                        <div class="overflow-hidden">
+                            <div class="px-6 pb-6 pt-2">
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Пленка на смартфон (глянец/матовая)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 500 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Пленка на планшет / смарт-часы</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 600 ₽</span>
+                                    </div>
+                                </div>
+                                <button onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Уточнить наличие на мою модель</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <table class="w-full text-left border-collapse">
-                    <tbody>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Гидрогелевая пленка на смартфон (глянец / матовая)</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 600 ₽</td>
-                        </tr>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Защита задней панели / камеры смартфона</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 400 ₽</td>
-                        </tr>
-                        <tr class="hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Пленка на планшет или смарт-часы</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 800 ₽</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
 
-            <div class="bg-[#1a1a1a] shadow-2xl rounded-2xl overflow-hidden mb-10 border border-gray-800">
-                <div class="bg-gray-800 text-white py-4 px-6 text-xl font-bold border-b border-gray-700 flex items-center">
-                    <i data-lucide="smartphone" class="w-6 h-6 mr-2"></i> Apple (iPhone)
+                <!-- Спойлер: Apple -->
+                <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-yellow-500/50 transition duration-300 overflow-hidden group">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
+                                <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-200">Apple (iPhone)</h3>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
+                        <div class="overflow-hidden">
+                            <div class="px-6 pb-6 pt-2">
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена дисплея (с переносом True-Tone)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 500 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена АКБ (прописка без ошибок в настройках)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 200 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена заднего стекла (крышки) / корпуса</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 2 000 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Чистка сеточек динамиков и микрофона</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 500 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена нижнего шлейфа (разъема зарядки)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 500 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена основной или фронтальной камеры</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 500 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Восстановление Face ID (TrueDepth)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 2 500 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Сложная пайка платы (контроллер питания, аудиокодек)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 2 000 ₽</span>
+                                    </div>
+                                </div>
+                                <button onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-yellow-500 font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать стоимость для моего iPhone</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <table class="w-full text-left border-collapse">
-                    <tbody>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена дисплея (Orig)</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 5 000 ₽</td>
-                        </tr>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена дисплея (Копия хорошего качества)</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 3 000 ₽</td>
-                        </tr>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена аккумулятора</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 2 000 ₽</td>
-                        </tr>
-                        <tr class="hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Настройка и программное восстановление</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 1 000 ₽</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
 
-            <div class="bg-[#1a1a1a] shadow-2xl rounded-2xl overflow-hidden mb-10 border border-gray-800">
-                <div class="bg-blue-900 text-white py-4 px-6 text-xl font-bold border-b border-blue-800 flex items-center">
-                    <i data-lucide="tablet-smartphone" class="w-6 h-6 mr-2"></i> Samsung
+                <!-- Спойлер: Android -->
+                <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-yellow-500/50 transition duration-300 overflow-hidden group">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
+                                <i data-lucide="cpu" class="w-6 h-6 text-green-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-200">Android (Samsung, Xiaomi, Realme...)</h3>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
+                        <div class="overflow-hidden">
+                            <div class="px-6 pb-6 pt-2">
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена дисплейного модуля</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 000 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена разъема зарядки (Type-C / Micro USB)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 800 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена аккумулятора / задней крышки</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 800 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Чистка динамиков и разъемов от пыли</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 500 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена разбитого стекла камеры</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 500 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Восстановление после залития (чистка в УЗ-ванне)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 000 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Компонентная пайка платы (замена контроллеров)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 500 ₽</span>
+                                    </div>
+                                </div>
+                                <button onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать стоимость для моего Android</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <table class="w-full text-left border-collapse">
-                    <tbody>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена дисплея (Orig)</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 4 500 ₽</td>
-                        </tr>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена дисплея (Копия)</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 2 500 ₽</td>
-                        </tr>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена задней крышки</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 1 500 ₽</td>
-                        </tr>
-                        <tr class="hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена аккумулятора</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 2 000 ₽</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                
+                <!-- Спойлер: Планшеты -->
+                <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-yellow-500/50 transition duration-300 overflow-hidden group">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
+                                <i data-lucide="tablet" class="w-6 h-6 text-purple-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-200">Планшеты (iPad, Samsung, Xiaomi...)</h3>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
+                        <div class="overflow-hidden">
+                            <div class="px-6 pb-6 pt-2">
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена сенсорного стекла (тачскрина)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 200 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена дисплея (матрицы)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 500 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена аккумулятора</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 200 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена разъема зарядки</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 000 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Восстановление материнской платы</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 2 000 ₽</span>
+                                    </div>
+                                </div>
+                                <button onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать ремонт моего планшета</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="bg-[#1a1a1a] shadow-2xl rounded-2xl overflow-hidden mb-10 border border-gray-800">
-                <div class="bg-orange-800 text-white py-4 px-6 text-xl font-bold border-b border-orange-700 flex items-center">
-                    <i data-lucide="cpu" class="w-6 h-6 mr-2"></i> Xiaomi / Redmi / Poco
+                <!-- Спойлер: Ноутбуки -->
+                <div class="bg-[#1a1a1a] border border-gray-800 rounded-2xl shadow-md hover:border-yellow-500/50 transition duration-300 overflow-hidden group">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/20 transition">
+                                <i data-lucide="laptop" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-200">Ноутбуки (Asus, Acer, MSI, HP...)</h3>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-500 group-hover:text-yellow-500 transform transition-transform duration-300 accordion-icon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="accordion-answer grid grid-rows-[0fr] transition-all duration-300">
+                        <div class="overflow-hidden">
+                            <div class="px-6 pb-6 pt-2">
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Чистка от пыли + замена термопасты</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 000 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Установка Windows, драйверов и программ</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 000 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Замена матрицы (экрана) / клавиатуры</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 500 ₽</span>
+                                    </div>
+                                    <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                                        <span class="text-gray-400 text-sm md:text-base">Апгрейд (установка SSD, добавление ОЗУ)</span>
+                                        <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 800 ₽</span>
+                                    </div>
+                                </div>
+                                <button onclick="document.getElementById('leadButton').click()" class="w-full bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2">Рассчитать ремонт моего ноутбука</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <table class="w-full text-left border-collapse">
-                    <tbody>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена дисплейного модуля</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 2 500 ₽</td>
-                        </tr>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена разъема зарядки (Type-C)</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 1 200 ₽</td>
-                        </tr>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена аккумулятора</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 1 500 ₽</td>
-                        </tr>
-                        <tr class="hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Программная настройка и обслуживание</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 1 500 ₽</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
 
-            <div class="bg-[#1a1a1a] shadow-2xl rounded-2xl overflow-hidden border border-gray-800">
-                <div class="bg-indigo-900 text-white py-4 px-6 text-xl font-bold border-b border-indigo-800 flex items-center">
-                    <i data-lucide="laptop" class="w-6 h-6 mr-2"></i> Ремонт Ноутбуков (Asus, Acer, MSI и др.)
-                </div>
-                <table class="w-full text-left border-collapse">
-                    <tbody>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Чистка от пыли и замена термопасты</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 1 500 ₽</td>
-                        </tr>
-                        <tr class="border-b border-gray-800 hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Замена матрицы (экрана)</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 3 500 ₽</td>
-                        </tr>
-                        <tr class="hover:bg-[#222] transition">
-                            <td class="py-4 px-6 text-gray-300">Установка ПО, Windows и драйверов</td>
-                            <td class="py-4 px-6 text-right font-bold text-white whitespace-nowrap">от 1 500 ₽</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>
@@ -814,74 +913,201 @@
 
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxU95W0x4tF2FHo0BQdFScwz7gZyI3E0dkTE4AU66XKsgfFfzflOQ5kivy7xptlMpRS/exec';
 
-        // dynamic typing
-        const words = ["телефонов", "ноутбуков", "iPhone", "Samsung", "Xiaomi", "планшетов"];
+        // --- ДИНАМИЧЕСКИЙ ЗАГОЛОВОК И МУЛЬТИЛЕНДИНГ (UTM) ---
+        let words = ["телефонов", "ноутбуков", "iPhone", "Samsung", "Xiaomi", "планшетов"];
+        let loopTyping = true; 
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmTerm = urlParams.get('utm_term');
+
+        // ГИГАНТСКИЙ СЛОВАРЬ БРЕНДОВ
+        const brandMap = {
+            "iPhone": ["iphone", "айфон"],
+            "Apple": ["apple", "эпл", "эппл"],
+            "iPad": ["ipad", "айпад", "айпэд"],
+            "MacBook": ["macbook", "макбук"],
+            "Samsung": ["samsung", "самсунг"],
+            "Xiaomi": ["xiaomi", "сяоми", "ксиоми"],
+            "Redmi": ["redmi", "редми"],
+            "POCO": ["poco", "поко"],
+            "Realme": ["realme", "рилми", "реалми"],
+            "Honor": ["honor", "хонор", "онор"],
+            "Huawei": ["huawei", "хуавей"],
+            "Tecno": ["tecno", "текно", "техно"],
+            "Infinix": ["infinix", "инфиникс"],
+            "Vivo": ["vivo", "виво"],
+            "Oppo": ["oppo", "оппо"],
+            "Google Pixel": ["pixel", "пиксель", "google", "гугл"],
+            "OnePlus": ["oneplus", "ванплас", "1+"],
+            "Meizu": ["meizu", "мейзу"],
+            "ZTE": ["zte", "зте"],
+            "Nokia": ["nokia", "нокиа", "нокия"],
+            "Motorola": ["motorola", "моторола"],
+            "Sony": ["sony", "сони"],
+            "Sony Ericsson": ["sony ericsson", "сони эриксон"],
+            "LG": ["lg", "лджи", "элджи"],
+            "HTC": ["htc", "хтс", "аштиси"],
+            "Asus": ["asus", "асус"],
+            "Acer": ["acer", "асер", "эйсер"],
+            "Lenovo": ["lenovo", "леново"],
+            "HP": ["hp", "хп", "эйчпи"],
+            "Dell": ["dell", "делл"],
+            "MSI": ["msi", "мси", "эмесай"],
+            "Toshiba": ["toshiba", "тошиба"],
+            "Dexp": ["dexp", "дексп"],
+            "Alcatel": ["alcatel", "алкатель"],
+            "Fly": ["fly", "флай"],
+            "Explay": ["explay", "эксплей"],
+            "Philips": ["philips", "филипс"],
+            "Panasonic": ["panasonic", "панасоник"],
+            "BlackBerry": ["blackberry", "блэкберри"],
+            "itel": ["itel", "ител", "айтел"],
+            "Blackview": ["blackview", "блеквью", "блэквью"],
+            "Oukitel": ["oukitel", "аукитель", "оукител"],
+            "CMF By Nothing": ["cmf"],
+            "Nothing": ["nothing", "нафинг", "нофинг"],
+            "Nubia": ["nubia", "нубия"],
+            "iQOO": ["iqoo", "айку"],
+            "TCL": ["tcl", "тсл", "тисиэл"],
+            "Unihertz": ["unihertz", "юнигерц"],
+            "IIIF150": ["iiif150", "150"],
+            "KENSHI": ["kenshi", "кенши"],
+            "Rikor": ["rikor", "рикор"],
+            "Bliss": ["bliss", "блисс"],
+            "SENSEIT": ["senseit", "сенсейт"],
+            "Rover PC": ["rover", "ровер"],
+            "BenQ-Siemens": ["benq", "бенкью"],
+            "Gresso": ["gresso", "грессо"],
+            "TeXet": ["texet", "тексет"],
+            "ONEXT": ["onext", "онекст"],
+            "Getac": ["getac", "гетак"],
+            "AnyDATA": ["anydata", "энидата"],
+            "Eten": ["eten", "етен"],
+            "VEON": ["veon", "веон"],
+            "Tag Heuer": ["tag heuer", "таг хойер"],
+            "BB-mobile": ["bb-mobile", "бб-мобайл"],
+            "Mitac": ["mitac", "митак"],
+            "AWAX": ["awax", "авакс"],
+            "AirOn": ["airon", "айрон"],
+            "BURG": ["burg", "бург"],
+            "Ubiquam": ["ubiquam", "убиквам"],
+            "GIGABYTE": ["gigabyte", "гигабайт"],
+            "Garmin": ["garmin", "гармин"],
+            "Handheld": ["handheld"],
+            "Handyuhr": ["handyuhr"],
+            "Hisense": ["hisense", "хайсенс"],
+            "iTravel": ["itravel", "айтревел"],
+            "JOA": ["joa"],
+            "Just5": ["just5", "джаст5"],
+            "Magic": ["magic", "меджик"],
+            "Maxon": ["maxon", "максон"],
+            "Ninefive": ["ninefive"],
+            "Outfone": ["outfone"],
+            "Pantech": ["pantech", "пантек"],
+            "Seals": ["seals", "силс"],
+            "Siemens": ["siemens", "сименс"],
+            "Sitronics": ["sitronics", "ситроникс"],
+            "Sonim": ["sonim", "соним"],
+            "Vertu": ["vertu", "верту"],
+            "Viewsonic": ["viewsonic", "вьюсоник"],
+            "Voxtel": ["voxtel", "вокстел"],
+            "Watchtech": ["watchtech"],
+            "Билайн": ["билайн", "beeline"],
+            "МТС": ["мтс", "mts"],
+            "МегаФон": ["мегафон", "megafon"],
+            "Highscreen": ["highscreen", "хайскрин"],
+            
+            // ОБЩИЕ ЗАПРОСЫ (Строго в конце словаря)
+            "телефонов": ["телефон", "смартфон", "сотовый"],
+            "ноутбуков": ["laptop", "ноутбук", "нетбук"],
+            "планшетов": ["tablet", "планшет"],
+            "компьютеров": ["pc", "компьютер", "пк", "моноблок"]
+        };
+
+        if (utmTerm) {
+            const term = utmTerm.toLowerCase();
+            for (const [displayWord, keywords] of Object.entries(brandMap)) {
+                if (keywords.some(kw => term.includes(kw))) {
+                    words = [displayWord]; 
+                    loopTyping = false;    
+                    break;                 
+                }
+            }
+        }
+
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
         const typedTextSpan = document.getElementById("typed-text");
 
-        function typeEffect() {
-            const currentWord = words[wordIndex];
-            
-            if (isDeleting) {
-                typedTextSpan.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typedTextSpan.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
+        if (typedTextSpan) {
+            function typeEffect() {
+                const currentWord = words[wordIndex];
+                
+                if (isDeleting) {
+                    typedTextSpan.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typedTextSpan.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                let typeSpeed = isDeleting ? 50 : 120;
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    if (!loopTyping) return; 
+                    
+                    typeSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    typeSpeed = 500;
+                }
+
+                setTimeout(typeEffect, typeSpeed);
             }
-
-            let typeSpeed = isDeleting ? 50 : 120;
-
-            if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-                typeSpeed = 500;
-            }
-
-            setTimeout(typeEffect, typeSpeed);
+            setTimeout(typeEffect, 1000);
         }
-        setTimeout(typeEffect, 1000);
-
 
         // interactive quiz logic
         const quizData = {
             "apple": {
                 name: "Apple",
                 problems: [
-                    { text: "Разбит экран / нет картинки", price: "от 3 000 ₽" },
-                    { text: "Быстро садится / вздулся", price: "от 2 000 ₽" },
-                    { text: "Не включается / висит на лого", price: "нужна диагностика" },
-                    { text: "Другое (камера, звук, разъем)", price: "от 1 500 ₽" }
+                    { text: "Разбит экран / нет картинки", price: "от 1 500 ₽" },
+                    { text: "Быстро садится / вздулся (АКБ)", price: "от 1 200 ₽" },
+                    { text: "Не заряжается / разъем", price: "от 1 500 ₽" },
+                    { text: "Не включается / висит на лого", price: "нужна диагностика" }
                 ]
             },
             "android": {
                 name: "Android",
                 problems: [
-                    { text: "Разбит экран", price: "от 2 500 ₽" },
-                    { text: "Замена аккумулятора", price: "от 1 500 ₽" },
-                    { text: "Не заряжается / разъем Type-C", price: "от 1 200 ₽" },
+                    { text: "Разбит экран / нет картинки", price: "от 1 000 ₽" },
+                    { text: "Быстро садится / вздулся (АКБ)", price: "от 800 ₽" },
+                    { text: "Не заряжается / разъем Type-C", price: "от 800 ₽" },
                     { text: "Не включается / залит", price: "нужна диагностика" }
                 ]
             },
             "laptop": {
                 name: "Ноутбук",
                 problems: [
-                    { text: "Греется / шумит (Чистка)", price: "от 1 500 ₽" },
-                    { text: "Разбита матрица (экран)", price: "от 3 500 ₽" },
-                    { text: "Установка Windows / драйверов", price: "от 1 500 ₽" },
-                    { text: "Не включается / нет реакции", price: "нужна диагностика" }
+                    { text: "Греется / шумит (Чистка)", price: "от 1 000 ₽" },
+                    { text: "Разбита матрица (экран)", price: "от 1 500 ₽" },
+                    { text: "Быстро садится (замена АКБ)", price: "от 1 000 ₽" },
+                    { text: "Ремонт корпуса / петель", price: "от 1 500 ₽" },
+                    { text: "Установка Windows / апгрейд", price: "от 800 ₽" },
+                    { text: "Залит / не включается", price: "нужна диагностика" }
                 ]
             },
             "other": {
                 name: "Другое",
                 problems: [
                     { text: "Поклейка гидрогелевой пленки", price: "от 500 ₽" },
-                    { text: "Ремонт планшета", price: "нужна диагностика" },
+                    { text: "Разбит планшет (экран / тачскрин)", price: "от 1 200 ₽" },
+                    { text: "Планшет не заряжается / АКБ", price: "от 1 000 ₽" },
+                    { text: "Сложная пайка / другое", price: "нужна диагностика" }
                 ]
             }
         };
@@ -901,7 +1127,7 @@
                 currentDevice = e.currentTarget.getAttribute('data-value');
                 problemsContainer.innerHTML = '';
                 quizData[currentDevice].problems.forEach(prob => {
-                    const btnHTML = `<button type="button" class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-4 transition font-semibold text-gray-200" data-price="${prob.price}" data-problem="${prob.text}">${prob.text}</button>`;
+                    const btnHTML = `<button type="button" class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition font-semibold text-gray-200" data-price="${prob.price}" data-problem="${prob.text}">${prob.text}</button>`;
                     problemsContainer.insertAdjacentHTML('beforeend', btnHTML);
                 });
 
@@ -1037,31 +1263,32 @@
             closePolicyModal.addEventListener('click', () => policyModal.classList.add('hidden'));
         }
 
-        // faq accordion
-        const faqBtns = document.querySelectorAll('.faq-btn');
-        faqBtns.forEach(btn => {
+        // accordion logic
+        const accordionBtns = document.querySelectorAll('.faq-btn, .accordion-btn');
+        accordionBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const answer = btn.nextElementSibling;
-                const icon = btn.querySelector('.faq-icon');
+                const icon = btn.querySelector('.faq-icon, .accordion-icon');
                 
-                document.querySelectorAll('.faq-answer').forEach(el => {
+                const section = btn.closest('section');
+                section.querySelectorAll('.faq-answer, .accordion-answer').forEach(el => {
                     if (el !== answer) {
                         el.classList.remove('grid-rows-[1fr]');
                         el.classList.add('grid-rows-[0fr]');
                     }
                 });
-                document.querySelectorAll('.faq-icon').forEach(el => {
-                    if (el !== icon) el.classList.remove('rotate-180');
+                section.querySelectorAll('.faq-icon, .accordion-icon').forEach(el => {
+                    if (el !== icon) el.classList.remove('rotate-180', 'text-yellow-500');
                 });
 
                 if (answer.classList.contains('grid-rows-[0fr]')) {
                     answer.classList.remove('grid-rows-[0fr]');
                     answer.classList.add('grid-rows-[1fr]');
-                    icon.classList.add('rotate-180');
+                    icon.classList.add('rotate-180', 'text-yellow-500');
                 } else {
                     answer.classList.remove('grid-rows-[1fr]');
                     answer.classList.add('grid-rows-[0fr]');
-                    icon.classList.remove('rotate-180');
+                    icon.classList.remove('rotate-180', 'text-yellow-500');
                 }
             });
         });
