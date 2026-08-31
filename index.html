@@ -166,7 +166,7 @@
             <h1 class="sr-only">Срочный ремонт телефонов и ноутбуков в Туле, Зареченский район, Хомяково</h1>
 
             <div aria-hidden="true" class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white min-h-[96px] md:min-h-[144px]">
-                Срочный ремонт <span id="geo-location" class="text-gray-100">в Туле</span> <br>
+                Срочный ремонт<span id="geo-location" class="text-gray-100"></span> <br>
                 <span id="typed-text" class="text-yellow-500"></span><span class="inline-block w-1 md:w-1.5 h-8 md:h-12 bg-yellow-500 animate-pulse ml-1 align-middle rounded-full"></span>
             </div>
             
@@ -258,7 +258,7 @@
                     
                     <div class="bg-yellow-500/10 border border-yellow-500/30 p-5 rounded-xl mb-6 text-center">
                         <h3 class="text-xl md:text-2xl font-bold mb-2 text-white">Отчет по <span id="final-model-name" class="text-yellow-500">вашему устройству</span> сформирован!</h3>
-                        <p class="text-sm md:text-base text-gray-300">Куда вам отправить точную стоимость ремонта и статус запчастей на складе?</p>
+                        <p class="text-sm md:text-base text-gray-300">Узнать точную стоимость и наличие запчастей вы можете в мессенджере (сообщение уже готово) или по телефону — просто оставьте номер.</p>
                     </div>
 
                     <!-- Выбор мессенджера -->
@@ -461,7 +461,7 @@
                                         <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 500 ₽</span>
                                     </div>
                                     <div class="flex justify-between items-end border-b border-gray-800 pb-2">
-                                        <span class="text-gray-400 text-sm md:text-base">Замена аккумуля</span>
+                                        <span class="text-gray-400 text-sm md:text-base">Замена аккумулятора</span>
                                         <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 200 ₽</span>
                                     </div>
                                     <div class="flex justify-between items-end border-b border-gray-800 pb-2">
@@ -616,12 +616,12 @@
 
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-start gap-10 relative z-10">
             <div class="w-full md:w-1/2">
-                <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-white leading-tight">Почему выбирают нас?</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-white leading-tight">Почему мы, а не официалы?</h2>
                 
                 <div class="border-l-4 border-yellow-500 pl-4 mb-8">
                     <p class="text-gray-300 text-lg mb-2">Нам часто приносят технику после других СЦ со словами: <span class="italic text-gray-400">«Сказали, проще купить новый»</span>.</p>
                     <p class="text-yellow-500 font-semibold">Мы не меняем платы вслепую.</p>
-                    <p class="text-sm text-gray-400 mt-2">Читаем panic-логи, ищем пробитые элементы и восстанавливаем цепи питания. Это в 2-3 раза дешевле модульной замены.</p>
+                    <p class="text-sm text-gray-400 mt-2">Читаем panic-логи, ищем пробитые элементы и восстанавливаем родные компоненты. Это в 2-3 раза дешевле модульной замены.</p>
                 </div>
                 
                 <div class="flex flex-col gap-5">
@@ -896,10 +896,10 @@
             if (!geoSpan) return;
 
             const locationMap = {
-                'zarechie': 'в Заречье',
-                'zarechenskij': 'в Зареченском районе',
-                'khomyakovo': 'в Хомяково',
-                'tula': 'в Туле'
+                'zarechie': ' в Заречье',
+                'zarechenskij': ' в Зареченском районе',
+                'khomyakovo': ' в Хомяково',
+                'tula': ' в Туле'
             };
 
             const urlParams = new URLSearchParams(window.location.search);
@@ -916,17 +916,15 @@
             }
 
             if (!isLocationFound) {
-                fetch('https://ipapi.co/json/')
+                fetch('https://ipinfo.io/json')
                     .then(response => response.json())
                     .then(data => {
-                        // Эта строка выведет твой город в консоль (F12)
                         console.log('Скрипт увидел город:', data.city, 'Регион:', data.region); 
                         
-                        // Добавили английские названия "Tula"
                         if (data.city === 'Tula' || data.city === 'Тула') {
-                            geoSpan.textContent = 'в Туле'; 
-                        } else if (data.region === 'Tula' || data.region === 'Тульская область') {
-                            geoSpan.textContent = 'в Тульской области';
+                            geoSpan.textContent = ' в Туле'; 
+                        } else if (data.region === 'Tula Oblast' || data.region === 'Тульская область' || data.region === 'Tula Region') {
+                            geoSpan.textContent = ' в Тульской области';
                         }
                     })
                     .catch(error => console.log('Ошибка геолокации:', error));
