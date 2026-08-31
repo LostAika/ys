@@ -163,23 +163,19 @@
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-3/4 bg-yellow-500 opacity-[0.07] blur-[100px] rounded-full pointer-events-none"></div>
         
         <div class="max-w-4xl mx-auto px-4 relative z-10">
-            <!-- SEO-заголовок (невидим для пользователей, но идеально читается Яндексом) -->
             <h1 class="sr-only">Срочный ремонт телефонов и ноутбуков в Туле, Зареченский район, Хомяково</h1>
 
-            <!-- Визуальный анимированный заголовок для клиентов -->
             <div aria-hidden="true" class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white min-h-[96px] md:min-h-[144px]">
-                Срочный ремонт <br>
+                Срочный ремонт <span id="geo-location" class="text-gray-100">в Туле</span> <br>
                 <span id="typed-text" class="text-yellow-500"></span><span class="inline-block w-1 md:w-1.5 h-8 md:h-12 bg-yellow-500 animate-pulse ml-1 align-middle rounded-full"></span>
             </div>
             
-            <!-- Триггеры конверсии -->
             <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-gray-300 text-sm md:text-base font-medium mb-10">
                 <div class="flex items-center justify-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i> Бесплатная диагностика</div>
                 <div class="flex items-center justify-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i> Ремонт от 20 минут</div>
                 <div class="flex items-center justify-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i> Гарантия до 1 года</div>
             </div>
 
-            <!-- Блок кнопок -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#quiz-section" class="w-full sm:w-auto bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-xl text-lg hover:bg-yellow-400 hover:shadow-[0_0_25px_rgba(255,238,0,0.5)] transition transform hover:-translate-y-1">Рассчитать стоимость</a>
                 <a href="https://t.me/+79952938949" target="_blank" class="w-full sm:w-auto bg-[#222] border border-gray-700 hover:border-yellow-500 text-white font-bold py-4 px-8 rounded-xl text-lg transition flex items-center justify-center gap-2">
@@ -217,61 +213,79 @@
             <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-4 text-white">Узнайте стоимость ремонта</h2>
             <p class="text-center text-gray-400 mb-10">Выберите устройство и поломку, чтобы получить предварительный расчет.</p>
 
-            <div class="bg-[#1a1a1a] p-8 rounded-2xl shadow-2xl border border-gray-800">
-                <!-- step 1 -->
-                <div id="quiz-step-1" class="quiz-step block">
+            <div class="bg-[#1a1a1a] p-8 rounded-2xl shadow-2xl border border-gray-800 relative min-h-[350px]">
+                <!-- Шаг 1: Тип устройства -->
+                <div id="quiz-step-1" class="quiz-step block transition-opacity duration-300">
                     <h3 class="text-xl font-bold mb-6 text-center text-white">Какое устройство сломалось?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="apple">
+                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="apple">
                             <i data-lucide="smartphone" class="w-10 h-10 text-gray-300"></i>
                             <span class="font-bold text-gray-200">Apple (iPhone)</span>
                         </button>
-                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="android">
+                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="android">
                             <i data-lucide="cpu" class="w-10 h-10 text-gray-300"></i>
-                            <span class="font-bold text-gray-200">Android (Samsung, Xiaomi...)</span>
+                            <span class="font-bold text-gray-200">Android смартфоны</span>
                         </button>
-                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="laptop">
+                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="laptop">
                             <i data-lucide="laptop" class="w-10 h-10 text-gray-300"></i>
                             <span class="font-bold text-gray-200">Ноутбуки и ПК</span>
                         </button>
-                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="other">
+                        <button class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] rounded-xl p-6 transition flex flex-col items-center gap-3" data-step="1" data-value="other">
                             <i data-lucide="settings" class="w-10 h-10 text-gray-300"></i>
                             <span class="font-bold text-gray-200">Планшеты и другое</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- step 2 -->
-                <div id="quiz-step-2" class="quiz-step hidden">
+                <!-- Шаг 2: Выбор модели -->
+                <div id="quiz-step-2" class="quiz-step hidden transition-opacity duration-300">
                     <button id="btn-back-1" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-1"><i data-lucide="arrow-left" class="w-4 h-4"></i> Назад</button>
-                    <h3 class="text-xl font-bold mb-6 text-center text-white">Что случилось?</h3>
+                    <h3 class="text-xl font-bold mb-6 text-center text-white">Уточните модель или бренд</h3>
+                    <div id="models-container"></div>
+                </div>
+
+                <!-- Шаг 3: Проблема -->
+                <div id="quiz-step-3" class="quiz-step hidden transition-opacity duration-300">
+                    <button id="btn-back-2" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-1"><i data-lucide="arrow-left" class="w-4 h-4"></i> Назад</button>
+                    <h3 class="text-xl font-bold mb-6 text-center text-white">Что случилось с <span id="display-model" class="text-yellow-500 border-b border-yellow-500/50 pb-0.5">вашим устройством</span>?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="problems-container"></div>
                 </div>
 
-                <!-- step 3 -->
-                <div id="quiz-step-3" class="quiz-step hidden text-center">
-                    <button id="btn-back-2" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-1 float-left"><i data-lucide="arrow-left" class="w-4 h-4"></i> Назад</button>
+                <!-- Шаг 4: Сбор контактов -->
+                <div id="quiz-step-4" class="quiz-step hidden text-center transition-opacity duration-300">
+                    <button id="btn-back-3" class="text-yellow-500 hover:text-yellow-400 text-sm mb-4 font-semibold flex items-center gap-1 float-left"><i data-lucide="arrow-left" class="w-4 h-4"></i> Назад</button>
                     <div class="clear-both"></div>
                     
-                    <div class="bg-yellow-500/10 border border-yellow-500/30 text-yellow-500 p-6 rounded-xl mb-8 shadow-inner">
-                        <p class="text-sm font-semibold uppercase tracking-wider mb-2">Ориентировочная стоимость</p>
-                        <p id="quiz-result-price" class="text-3xl font-black">от 1 500 ₽</p>
-                        <p class="text-sm mt-2 text-yellow-500/80">Точная цена зависит от модели и результатов диагностики.</p>
+                    <div class="bg-yellow-500/10 border border-yellow-500/30 p-5 rounded-xl mb-6 text-center">
+                        <h3 class="text-xl md:text-2xl font-bold mb-2 text-white">Отчет по <span id="final-model-name" class="text-yellow-500">вашему устройству</span> сформирован!</h3>
+                        <p class="text-sm md:text-base text-gray-300">Куда вам отправить точную стоимость ремонта и статус запчастей на складе?</p>
                     </div>
 
-                    <h3 class="text-xl font-bold mb-2 text-white">Узнать точную цену</h3>
-                    <p class="text-gray-400 mb-6 text-sm">Оставьте номер. Перезвоним за 10 минут, спамить не будем.</p>
+                    <!-- Выбор мессенджера -->
+                    <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                        <a href="#" id="tg-result-btn" target="_blank" class="w-full flex items-center justify-center gap-2 bg-[#1a1a1a] border border-[#2AABEE] hover:bg-[#2AABEE]/15 hover:border-[#33b5e5] text-white font-bold py-3.5 px-4 rounded-xl transition shadow-lg">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Telegram_Messenger.png" alt="Telegram" class="w-6 h-6 object-contain">
+                            В Telegram
+                        </a>
+                        <a href="#" id="max-result-btn" target="_blank" class="w-full flex items-center justify-center gap-2 bg-[#1a1a1a] border border-gray-700 hover:border-yellow-500 hover:text-yellow-500 text-white font-bold py-3.5 px-4 rounded-xl transition shadow-lg">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Max_logo_2025.png" alt="MAX" class="w-6 h-6 object-contain rounded-md">
+                            В мессенджер MAX
+                        </a>
+                    </div>
 
-                    <form id="quizForm" class="flex flex-col gap-4 max-w-sm mx-auto text-left relative">
-                        <!-- Невидимое поле Honeypot -->
+                    <!-- Разделитель -->
+                    <div class="relative flex py-2 items-center mb-6">
+                        <div class="flex-grow border-t border-gray-800"></div>
+                        <span class="flex-shrink-0 mx-4 text-gray-500 text-xs uppercase tracking-wider font-semibold">Или ответим по телефону</span>
+                        <div class="flex-grow border-t border-gray-800"></div>
+                    </div>
+
+                    <!-- Классическая форма -->
+                    <form id="quizForm" class="flex flex-col gap-3 max-w-sm mx-auto text-left relative">
                         <input type="text" id="honeyEmailQuiz" name="client_email" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px; opacity: 0; z-index: -1;">
-                        
-                        <input type="text" id="quizName" required placeholder="Ваше имя" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none transition">
-                        <input type="tel" id="quizPhone" required placeholder="Телефон: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none transition">
-                        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-4 px-6 rounded-lg transition mt-2 shadow-[0_0_20px_rgba(255,238,0,0.3)] hover:shadow-[0_0_25px_rgba(255,238,0,0.5)]">Получить расчет</button>
-                        
-                        <p class="text-[10px] text-gray-500 mt-2 text-center leading-tight">Нажимая кнопку, вы даете согласие на обработку данных согласно <a href="#" class="underline hover:text-yellow-500 transition policy-link">политике конфиденциальности</a>.</p>
-                        
+                        <input type="tel" id="quizPhone" required placeholder="Ваш номер: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-4 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:outline-none transition text-center text-lg">
+                        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-extrabold py-4 px-6 rounded-xl transition shadow-[0_0_20px_rgba(255,238,0,0.3)] hover:shadow-[0_0_25px_rgba(255,238,0,0.5)]">Жду звонка мастера</button>
+                        <p class="text-[10px] text-gray-500 mt-1 text-center leading-tight">Нажимая кнопку, вы соглашаетесь с <a href="#" class="underline hover:text-yellow-500 transition policy-link">политикой конфиденциальности</a>.</p>
                         <p id="quizStatus" class="text-center font-semibold text-sm hidden mt-2"></p>
                     </form>
                 </div>
@@ -447,7 +461,7 @@
                                         <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 500 ₽</span>
                                     </div>
                                     <div class="flex justify-between items-end border-b border-gray-800 pb-2">
-                                        <span class="text-gray-400 text-sm md:text-base">Замена аккумулятора</span>
+                                        <span class="text-gray-400 text-sm md:text-base">Замена аккумуля</span>
                                         <span class="font-bold text-white text-right whitespace-nowrap ml-4">от 1 200 ₽</span>
                                     </div>
                                     <div class="flex justify-between items-end border-b border-gray-800 pb-2">
@@ -603,25 +617,30 @@
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-start gap-10 relative z-10">
             <div class="w-full md:w-1/2">
                 <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-white leading-tight">Почему выбирают нас?</h2>
-                <div class="space-y-3 text-gray-400 text-base mb-8">
-                    <p>Часто к нам приносят технику после других сервисов со словами <span class="text-gray-200 italic">«сказали, проще купить новый»</span>.</p>
-                    <p>В <span class="text-yellow-500 font-bold">Yellow Сервис</span> мы не предлагаем слепо менять плату за бешеные деньги. Мы читаем <span class="text-gray-200 font-semibold">panic логи</span>, используем программаторы и ищем саму причину: сгоревший контроллер, пробитый элемент или короткое замыкание.</p>
-                    <p><span class="text-gray-200 font-semibold">Точная диагностика</span> — залог того, что вы не переплатите.</p>
+                
+                <div class="border-l-4 border-yellow-500 pl-4 mb-8">
+                    <p class="text-gray-300 text-lg mb-2">Нам часто приносят технику после других СЦ со словами: <span class="italic text-gray-400">«Сказали, проще купить новый»</span>.</p>
+                    <p class="text-yellow-500 font-semibold">Мы не меняем платы вслепую.</p>
+                    <p class="text-sm text-gray-400 mt-2">Читаем panic-логи, ищем пробитые элементы и восстанавливаем цепи питания. Это в 2-3 раза дешевле модульной замены.</p>
                 </div>
                 
-                <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-5">
                     <div class="flex items-start gap-3">
-                        <i data-lucide="search" class="w-6 h-6 text-yellow-500"></i>
+                        <div class="bg-[#222] p-2 rounded-lg text-yellow-500 shrink-0">
+                            <i data-lucide="search" class="w-5 h-5"></i>
+                        </div>
                         <div>
                             <h4 class="font-bold text-gray-200">Бесплатная диагностика</h4>
-                            <p class="text-sm text-gray-500">Не берем деньги за осмотр, даже если откажетесь от ремонта.</p>
+                            <p class="text-sm text-gray-500 leading-snug mt-1">Не берем деньги за осмотр, даже при отказе от ремонта.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <i data-lucide="shield" class="w-6 h-6 text-yellow-500"></i>
+                        <div class="bg-[#222] p-2 rounded-lg text-yellow-500 shrink-0">
+                            <i data-lucide="shield" class="w-5 h-5"></i>
+                        </div>
                         <div>
-                            <h4 class="font-bold text-gray-200">Гарантия на работу</h4>
-                            <p class="text-sm text-gray-500">Отвечаем рублем за каждую установленную запчасть.</p>
+                            <h4 class="font-bold text-gray-200">Гарантия до 1 года</h4>
+                            <p class="text-sm text-gray-500 leading-snug mt-1">Отвечаем рублем за каждую установленную запчасть.</p>
                         </div>
                     </div>
                 </div>
@@ -803,21 +822,17 @@
             <p class="text-gray-400 mb-6 text-sm">Оставьте номер, и мы перезвоним в течение 10 минут.</p>
             
             <form id="leadForm" class="flex flex-col gap-5 relative">
-                <!-- Невидимое поле Honeypot -->
                 <input type="text" id="honeyEmailModal" name="client_email" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px; opacity: 0; z-index: -1;">
                 
                 <div>
-                    <input type="text" id="clientName" required placeholder="Ваше имя" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition">
-                </div>
-                <div>
-                    <input type="tel" id="clientPhone" required placeholder="Телефон: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition">
+                    <input type="tel" id="clientPhone" required placeholder="Ваш телефон: +7 (___) ___-__-__" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition">
                 </div>
                 <div>
                     <input type="text" id="clientProblem" placeholder="Что сломалось? (необязательно)" class="w-full bg-[#222] border border-gray-700 text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition">
                 </div>
                 <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-4 px-6 rounded-lg transition mt-2 shadow-[0_0_20px_rgba(255,238,0,0.3)] hover:shadow-[0_0_25px_rgba(255,238,0,0.5)]">Отправить заявку</button>
                 
-                <p class="text-[10px] text-gray-500 mt-2 text-center leading-tight">Нажимая кнопку, вы соглашаетесь на обработку персональных данных и с <a href="#" class="underline hover:text-yellow-500 transition policy-link">политикой конфиденциальности</a>.</p>
+                <p class="text-[10px] text-gray-500 mt-2 text-center leading-tight">Нажимая кнопку, вы соглашаетесь на обработку данных и с <a href="#" class="underline hover:text-yellow-500 transition policy-link">политикой конфиденциальности</a>.</p>
             </form>
             
             <p id="formStatus" class="mt-4 text-center font-semibold hidden"></p>
@@ -859,7 +874,6 @@
                 <p><strong>1. Общие положения</strong><br>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые сервисом «Yellow Сервис» (далее – Оператор).</p>
                 <p><strong>2. Основные понятия</strong><br>Персональные данные — любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта.</p>
                 <p><strong>3. Оператор может обрабатывать следующие персональные данные Пользователя:</strong><br>
-                • Имя;<br>
                 • Номер телефона;<br>
                 • Сведения о поломке устройства.</p>
                 <p><strong>4. Цели обработки персональных данных</strong><br>Цель обработки персональных данных Пользователя — информирование Пользователя посредством телефонных звонков; уточнение деталей ремонта; предоставление консультаций.</p>
@@ -873,6 +887,51 @@
     <script>
         // initialize icons
         lucide.createIcons();
+
+        // ---------------------------------------------
+        // DYNAMIC GEOLOCATION & UTM SCRIPT
+        // ---------------------------------------------
+        document.addEventListener('DOMContentLoaded', () => {
+            const geoSpan = document.getElementById('geo-location');
+            if (!geoSpan) return;
+
+            const locationMap = {
+                'zarechie': 'в Заречье',
+                'zarechenskij': 'в Зареченском районе',
+                'khomyakovo': 'в Хомяково',
+                'tula': 'в Туле'
+            };
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const utmContent = (urlParams.get('utm_term') || urlParams.get('utm_campaign') || '').toLowerCase();
+            
+            let isLocationFound = false;
+
+            for (const [key, value] of Object.entries(locationMap)) {
+                if (utmContent.includes(key)) {
+                    geoSpan.textContent = value;
+                    isLocationFound = true;
+                    break;
+                }
+            }
+
+            if (!isLocationFound) {
+                fetch('https://ipapi.co/json/')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Эта строка выведет твой город в консоль (F12)
+                        console.log('Скрипт увидел город:', data.city, 'Регион:', data.region); 
+                        
+                        // Добавили английские названия "Tula"
+                        if (data.city === 'Tula' || data.city === 'Тула') {
+                            geoSpan.textContent = 'в Туле'; 
+                        } else if (data.region === 'Tula' || data.region === 'Тульская область') {
+                            geoSpan.textContent = 'в Тульской области';
+                        }
+                    })
+                    .catch(error => console.log('Ошибка геолокации:', error));
+            }
+        });
 
         // scroll logic
         const backToTop = document.getElementById('backToTop');
@@ -921,8 +980,8 @@
         let words = ["телефонов", "ноутбуков", "iPhone", "Samsung", "Xiaomi", "планшетов"];
         let loopTyping = true; 
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const utmTerm = urlParams.get('utm_term');
+        const urlParamsText = new URLSearchParams(window.location.search);
+        const utmTermText = urlParamsText.get('utm_term');
 
         // ГИГАНТСКИЙ СЛОВАРЬ БРЕНДОВ
         const brandMap = {
@@ -1028,8 +1087,8 @@
             "компьютеров": ["pc", "компьютер", "пк", "моноблок"]
         };
 
-        if (utmTerm) {
-            const term = utmTerm.toLowerCase();
+        if (utmTermText) {
+            const term = utmTermText.toLowerCase();
             for (const [displayWord, keywords] of Object.entries(brandMap)) {
                 if (keywords.some(kw => term.includes(kw))) {
                     words = [displayWord]; 
@@ -1074,72 +1133,163 @@
             setTimeout(typeEffect, 1000);
         }
 
-        // interactive quiz logic
+        // ---------------------------------------------
+        // INTERACTIVE QUIZ LOGIC (4 STEPS)
+        // ---------------------------------------------
         const quizData = {
             "apple": {
                 name: "Apple",
+                models: [
+                    "iPhone 17 Pro Max", "iPhone 17 Pro", "iPhone 17 / 17 Plus",
+                    "iPhone 16 Pro Max", "iPhone 16 Pro", "iPhone 16 / 16 Plus",
+                    "iPhone 15 Pro Max", "iPhone 15 Pro", "iPhone 15 / 15 Plus",
+                    "iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone 14 / 14 Plus",
+                    "iPhone 13 Pro Max", "iPhone 13 Pro", "iPhone 13 / 13 Mini",
+                    "iPhone 12 Pro Max", "iPhone 12 Pro", "iPhone 12 / 12 Mini",
+                    "iPhone 11 Pro Max", "iPhone 11 Pro", "iPhone 11",
+                    "iPhone X / XS / XS Max", "iPhone XR",
+                    "iPhone 7 / 8 / SE", "Не знаю модель"
+                ],
                 problems: [
                     { text: "Разбит экран / нет картинки", price: "от 1 500 ₽" },
                     { text: "Быстро садится / вздулся (АКБ)", price: "от 1 200 ₽" },
                     { text: "Не заряжается / разъем", price: "от 1 500 ₽" },
-                    { text: "Не включается / висит на лого", price: "нужна диагностика" }
+                    { text: "Не работает Face ID / True Tone", price: "от 2 500 ₽" },
+                    { text: "Не включается / висит на яблоке", price: "нужна диагностика" },
+                    { text: "Другая проблема", price: "уточним при звонке" }
                 ]
             },
             "android": {
                 name: "Android",
+                models: [
+                    "Xiaomi (Mi)", "Redmi", "POCO", 
+                    "Samsung Galaxy S-серия", "Samsung Galaxy A/M-серия", "Samsung Z Fold / Flip",
+                    "Realme", "Honor", "Huawei", 
+                    "Tecno", "Infinix", "Google Pixel", "OnePlus", "Vivo / Oppo", "Другой Android"
+                ],
                 problems: [
                     { text: "Разбит экран / нет картинки", price: "от 1 000 ₽" },
                     { text: "Быстро садится / вздулся (АКБ)", price: "от 800 ₽" },
                     { text: "Не заряжается / разъем Type-C", price: "от 800 ₽" },
-                    { text: "Не включается / залит", price: "нужна диагностика" }
+                    { text: "Не включается / залит", price: "нужна диагностика" },
+                    { text: "Другая проблема", price: "уточним при звонке" }
                 ]
             },
             "laptop": {
                 name: "Ноутбук",
+                models: ["Asus", "Acer", "Lenovo", "HP", "MSI", "Apple MacBook", "Dell", "Honor / Huawei", "Xiaomi", "Другой бренд"],
                 problems: [
                     { text: "Греется / шумит (Чистка)", price: "от 1 000 ₽" },
                     { text: "Разбита матрица (экран)", price: "от 1 500 ₽" },
                     { text: "Быстро садится (замена АКБ)", price: "от 1 000 ₽" },
+                    { text: "Установка Windows / SSD", price: "от 800 ₽" },
                     { text: "Ремонт корпуса / петель", price: "от 1 500 ₽" },
-                    { text: "Установка Windows / апгрейд", price: "от 800 ₽" },
                     { text: "Залит / не включается", price: "нужна диагностика" }
                 ]
             },
             "other": {
                 name: "Другое",
+                models: ["Планшет Apple iPad", "Планшет Android", "Умные часы (Apple Watch / др.)", "Другое устройство"],
                 problems: [
+                    { text: "Разбит экран / тачскрин", price: "от 1 200 ₽" },
+                    { text: "Не заряжается / замена АКБ", price: "от 1 000 ₽" },
                     { text: "Поклейка гидрогелевой пленки", price: "от 500 ₽" },
-                    { text: "Разбит планшет (экран / тачскрин)", price: "от 1 200 ₽" },
-                    { text: "Планшет не заряжается / АКБ", price: "от 1 000 ₽" },
                     { text: "Сложная пайка / другое", price: "нужна диагностика" }
                 ]
             }
         };
 
         let currentDevice = "";
+        let currentModel = "";
         let currentProblem = "";
         let currentEstimate = "";
 
         const step1 = document.getElementById('quiz-step-1');
         const step2 = document.getElementById('quiz-step-2');
         const step3 = document.getElementById('quiz-step-3');
-        const problemsContainer = document.getElementById('problems-container');
-        const resultPrice = document.getElementById('quiz-result-price');
+        const step4 = document.getElementById('quiz-step-4');
 
-        document.querySelectorAll('.quiz-step button[data-step="1"]').forEach(btn => {
+        const modelsContainer = document.getElementById('models-container');
+        const problemsContainer = document.getElementById('problems-container');
+        const displayModel = document.getElementById('display-model');
+        const finalModelName = document.getElementById('final-model-name');
+        
+        const tgResultBtn = document.getElementById('tg-result-btn');
+        const maxResultBtn = document.getElementById('max-result-btn');
+
+        document.querySelectorAll('#quiz-step-1 button[data-step="1"]').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 currentDevice = e.currentTarget.getAttribute('data-value');
-                problemsContainer.innerHTML = '';
-                quizData[currentDevice].problems.forEach(prob => {
-                    const btnHTML = `<button type="button" class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] hover:shadow-[0_0_15px_rgba(255,238,0,0.2)] rounded-xl p-6 transition font-semibold text-gray-200" data-price="${prob.price}" data-problem="${prob.text}">${prob.text}</button>`;
-                    problemsContainer.insertAdjacentHTML('beforeend', btnHTML);
-                });
+                modelsContainer.innerHTML = '';
+                modelsContainer.className = ''; 
+                
+                if (currentDevice === 'apple') {
+                    const scrollWrapper = document.createElement('div');
+                    scrollWrapper.className = 'bg-[#222] border border-gray-700 rounded-xl overflow-hidden shadow-inner';
+                    const scrollInner = document.createElement('div');
+                    scrollInner.className = 'max-h-[280px] overflow-y-auto flex flex-col [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-yellow-500 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-[#111]';
+                    
+                    quizData[currentDevice].models.forEach(modelName => {
+                        const btnHTML = `<button type="button" class="w-full text-left py-4 px-5 hover:bg-yellow-500 text-gray-300 hover:text-gray-900 transition-colors border-b border-gray-700 last:border-0 font-medium quiz-model-btn" data-model="${modelName}">${modelName}</button>`;
+                        scrollInner.insertAdjacentHTML('beforeend', btnHTML);
+                    });
+                    
+                    scrollWrapper.appendChild(scrollInner);
+                    modelsContainer.appendChild(scrollWrapper);
+                } else {
+                    modelsContainer.className = 'grid grid-cols-1 sm:grid-cols-2 gap-3';
+                    quizData[currentDevice].models.forEach(modelName => {
+                        const btnHTML = `<button type="button" class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] rounded-lg p-4 transition font-semibold text-gray-200 text-sm md:text-base text-left quiz-model-btn" data-model="${modelName}">${modelName}</button>`;
+                        modelsContainer.insertAdjacentHTML('beforeend', btnHTML);
+                    });
+                }
 
-                document.querySelectorAll('#problems-container button').forEach(pBtn => {
-                    pBtn.addEventListener('click', (pe) => {
-                        currentProblem = pe.currentTarget.getAttribute('data-problem');
-                        currentEstimate = pe.currentTarget.getAttribute('data-price');
-                        resultPrice.textContent = currentEstimate;
+                document.querySelectorAll('.quiz-model-btn').forEach(mBtn => {
+                    mBtn.addEventListener('click', (me) => {
+                        currentModel = me.currentTarget.getAttribute('data-model');
+                        
+                        if (currentDevice === 'apple') {
+                            displayModel.textContent = currentModel;
+                            finalModelName.textContent = currentModel;
+                        } else {
+                            displayModel.textContent = "вашим устройством";
+                            finalModelName.textContent = "вашему устройству";
+                        }
+
+                        problemsContainer.innerHTML = '';
+                        quizData[currentDevice].problems.forEach(prob => {
+                            const probHTML = `<button type="button" class="quiz-btn border-2 border-gray-700 hover:border-yellow-500 bg-[#222] hover:bg-[#2a2a2a] rounded-xl p-6 transition font-semibold text-gray-200" data-price="${prob.price}" data-problem="${prob.text}">${prob.text}</button>`;
+                            problemsContainer.insertAdjacentHTML('beforeend', probHTML);
+                        });
+
+                        document.querySelectorAll('#problems-container button').forEach(pBtn => {
+                            pBtn.addEventListener('click', (pe) => {
+                                currentProblem = pe.currentTarget.getAttribute('data-problem');
+                                currentEstimate = pe.currentTarget.getAttribute('data-price');
+                                
+                                // === ГЕНЕРАЦИЯ ССЫЛОК ДЛЯ МЕССЕНДЖЕРОВ ===
+                                let prefilledText = '';
+                                if (currentDevice === 'apple') {
+                                    prefilledText = `Здравствуйте! Я прошел квиз на сайте. Подскажите точную стоимость ремонта и наличие запчастей.\n\n📱 Модель: ${currentModel}\n🛠 Проблема: ${currentProblem}`;
+                                } else {
+                                    prefilledText = `Здравствуйте! Я прошел квиз на сайте. Подскажите точную стоимость ремонта и наличие запчастей.\n\n📱 Устройство: ${quizData[currentDevice].name} (${currentModel})\n🛠 Проблема: ${currentProblem}`;
+                                }
+                                
+                                const encodedText = encodeURIComponent(prefilledText);
+                                
+                                if (tgResultBtn) {
+                                    tgResultBtn.href = `https://t.me/+79952938949?text=${encodedText}`;
+                                }
+                                if (maxResultBtn) {
+                                    maxResultBtn.href = `https://max.ru/+79952938949?text=${encodedText}`; 
+                                }
+                                // ========================================
+
+                                step3.classList.add('hidden');
+                                step4.classList.remove('hidden');
+                            });
+                        });
+
                         step2.classList.add('hidden');
                         step3.classList.remove('hidden');
                     });
@@ -1157,6 +1307,10 @@
         document.getElementById('btn-back-2').addEventListener('click', () => {
             step3.classList.add('hidden');
             step2.classList.remove('hidden');
+        });
+        document.getElementById('btn-back-3').addEventListener('click', () => {
+            step4.classList.add('hidden');
+            step3.classList.remove('hidden');
         });
 
         // gallery scroll
@@ -1213,8 +1367,8 @@
             modal.classList.remove('hidden');
             formStatus.classList.add('hidden');
             setTimeout(() => {
-                const nameInput = document.getElementById('clientName');
-                if (nameInput) nameInput.focus();
+                const phoneInputFocus = document.getElementById('clientPhone');
+                if (phoneInputFocus) phoneInputFocus.focus();
             }, 100);
         };
 
@@ -1355,7 +1509,7 @@
         if (leadForm) {
             leadForm.addEventListener('submit', function(e) {
                 e.preventDefault(); 
-                const name = document.getElementById('clientName').value;
+                const name = 'Клиент';
                 const phone = document.getElementById('clientPhone').value;
                 let problem = document.getElementById('clientProblem').value || 'Не указано';
                 
@@ -1388,7 +1542,7 @@
         if (quizForm) {
             quizForm.addEventListener('submit', function(e) {
                 e.preventDefault(); 
-                const name = document.getElementById('quizName').value;
+                const name = 'Клиент из Квиза (Звонок)';
                 const phone = document.getElementById('quizPhone').value;
                 const honeypot = document.getElementById('honeyEmailQuiz') ? document.getElementById('honeyEmailQuiz').value : '';
 
@@ -1405,7 +1559,7 @@
                 submitBtn.disabled = true;
                 quizStatus.classList.add('hidden');
 
-                const formattedProblem = `[КВИЗ] ${quizData[currentDevice].name} - ${currentProblem} (Ожидает: ${currentEstimate})`;
+                const formattedProblem = `[КВИЗ] ${quizData[currentDevice].name} (${currentModel}) - ${currentProblem} (Ожидает звонка)`;
                 const payload = { name: name, phone: phone, problem: formattedProblem, honeypot: honeypot };
                 sendToGoogle(payload, quizForm, quizStatus, submitBtn, originalBtnText);
             });
